@@ -1,0 +1,14 @@
+>  # FPT stock
+
+> FPT=read.csv("fpt.csv") #Read CSV into R 
+
+> attach(FPT) #make the data available to the R search path
+
+> names(FPT) #show name of objects  is stored in R
+[1] "Stock" "Date"  "Price"
+
+> Si<-Price[2:250]	
+
+> Sk<-Price[1:249]	
+
+> ui<-log(Si/Sk)	#This is the daily return

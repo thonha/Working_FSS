@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{INTRODUCTION}{3}{0}{1}
+\beamer@sectionintoc {2}{NOISE AND INTERFERENCE}{5}{0}{2}
+\beamer@sectionintoc {3}{DESIGNING FOR ELECTROMAGNETIC COMPATIBILITY}{10}{0}{3}
+\beamer@sectionintoc {4}{EMC REGULATIONS}{14}{0}{4}
+\beamer@sectionintoc {5}{SUMMARY}{18}{0}{5}
+\beamer@sectionintoc {6}{REFERENCES}{19}{0}{6}

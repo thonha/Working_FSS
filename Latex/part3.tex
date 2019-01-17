@@ -1,0 +1,44 @@
+\chapter{Application}
+\label{ch:Appy}
+
+\section{Condition of the Black-Sholes-Merton model}
+Six assumptions of the Black-Sholes-Merton model is given by
+\begin{enumerate}
+	\item The option is European 
+	\item No dividends are paid out during the option's life
+	\item Efficient markets
+	\item There are no transaction costs in buying the option
+	\item The risk-free rate and volatility of the underlying are known and constant
+	\item The returns on the underlying are normally distributed
+\end{enumerate}
+\indent{\itshape\bfseries Problem}\\[0.5cm]
+Consider a European call option on FPT stock without dividends. Market movements cannot be predicted. When the stock price is \$2.5, the exercise price is \$3, the risk-free interest rate is 5\%, the volatility is 23.7\% per annum,
+and the time to maturity is 6 months. These information is given 5 first assumptions. We need to check the last one which is the rate of returns are normally distributed.\\
+\indent{\itshape\bfseries Testing for normal distribution}\\[0.5cm]
+The software is using for testing data is R – Studio. The code is shown at the end of report. We will use graphical methods which is normal probability plot (Q-Q plot or quantile quantile plots). \\
+Q-Q plot is a graphical technique to help us assess whether or not a data set is approximately normally distributed. The question is how to make a Q-Q plot. The method is following  
+\begin{itemize}
+\item Sort the numbers from smallest to largest
+\item Draw a normal distribution curve
+\item Find the Z-value for each segment
+\item Plot data set value against the Z-value 
+\end{itemize}
+If the most part the data points follow along the straight line, this will be normally distributed. Here is our result
+	\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[scale=.8]{Rplot01}
+	\end{center}
+	\label{refRplot01}
+	\caption{The distribution of FPT's returns}
+\end{figure}
+
+This graph satisfies conditions of normal distribution. Here the x-axis is the probability and the y-axis is the values of returns.
+Therefore, the returns is most likely normally distribution.
+\section{Apply to the Black-Scholes-Merton model}
+
+
+
+
+
+
+

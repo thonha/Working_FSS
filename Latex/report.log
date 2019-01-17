@@ -1,0 +1,57 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.16)  9 DEC 2018 12:49
+entering extended mode
+**./report.tex
+(report.tex
+LaTeX2e <2018-04-01> patch level 5
+
+("C:\Users\TaPhuongDung-PC\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\rep
+ort.cls"
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+
+("C:\Users\TaPhuongDung-PC\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\siz
+e12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\TaPhuongDung-PC\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inp
+utenc.sty"
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+
+! LaTeX Error: File `xutf8.def' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: def)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.165 \endinput
+               
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 240 strings out of 492973
+ 2903 string characters out of 3135902
+ 59603 words of memory out of 3000000
+ 4197 multiletter control sequences out of 15000+200000
+ 3938 words of font info for 15 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 22i,0n,22p,143b,36s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

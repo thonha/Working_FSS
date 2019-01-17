@@ -1,0 +1,97 @@
+05/01/2019 10:16:34 AM -- UPDATE TIME:05/01/2019 10:16:34 AM
+05/01/2019 10:16:34 AM -- Starting Online-Update  version 1.0.0.1
+05/01/2019 10:16:34 AM -- OS:      Microsoft Windows NT 6.1.7601 Service Pack 1
+05/01/2019 10:16:34 AM -- Machine: DIEUNGUYEN-PC.DieuNguyen-PC
+05/01/2019 10:16:34 AM -- User:    DieuNguyen
+05/01/2019 10:16:34 AM -- Begin clearAttributes
+05/01/2019 10:16:34 AM -- Begin clearAttributes with path: D:\TCS\www_FlexClient\FLEX
+05/01/2019 10:16:34 AM -- Begin remove FileAttributes.ReadOnly
+05/01/2019 10:16:34 AM -- The Apache.NMS.ActiveMQ.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Apache.NMS.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The AppCore.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The AxInterop.SHDocVw.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The BrokerScreen.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The BrokerScreen.dll.config is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The ChinhSuaF2.zip is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Common.Logging.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The CommonLibrary.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The CrystalDecisions.CrystalReports.Design.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The CrystalDecisions.CrystalReports.Engine.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The CrystalDecisions.Shared.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DataGridViewAutoFilter.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.Charts.v11.1.Core.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.Data.v11.1.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.PivotGrid.v11.1.Core.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.Printing.v11.1.Core.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.RichEdit.v11.1.Core.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.Utils.v11.1.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.XtraBars.v11.1.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.XtraCharts.v11.1.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.XtraCharts.v11.1.UI.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.XtraEditors.v11.1.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.XtraGrid.v11.1.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.XtraLayout.v11.1.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.XtraNavBar.v11.1.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.XtraPivotGrid.v11.1.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.XtraReports.v11.1.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The DevExpress.XtraRichEdit.v11.1.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The ExcelLibrary.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The FLEX.exe is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The FLEX.exe.config is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The FLEX.rar is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The FLEX.XmlSerializers.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The FSS.RTDF.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The HTMLEditorControl.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The ICSharpCode.SharpZipLib.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Interop.Excel.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Interop.SHDocVw.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Ionic.Zip.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The log4net.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Microsoft.QualityTools.Testing.Fakes.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Microsoft.Vbe.Interop.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Newtonsoft.Json.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The office.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The SendFiles.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The SocketServer.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Spring.Aop.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Spring.Core.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Spring.Data.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Spring.Messaging.Nms.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The update.exe is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The update.exe.config is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The update.log is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The updateclient.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Xceed.Editors.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Xceed.Grid.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Xceed.SmartUI.Controls.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Xceed.SmartUI.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Xceed.SmartUI.UIStyle.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Xceed.UI.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The Xceed.Validation.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The BrokerScreen.resources.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The broker-screen-log-file.txt is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The broker-screen-log-file.txt.1 is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The SE0008.rpt is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The SE0008.xml is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The SE00080001.xml is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- The BrokerScreen.resources.dll is no longer ReadOnly.
+05/01/2019 10:16:34 AM -- End remove FileAttributes.ReadOnly
+05/01/2019 10:16:34 AM -- Begin Add Full Permission
+05/01/2019 10:16:34 AM -- End Add Full Permission
+05/01/2019 10:16:34 AM -- Downloading... 
+05/01/2019 10:16:34 AM -- Update Path: http://192.168.18.225:1616/Deployment/Report/reports.6.5.0.0017.0126.zip
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   at update.Update.DownloadUpdate()05/01/2019 10:16:35 AM -- copying files ...
+05/01/2019 10:16:35 AM -- Update report:
+05/01/2019 10:16:35 AM -- Update Report Directory
+05/01/2019 10:16:35 AM -- System.ArgumentNullException: Value cannot be null.
+Parameter name: path
+   at System.IO.Directory.GetDirectories(String path)
+   at update.Update.CopyFile(String v_UpdatePath)
+   at update.Update.ProcessUpdate()
+System.ArgumentNullException: Value cannot be null.
+Parameter name: path
+   at System.IO.Path.GetFullPathInternal(String path)
+   at update.Update.DeleteTempFiles()Starting programme... started
+05/01/2019 10:16:35 AM -- Update successful and finished. Exiting Update-Process now.

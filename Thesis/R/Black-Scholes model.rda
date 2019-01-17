@@ -1,0 +1,33 @@
+  > #Black Scholes Model
+
+> #Assigning variables
+
+> s<-59.8 #Stock Price
+
+> k<-62 #Strike Price
+
+> sigma<-0.24 #Volatility
+
+> r<-0.03 #Risk free rate
+
+> T<-0.5 #Expiration date
+
+> #Calculate d1
+
+>d1<-(log(s/k)+(r+(sigma^2)/2)*T)/(sigma*sqrt(T))
+
+> d1
+[1] -0.03964939
+
+> #Calculate d2
+
+>d2<-(log(s/k)+(r-(sigma^2)/2)*T)/(sigma*sqrt(T))
+
+> d2
+[1] -0.209355
+
+> #Calculate Call Option price
+
+>c<-s*pnorm(d1)-exp(-r*T)*k*pnorm(d2)
+> c
+[1] 3.480033

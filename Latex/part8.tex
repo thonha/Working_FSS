@@ -1,0 +1,253 @@
+\chapter{R Code}
+
+\section{Sketch payoff diagram of a call option}
+\begin{lstlisting}
+> #Figure 1.1: Payoff of call option 
+
+> getwd() #print the current working directory
+[1] "C:/Users/tapud_000/Documents"
+
+> setwd("E:/Thesis/R") #change to mydirectory
+
+> S<-read.csv("ex1.csv") #Read CSV into R 
+
+> attach(S) #make the data available to the R search path
+
+>plot(Stock.price,Payoff,xlim=c(0,100),ylim = c(-10,60),type = "l",col="blue", xlab="Stock price", ylab = "Profit",main = "Profit diagram of a call option",lwd=1.5) #sketch diagram of call option
+
+> q<-rep(0,101) # Profit is according to stock price
+
+>lines(Stock.price,q,col="red",lwd=1.5) #sketch the line describes payoff is equal zero to help comparison easily
+
+>plot(Stock.price,Payoff,xlim=c(0,100),ylim = c(-10,60),type = "l",col="blue", ylab = "Profit",main = "Profit diagram of a call option",lwd=1.5, legend("topright", legend=c("Call, K = $50, A premium = $5"),col=("blue"), lty=1:2, cex=0.8))# add legend to plot in R
+\end{lstlisting}
+
+\newpage
+\section{Calculate the daily return}
+\begin{lstlisting}
+>  # FPT stock
+
+> FPT=read.csv("fpt.csv") #Read CSV into R 
+
+> attach(FPT) #make the data available to the R search path
+
+> names(FPT) #show name of objects  is stored in R
+[1] "Stock" "Date"  "Price"
+
+> Si<-Price[2:250]	
+
+> Sk<-Price[1:249]	
+
+> ui<-log(Si/Sk)	#This is the daily return
+
+\end{lstlisting}
+
+\newpage
+\section{ Calculate the volatility of FPT stock}
+\begin{lstlisting}
+>  # Volatility per annum
+
+> FPT=read.csv("fpt.csv") #Read CSV into R 
+
+> attach(FPT) #make the data available to the R search path
+
+> names(FPT) #show name of objects  is stored in R
+[1] "Stock" "Date"  "Price"
+
+> Si<-Price[2:250]	
+
+> Sk<-Price[1:249]	
+
+> ui<-log(Si/Sk)
+
+>s<-sqrt((1/148)*sum((ui-mean(ui))^2))
+
+> s
+[1] 0.01518166
+
+\end{lstlisting}
+
+\newpage
+
+\section{Check data normality}
+\begin{lstlisting}
+>  #Figure 3.1: The distribution of FPT stock 
+
+> FPT=read.csv("stock.csv") #Read CSV into R 
+
+> attach(FPT) #make the data available to the R search path
+
+> names(FPT) #show name of objects  is stored in R
+[1] "Stock"                    "Day(i)"                 
+[3] "Stock.price" "Daily.Return"            
+[5] "Volatility"  
+
+> DailyReturn=na.omit(Daily.Return) #remove NAs value from Daily.Return
+
+>  #Using quantitle-quantitle (QQ) plots to check data normality in R
+
+> qqnorm(DailyReturn)  #produces a normal QQ plot of the variable
+
+> qqline(DailyReturn,col=2,lwd=1.5) #adds a reference line
+\end{lstlisting}
+
+\newpage
+\section{Black-Scholes-Merton model}
+\begin{lstlisting}
+> #Black Scholes Model
+
+> #Assigning variables
+
+> s<-59.8 #Stock Price
+
+> k<-62 #Strike Price
+
+> sigma<-0.24 #Volatility
+
+> r<-0.03 #Risk free rate
+
+> T<-0.5 #Expiration date
+
+> #Calculate d1
+
+>d1<-(log(s/k)+(r+(sigma^2)/2)*T)/(sigma*sqrt(T))
+
+> d1
+[1] -0.03964939
+
+> #Calculate d2
+
+>d2<-(log(s/k)+(r-(sigma^2)/2)*T)/(sigma*sqrt(T))
+
+> d2
+[1] -0.209355
+
+> #Calculate Call Option price
+
+>c<-s*pnorm(d1)-exp(-r*T)*k*pnorm(d2)
+> c
+[1] 3.480033
+\end{lstlisting}
+
+\newpage
+\section{European barrier call option}
+
+\begin{lstlisting}
+> #European down-and-out call option without rebates
+
+> #Assigning variables
+
+> S<-59.8 #Stock price at time zero 
+
+> K<-62 #Strike price
+
+> B<-55 #Down and out barrier price
+
+> sigma<-0.24 #Annual volitility
+
+> r<-0.03 #Annual riskless rate 
+
+> T<-0.5 #Option expiration
+
+>d1<-(log(S/K)+(r+(sigma^2)/2)*T)/(sigma*sqrt(T))
+
+> d1
+[1] -0.03964939
+
+> d2=d1-sigma*sqrt(T)
+
+> d2
+[1]  -0.209355
+
+>d3=(log((B^2)/(S*K))+(r+(sigma^2)/2)*T)/(sigma*sqrt(T))
+
+> d3
+[1] -1.025739
+
+> d4=d3-sigma*sqrt(T)
+
+> d4
+[1]  -1.195445
+
+>lamda<-(sigma^2-2*r)/(2*sigma^2)
+
+> lambda
+[1]  -0.02083333
+
+>C1<-S*pnorm(d1)-K*exp(-r*T)*pnorm(d2)
+
+> C1
+[1] 3.480033
+
+>C2<-((B^2)/S)*pnorm(d3)-K*exp(-r*T)*pnorm(d4)
+
+> C2
+[1] 0.6323466
+
+>C<-C1-((S/B)^(2*alpha))*C2
+
+> C
+[1] 2.849887 #The European down-and-out call option without rebates
+\end{lstlisting}
+
+\newpage
+\section{European barrier call option with rebates}
+
+\begin{lstlisting}
+> #Pricing of European down-and-out call option with rebates
+
+> #Assigning variables
+
+> S<-59.8 #Stock price at time zero 
+
+> K<-62 #Strike price
+
+> B<-55 #Down and out barrier price
+
+> sigma<-0.24 #Annual volitility
+
+> r<-0.03 #Annual riskless rate 
+
+> T<-0.5 #Option expiration
+
+>R<-10
+
+> #We already calculate the European down-and-out call option without rebates is $2.85. Next it will be for rebates and final result.
+
+>beta<-sqrt((r-(sigma^2)/2)^2+2*r*(sigma^2))
+
+> beta
+[1] 0.0588
+
+>alpha1<-(r-((sigma^2)/2)+beta)/(sigma^2)
+
+> alpha1
+[1] 1.041667
+
+>alpha2<-(r-((sigma^2)/2)-beta)/(sigma^2)
+
+> alpha2
+[1] -1
+
+>l1<-(log(B/S)+beta*T)/(sigma*sqrt(T))
+
+> l1
+[1] -0.3198036
+
+>l2<-(log(B/S)-beta*T)/(sigma*sqrt(T))
+
+> l2
+[1] -0.666286
+
+> R<-1
+
+>RV<-R*(((B/s)^alpha1)*pnorm(l1)+((B/s)^alpha2)*pnorm(l2))
+> RV
+[1] 6.179553
+
+> Result<-C+RV
+
+> Result
+[1] 9.02944
+
+\end{lstlisting}

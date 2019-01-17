@@ -1,0 +1,66 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <RptData>
+    <GR_I> I. CỔ PHIẾU </GR_I>
+    <GR_II> 1. Niêm yết tại HNX </GR_II>
+    <TOTAL_AMT>0</TOTAL_AMT>
+    <PLSENT>TRUNG TÂM LƯU KÝ CHỨNG KHOÁN VIỆT NAM</PLSENT>
+    <DATE_TRANS>2018-05-17T00:00:00+07:00</DATE_TRANS>
+  </RptData>
+  <RptData>
+    <GR_I> I. CỔ PHIẾU </GR_I>
+    <GR_II> 2. Niêm yết tại HOSE </GR_II>
+    <TOTAL_AMT>0</TOTAL_AMT>
+    <PLSENT>TRUNG TÂM LƯU KÝ CHỨNG KHOÁN VIỆT NAM</PLSENT>
+    <DATE_TRANS>2018-05-17T00:00:00+07:00</DATE_TRANS>
+  </RptData>
+  <RptData>
+    <GR_I> I. CỔ PHIẾU </GR_I>
+    <GR_II> 3. UPCOM </GR_II>
+    <TOTAL_AMT>0</TOTAL_AMT>
+    <PLSENT>TRUNG TÂM LƯU KÝ CHỨNG KHOÁN VIỆT NAM</PLSENT>
+    <DATE_TRANS>2018-05-17T00:00:00+07:00</DATE_TRANS>
+  </RptData>
+  <RptData>
+    <GR_I> II. TRÁI PHIẾU </GR_I>
+    <GR_II> 1. Niêm yết tại HNX </GR_II>
+    <TOTAL_AMT>0</TOTAL_AMT>
+    <PLSENT>TRUNG TÂM LƯU KÝ CHỨNG KHOÁN VIỆT NAM</PLSENT>
+    <DATE_TRANS>2018-05-17T00:00:00+07:00</DATE_TRANS>
+  </RptData>
+  <RptData>
+    <GR_I> II. TRÁI PHIẾU </GR_I>
+    <GR_II> 2. Niêm yết tại HOSE </GR_II>
+    <TOTAL_AMT>0</TOTAL_AMT>
+    <PLSENT>TRUNG TÂM LƯU KÝ CHỨNG KHOÁN VIỆT NAM</PLSENT>
+    <DATE_TRANS>2018-05-17T00:00:00+07:00</DATE_TRANS>
+  </RptData>
+  <RptData>
+    <GR_I> II. TRÁI PHIẾU </GR_I>
+    <GR_II> 3. UPCOM </GR_II>
+    <TOTAL_AMT>0</TOTAL_AMT>
+    <PLSENT>TRUNG TÂM LƯU KÝ CHỨNG KHOÁN VIỆT NAM</PLSENT>
+    <DATE_TRANS>2018-05-17T00:00:00+07:00</DATE_TRANS>
+  </RptData>
+  <RptData>
+    <GR_I> III. CHỨNG CHỈ QUỸ </GR_I>
+    <GR_II> 1. Niêm yết tại HNX </GR_II>
+    <TOTAL_AMT>0</TOTAL_AMT>
+    <PLSENT>TRUNG TÂM LƯU KÝ CHỨNG KHOÁN VIỆT NAM</PLSENT>
+    <DATE_TRANS>2018-05-17T00:00:00+07:00</DATE_TRANS>
+  </RptData>
+  <RptData>
+    <GR_I> III. CHỨNG CHỈ QUỸ </GR_I>
+    <GR_II> 2. Niêm yết tại HOSE </GR_II>
+    <TOTAL_AMT>0</TOTAL_AMT>
+    <PLSENT>TRUNG TÂM LƯU KÝ CHỨNG KHOÁN VIỆT NAM</PLSENT>
+    <DATE_TRANS>2018-05-17T00:00:00+07:00</DATE_TRANS>
+  </RptData>
+  <RptData>
+    <GR_I> III. CHỨNG CHỈ QUỸ </GR_I>
+    <GR_II> 3. UPCOM </GR_II>
+    <TOTAL_AMT>0</TOTAL_AMT>
+    <PLSENT>TRUNG TÂM LƯU KÝ CHỨNG KHOÁN VIỆT NAM</PLSENT>
+    <DATE_TRANS>2018-05-17T00:00:00+07:00</DATE_TRANS>
+  </RptData>
+</NewDataSet>

@@ -1,0 +1,17 @@
+\chapter{Methodology}
+\label{ch:Methodology}
+
+We may formulate the pricing models of barrier options using the probabilistic approach that includes the martingales pricing approach and derive the corresponding price formulas by computing the expectation
+of the discounted terminal payoff under
+the risk neutral measure Q. 
+The price of the European down-and-out call
+option with rebates is given by
+\begin{align}
+\begin{split}
+c(S, \tau)=&c_E(S, \tau)-\left(\dfrac{B}{S}\right)^{\delta-1} c_E\left(\dfrac{B^2}{S},\tau \right)\\
+&+\displaystyle \int_{0}^{\tau}e^{-r\omega}\dfrac{ln\frac{S}{B}}{\sqrt{2\pi}\sigma}\dfrac{exp(\dfrac{-[ln\frac{S}{B}+(r-\frac{\sigma^2}{2})\omega]^2}{2\sigma^2\omega})}{\omega^{\frac{3}{2}}}R(\tau-\omega)d\omega
+\end{split}
+\end{align} \\ [0.5cm]
+In particular,under the Black–Scholes pricing paradigm, when the martingale approach is used, we obtain the transition density function using the reflection principle in the Brownian process literature. To compute the expected present value of the rebate payment, we derive
+the density function of the first passage time to the barrier. Therefore, the Black-Sholes model is very necessary.
+

@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{The reason for selecting topic}{3}{0}{1}
+\beamer@sectionintoc {2}{Methodology}{10}{0}{2}
+\beamer@sectionintoc {3}{Objectives}{16}{0}{3}
+\beamer@sectionintoc {4}{Process and Completion}{20}{0}{4}

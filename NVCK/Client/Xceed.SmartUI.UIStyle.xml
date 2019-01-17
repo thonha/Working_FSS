@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<doc>
+    <assembly>
+        <name>Xceed.SmartUI.UIStyle</name>
+    </assembly>
+    <members>
+        <member name="N:Xceed.SmartUI.UIStyle">
+            <summary>The Xceed.SmartUI.UIStyle namespace provides utility classes for painting SmartControls and SmartItems.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.UIStyle.Borders">
+            <summary>Value representing the borders of the SmartControl.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.Borders.None">
+            <summary>The SmartControl does not have borders.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.Borders.Left">
+            <summary>The SmartControl only has a left border.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.Borders.Right">
+            <summary>The SmartControl only has a right border.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.Borders.Top">
+            <summary>The SmartControl only has a top border.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.Borders.Bottom">
+            <summary>The SmartControl only has a bottom border.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.Borders.All">
+            <summary>The SmartControl has a border on all sides.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.UIStyle.ThemeColor">
+            <summary>Value representing elements whose color depends on a Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.ToolBar">
+            <summary>The color of a toolbar.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.ToolSeparator">
+            <summary>The color of a tool separator.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.ToolBackgroundOver">
+            <summary>The background color of a tool when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.ToolBackgroundDown">
+            <summary>The background color of a tool when it is pressed.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.ToolBackgroundChecked">
+            <summary>The background color of a tool when it is checked.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.ToolBorderOver">
+            <summary>The color of a tool's border when the mouse passes over the tool.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.ToolBorderDown">
+            <summary>The color of a tool's border when the tool is pressed.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.ToolBorderChecked">
+            <summary>The color of a tool's border when the tool is checked.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.ToolTextOver">
+            <summary>The color of a tool's text when the mouse passes over the tool.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.ToolTextDown">
+            <summary>The color of a tool's text when the tool is pressed.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.ToolTextChecked">
+            <summary>The color of a tool's text when the tool is checked.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.ImageShadow">
+            <summary>The color of an image's shadow.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.MenuStrip">
+            <summary>The color of a menu strip.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.MenuStripExtend">
+            <summary>The color of a menu strip when it is extended.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.DropDownMenu">
+            <summary>The color of a dropdown menu.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.DropDownMenuBorder">
+            <summary>The color of a dropdown menu's border.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.TabStrip">
+            <summary>The color of a tab strip.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.SpecialGroupText">
+            <summary>The color of a special group's text.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.SpecialGroupTextOver">
+            <summary>The color of a special group's text when the mouse passes over the group.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.SpecialGroupTask">
+            <summary>The color of a special group's task.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.SpecialGroupTaskOver">
+            <summary>The color of a special group's task when the mouse passes over the task.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.NormalGroupText">
+            <summary>The color of a normal group's text.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.NormalGroupTextOver">
+            <summary>The color of a normal group's text when the mouse passes over the group.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.NormalGroupTask">
+            <summary>The color of a normal group's task.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.NormalGroupTaskOver">
+            <summary>The color of a normal group's task when the mouse passes over the task.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.ExplorerTaskPaneBorder">
+            <summary>The color of an Explorer taskpane's border.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.MenuSeparator">
+            <summary>The color of a menu separator.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.DropDownMenuText">
+            <summary>The color of a drop down menu's text.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.OfficeTaskPane">
+            <summary>The background color of an OfficeTaskPane control.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.OfficeTaskPaneGroup">
+            <summary>The color of a group's text.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.OfficeTaskPaneGroupUnderline">
+            <summary>The color of the underline under a group's title.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.OfficeTaskPaneTask">
+            <summary>The color of a task's text.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.MenuItemBackgroundOver">
+            <summary>The background color of a menu item when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.CheckMenuBackground">
+            <summary>The background color of a check menu item.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.CheckMenuBackgroundOver">
+            <summary>The background color of a check menu item when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.CheckMenuBorder">
+            <summary>The color of a menu's border.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.CheckMenuBorderOver">
+            <summary>The color of a menu's border when the mouse passes over it</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemeColor.StatusBarPanelBorder">
+            <summary>The border color of a status bar's flat panel.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.UIStyle.ThemePart">
+            <summary>Value representing the various parts of a theme.</summary>
+            <remarks>    A theme part represents a graphical element that can be     found throughout Windows.</remarks>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.None">
+            <summary>Not a theme part.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.CheckBox">
+            <summary>A checkbox as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.CheckBoxOver">
+            <summary>A checkbox as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.CheckBoxDown">
+            <summary>A checkbox as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.CheckBoxDisabled">
+            <summary>A checkbox as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.CheckBoxChecked">
+            <summary>A checkbox as painted by the Windows theme when it is checked.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.CheckBoxCheckedOver">
+            <summary>A checkbox as painted by the Windows theme when it is checked and the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.CheckBoxCheckedDown">
+            <summary>A checkbox as painted by the Windows theme when it is checked and the mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.CheckBoxCheckedDisabled">
+            <summary>A checkbox as painted by the Windows theme when it is checked and disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.CheckBoxMixed">
+            <summary>A checkbox in an indeterminate state as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.CheckBoxMixedOver">
+            <summary>A checkbox in an indeterminate state as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.CheckBoxMixedDown">
+            <summary>A checkbox in an indeterminate state as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.CheckBoxMixedDisabled">
+            <summary>A checkbox in an indeterminate state as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.RadioButton">
+            <summary>A radio button as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.RadioButtonOver">
+            <summary>A radio button as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.RadioButtonDown">
+            <summary>A radio button as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.RadioButtonDisabled">
+            <summary>A radio button as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.RadioButtonChecked">
+            <summary>A radio button as painted by the Windows theme when it is checked.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.RadioButtonCheckedOver">
+            <summary>A radio button as painted by the Windows theme when it is checked and the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.RadioButtonCheckedDown">
+            <summary>A radio button as painted by the Windows theme when it is checked and the mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.RadioButtonCheckedDisabled">
+            <summary>A radio button as painted by the Windows theme when it is checked and disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.GroupBox">
+            <summary>A group box as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.NormalGroupHeaderBackground">
+            <summary>The background of a normal group's header as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.NormalGroupPanelBackground">
+            <summary>The background of a normal group's panel as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.NormalGroupCollapse">
+            <summary>A collapsed normal group as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.NormalGroupCollapseOver">
+            <summary>A collapsed normal group as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.NormalGroupExpand">
+            <summary>An expanded normal group as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.NormalGroupExpandOver">
+            <summary>An expanded normal group as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.SpecialGroupHeaderBackground">
+            <summary>The background of a special group's header as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.SpecialGroupPanelBackground">
+            <summary>The background of a special group's panel as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.SpecialGroupCollapse">
+            <summary>A collapsed special group as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.SpecialGroupCollapseOver">
+            <summary>A collapsed special group as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.SpecialGroupExpand">
+            <summary>An expanded special group as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.SpecialGroupExpandOver">
+            <summary>An expanded special group as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.RebarBackground">
+            <summary>The background of a toolbar as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.StatusBarBackground">
+            <summary>The background of a statusbar as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ExplorerTaskPaneBackground">
+            <summary>The background of the Explorer taskpane as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ListBoxBorder">
+            <summary>A listbox's border as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.TextBoxBorder">
+            <summary>A textbox's border as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ComboBoxBorder">
+            <summary>A combobox's border as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ComboBoxBorderDisabled">
+            <summary>A combobox's border as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ComboBoxButton">
+            <summary>A combobox's button as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ComboBoxButtonOver">
+            <summary>A combobox's button as painted by the Windows theme when a mouse button passed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ComboBoxButtonDown">
+            <summary>A combobox's button as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ComboBoxButtonDisabled">
+            <summary>A combobox's button as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.Panel">
+            <summary>A panel as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.StatusBarGripperPanel">
+            <summary>A statusbar's gripper panel as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.StatusBarGripper">
+            <summary>A statusbar's gripper as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ProgressBar">
+            <summary>A progress bar as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ProgressChunk">
+            <summary>A progress bar's step as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ShortcutBarHeaderBackground">
+            <summary>The background of a shortcut bar's header as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ShortcutBarHeaderItem">
+            <summary>A shortcut bar's header as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ShortcutBarHeaderItemOver">
+            <summary>A shortcut bar's header as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ShortcutBarHeaderItemDown">
+            <summary>A shortcut bar's header as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.TreeExpand">
+            <summary>An expanded tree as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.TreeCollapse">
+            <summary>A collapsed tree as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.TabEdge">
+            <summary>A tab's edge as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.TabBackground">
+            <summary>A tab's background as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.Tool">
+            <summary>A tool as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ToolOver">
+            <summary>A tool as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ToolDown">
+            <summary>A tool as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ToolChecked">
+            <summary>A tool as painted by the Windows theme when it is checked.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ToolCheckedOver">
+            <summary>A tool as painted by the Windows theme when it is checked and the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ToolMixed">
+            <summary>A mixed tool as painted by the Windows theme. A mixed tool is a tool that has both a button and a dropdown.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ToolMixedOver">
+            <summary>A mixed tool as painted by the Windows theme when the mouse passes over it. A mixed tool is a tool that has both a button and a dropdown.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ToolMixedDown">
+            <summary>A mixed tool as painted by the Windows theme when a mouse button is pressed over it. A mixed tool is a tool that has both a button and a dropdown.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ToolMixedDropDown">
+            <summary>A mixed tool's dropdown as painted by the Windows theme. A mixed tool is a tool that has both a button and a dropdown.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ToolMixedDropDownOver">
+            <summary>A mixed tool's dropdown as painted by the Windows theme when the mouse passes over it. A mixed tool is a tool that has both a button and a dropdown.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ToolMixedDropDownDown">
+            <summary>A mixed tool's dropdown as painted by the Windows theme when a mouse button is pressed over it. A mixed tool is a tool that has both a button and a dropdown.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ToolSeparator">
+            <summary>A horizontal tool separator as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ToolSeparatorVertical">
+            <summary>A horizontal tool separator as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollUpButton">
+            <summary>An up scroll button as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollUpButtonOver">
+            <summary>An up scroll button as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollUpButtonDown">
+            <summary>An up scroll button as painted by the Windows theme when a mouse button is pressed over it</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollUpButtonDisabled">
+            <summary>An up scroll button as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollDownButton">
+            <summary>A down scroll button as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollDownButtonOver">
+            <summary>A down scroll button as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollDownButtonDown">
+            <summary>A down scroll button as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollDownButtonDisabled">
+            <summary>A down scroll button as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollLeftButton">
+            <summary>A left scroll button as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollLeftButtonOver">
+            <summary>A left scroll button as painted by the Windows theme when the mouse passed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollLeftButtonDown">
+            <summary>A left scroll button as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollLeftButtonDisabled">
+            <summary>A left scroll button as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollRightButton">
+            <summary>A right scroll button as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollRightButtonOver">
+            <summary>A right scroll button as painted by the Windows theme when the mouse passed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollRightButtonDown">
+            <summary>A right scroll button as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollRightButtonDisabled">
+            <summary>A right scroll button as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollShaft">
+            <summary>A horizontal scroll shaft as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollShaftOver">
+            <summary>A horizontal scroll shaft as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollShaftDown">
+            <summary>A horizontal scroll shaft as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollShaftDisabled">
+            <summary>A horizontal scroll shaft as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollShaftVertical">
+            <summary>A vertical scroll shaft as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollShaftVerticalOver">
+            <summary>A vertical scroll shaft as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollShaftVerticalDown">
+            <summary>A vertical scroll shaft as painted by the Windows theme when a mouse button is pressed over it..</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollShaftVerticalDisabled">
+            <summary>A vertical scroll shaft as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollThumb">
+            <summary>A horizontal scroll thumb as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollThumbOver">
+            <summary>A horizontal scroll thumb as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollThumbDown">
+            <summary>A horizontal scroll thumb as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollThumbDisabled">
+            <summary>A horizontal scroll thumb as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollThumbVertical">
+            <summary>A vertical scroll thumb as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollThumbVerticalOver">
+            <summary>A vertical scroll thumb as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollThumbVerticalDown">
+            <summary>A vertical scroll thumb as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollThumbVerticalDisabled">
+            <summary>A vertical scroll thumb as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollGripper">
+            <summary>A horizontal scroll gripper as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollGripperOver">
+            <summary>A horizontal scroll gripper as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollGripperDown">
+            <summary>A horizontal scroll gripper as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollGripperDisabled">
+            <summary>A horizontal scroll gripper as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollGripperVertical">
+            <summary>A vertical scroll gripper as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollGripperVerticalOver">
+            <summary>A vertical scroll gripper as painted by the Windows theme when the mouse button passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollGripperVerticalDown">
+            <summary>A vertical scroll gripper as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollGripperVerticalDisabled">
+            <summary>A vertical scroll gripper as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ScrollBarSizeBox">
+            <summary>A scrollbar size box as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.MenuStrip">
+            <summary>A menu strip as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.MenuStripExtend">
+            <summary>A menu strip as painted by the Windows theme when it is extended.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.Chevron">
+            <summary>A chevron as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.ToolBarBeam">
+            <summary>A toolbar beam as painted by the Office 2003 theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.MDIMinimizeButton">
+            <summary>A minimize control button as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.MDIMinimizeButtonOver">
+            <summary>A minimize control button as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.MDIMinimizeButtonDown">
+            <summary>A minimize control button as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.MDIMinimizeButtonDisabled">
+            <summary>A minimize control button as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.MDIRestoreButton">
+            <summary>A restore control button as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.MDIRestoreButtonOver">
+            <summary>A restore control button as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.MDIRestoreButtonDown">
+            <summary>A restore control button as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.MDIRestoreButtonDisabled">
+            <summary>A restore control button as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.MDICloseButton">
+            <summary>A close control button as painted by the Windows theme.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.MDICloseButtonOver">
+            <summary>A close control button as painted by the Windows theme when the mouse passes over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.MDICloseButtonDown">
+            <summary>A close control button as painted by the Windows theme when a mouse button is pressed over it.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.ThemePart.MDICloseButtonDisabled">
+            <summary>A close control button as painted by the Windows theme when it is disabled.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.UIStyle.UIStyle">
+            <summary>Value representing the appearance of a SmartControl and its SmartItems.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.UIStyle.WindowsClassic">
+            <summary>The SmartControl and its SmartItems will have the classic Windows 95 to 2000 appearance.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.UIStyle.OfficeXP">
+            <summary>The SmartControl and its SmartItems will have the Office XP appearance.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.UIStyle.WindowsXP">
+            <summary>The SmartControl and its SmartItems will have the Windows XP appearance.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.UIStyle.ResourceAssembly">
+            <summary>The SmartControl and its SmartItems will have the appearance defined in the resource assembly which can be provided by setting the SmartControl.UIStyleResourceAssembly property.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.UIStyle.UIStyle.Office2003">
+            <summary>The SmartControl and its SmartItems will have the Office 2003 appearance.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.UIStyle.Margins">
+            <summary>Represents the margins of the SmartItemCollection.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.UIStyle.Margins.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>Initializes a new Margins stucture specifying, in pixels, the width of the left, top, right and bottom borders.</summary>
+            <param name="left">The width, in pixels, of the left margin.</param>
+            <param name="right">The width, in pixels, of the right margin.</param>
+            <param name="top">The width, in pixels, of the top margin.</param>
+            <param name="bottom">The width, in pixels, of the bottom margin.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.UIStyle.Margins.Add(Xceed.SmartUI.UIStyle.Margins)">
+            <summary>Adds the specified margins to the current Margins structure..</summary>
+            <param name="margins">A Margins structure representing the margins to add to the current Margins structure.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.UIStyle.Margins.Equals(System.Object)">
+            <summary>Tests whether the specified object is a Margins structure and is equivalent to this Margins structure.</summary>
+            <returns>This method returns [LangWord]true if obj is a Margins structure equivalent to this Margins structure; [LangWord]false otherwise.</returns>
+            <param name="obj">The object to test.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.UIStyle.Margins.GetHashCode">
+            <summary>Returns a hash code for this Margins structure</summary>
+            <returns>An integer value that specifies the hash code for this Margins structure</returns>
+        </member>
+        <member name="M:Xceed.SmartUI.UIStyle.Margins.Subtract(Xceed.SmartUI.UIStyle.Margins)">
+            <summary>Subtracts the specified margins.</summary>
+            <param name="margins">A Margins structure representing the margins to subtract.</param>
+        </member>
+        <member name="P:Xceed.SmartUI.UIStyle.Margins.op_Addition">
+            <summary>Adds two specified Margins stuctures.</summary>
+            <returns>A Margins structure representing the resulting of adding margins1 and margins2</returns>
+            <param name="margins1">The first Margins stucture.</param>
+            <param name="margins2">The second Margins stucture.</param>
+        </member>
+        <member name="P:Xceed.SmartUI.UIStyle.Margins.op_Equality">
+            <summary>Tests whether two specified Margins structures are equivalent</summary>
+            <returns>This operator returns [LangWord]true if the two Margins structures are equal; [LangWord]false otherwise.</returns>
+            <param name="margins1">The Margins structure that is to the left of the equality operator.</param>
+            <param name="margins2">The Margins structure that is to the right of the equality operator.</param>
+        </member>
+        <member name="P:Xceed.SmartUI.UIStyle.Margins.op_Inequality">
+            <summary>Tests whether two specified Margins structures are different.</summary>
+            <returns>This operator returns [LangWord]true if the two Margins structures are different; [LangWord]false otherwise.</returns>
+            <param name="margins1">The Margins structure that is to the left of the inequality operator.</param>
+            <param name="margins2">The Margins structure that is to the right of the inequality operator.</param>
+        </member>
+        <member name="P:Xceed.SmartUI.UIStyle.Margins.op_Subtraction">
+            <summary>Subtracts two specified Margins stuctures.</summary>
+            <returns>A Margins structure representing the result of subtracting margins1 and margins2</returns>
+            <param name="margins1">The first Margins stucture.</param>
+            <param name="margins2">The second Margins stucture.</param>
+        </member>
+        <member name="P:Xceed.SmartUI.UIStyle.Margins.Bottom">
+            <summary>Gets or sets the width, in pixels, of the bottom margin.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.UIStyle.Margins.Empty">
+            <summary>Gets an empty Margins structure.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.UIStyle.Margins.IsEmpty">
+            <summary>Gets a boolean value indicating if the margins are empty.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.UIStyle.Margins.Left">
+            <summary>Gets or sets the width, in pixels, of the left margin.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.UIStyle.Margins.Right">
+            <summary>Gets or sets the width, in pixels, of the right margin.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.UIStyle.Margins.Top">
+            <summary>Gets or sets the width, in pixels, of the top margin.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.UIStyle.UIStyleException">
+            <summary>The exception that is thrown by SmartUI when an error occurs.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.UIStyle.UIStyleException.#ctor">
+            <summary>Initializes a new instance of the UIStyleException class with a specified error message.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.UIStyle.UIStyleException.#ctor(System.String)">
+            <summary>Initializes a new instance of the UIStyleException class with a specified error message.</summary>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.UIStyle.UIStyleException.#ctor(System.String,System.Exception)">
+            <summary>Initializes a new instance of the UIStyleException class with a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+            <param name="message">A message that describes the error.</param>
+            <param name="inner">The exception that is the cause of the current exception. If the inner parameter is not [LangWord]null, the current exception is raised in a catch block that handles the inner exception.</param>
+        </member>
+    </members>
+</doc>

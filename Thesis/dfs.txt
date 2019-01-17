@@ -1,0 +1,34 @@
+\documentclass[a4paper, 11pt]{book}
+\usepackage{amsmath, amsxtra, amssymb, latexsym, amscd, amsthm}
+\usepackage[a4paper]{geometry}
+\geometry{verbose, tmargin=2.54cm, bmargin=2cm, lmargin=2.5cm, rmargin=2.5cm, headheight=0.54cm, headsep=0.54cm, footskip=1cm}
+\usepackage{graphicx}
+\usepackage[dvips]{color}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead{International University}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+
+\begin{document}
+\fontsize{22}{25}\selectfont
+{\centering{\color[rgb]{0.0,0.0,0.62}\textbf{ \\
+REPORT\\
+Overview of Barrier option}}\\
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=1]{logo}
+\end{figure}
+\vspace{8cm}
+\fontsize{14}{22}\selectfont
+\begin{flushleft}
+{\color{black}
+Deparment: \\
+Advisor: \\
+Student: \\
+Date: }
+\end{flushleft}
+
+\end{document}

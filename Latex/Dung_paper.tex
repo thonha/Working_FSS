@@ -1,0 +1,433 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage[square,sort&compress, numbers, comma]{natbib}
+\usepackage{amsfonts}
+\usepackage{amssymb,array,graphicx}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{ latexsym, amscd, amstext}
+%\usepackage[dvips]{color}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{natbib}
+\usepackage{mathtools}
+\usepackage{commath}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+	language=R,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
+\thispagestyle{empty}
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{assertion}{Assertion}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}[section]
+\newcommand{\proof}{{\sf Proof. \,\,}}
+\newcommand{\qed}{$\qquad \Box$}
+\newcommand{\pleq}{\approx}
+\newcommand{\vs}{\vspace{.15cm}}
+\newtheorem{proposition}{Proposition}
+
+\setlength{\textwidth}{167mm} \setlength{\textheight}{25cm}
+\setlength{\headheight}{-1.8cm} \setlength{\topmargin}{-0.2cm}
+\setlength{\oddsidemargin}{0.1cm} \setlength{\evensidemargin}{-0.2cm}
+\setlength{\parskip}{1mm} \setlength{\unitlength}{1mm}
+\def\baselinestretch{1}
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\bey}{\begin{eqnarray}}
+\newcommand{\eey}{\end{eqnarray}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\lk}{\left(}
+\newcommand{\rk}{\right)}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+%\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\baselinestretch}{1}
+\def\d{\delta}
+\def\ds{\displaystyle}
+\def\e{{\epsilon}}
+\def\Eb{\bar{E}}
+\def\enorm#1{\|#1\|_2}
+\def\Fp{F^\prime}
+\def\fishpack{{FISHPACK}}
+\def\fortran{{FORTRAN}}
+\def\gmres{{GMRES}}
+\def\gmresm{{\rm GMRES($\Kc$)}}
+\def\Kc{{\cal K}}
+\def\Bc{{\cal B}}
+\def\R{{\mathbb R}}
+\def\Cc{{\cal C}}
+\def\cO{{\cal O}}
+\def\Ec{{\cal E}}
+\def\D{\Delta}
+\def\norm#1{\|#1\|}
+\def\qb{\bar q}
+\def\fb{{\bar f}}
+\def\ub{{\bar u}}
+\def\pb{{\bar p}}
+\def\tb{{\bar t}}
+\def\vb{\bar v}
+\def\mb{\bar m}
+\def\pl{{\partial}}
+\def\p{{\partial}}
+\def\no{{\nonumber}}
+\def\a{{\alpha}}
+\def\b{{\beta}}
+\def\g{{\gamma}}
+\def\l{{\lambda}}
+\def\k{{\kappa}}
+\def\i{{\infty}}
+\def\s{{\sigma}}
+\def\d{\delta}
+\def\n{\nabla}
+\def\r{{\rightarrow}}
+\def\t{\tau}
+\def\div{{\mbox{div}}}
+\def\min{{\mbox{min}}}
+\usepackage{setspace}
+%\doublespacing
+\linespread{1}
+\usepackage{sectsty}
+\sectionfont{\large}
+\newcommand{\myblue}[1]{{\color{black}{#1}}}
+\newcommand{\my}[1]{{\color{blue}{#1}}}
+\begin{document}
+
+\newpage
+%\title{An integral approach for pricing American standard stock loan with finite majurity}
+
+\title{Pricing European down-and-out call options: \\
+an application to Vietnamese financial derivatives market}
+%\author{Nhat-Tan Le  \and Duy-Minh Dang
+%	\and Minh-Man Ngo
+\author{ Ta Thi Phuong Dung 
+	and Le Nhat Tan
+	\\Department of Mathematics,\\
+	 International University,
+	 Vietnam National University, \\
+	 Quarter 6, Linh Trung Ward, Thu Duc District, Ho Chi Minh City. }
+
+%\newcommand{\Addresses}{{% additional braces for segregating \footnotesize
+%		\bigskip
+%		\footnotesize
+%		Nhat-Tan Le\\
+%		\textsc{Department of Mathematics, International University, Vietnam National University, Quarter 6, Linh Trung Ward, Thu Duc District, Ho Chi Minh City, Viet Nam}\par\nopagebreak
+%		\textit{E-mail address}, N.~T.~Le: \texttt{lenhattan@muce.edu.vn};
+%		
+%		\medskip
+%		
+%%		Duy-Minh Dang\\
+%%		\textsc{School of Mathematics and Physics,The University of Queensland,St Lucia, Brisbane 4072, Australia.}\par\nopagebreak
+%%		\textit{E-mail address}, D.~M. Dang: \texttt{duyminh.dang@uq.edu.au};
+%%			\medskip
+%		
+%		Minh-Man Ngo\\
+%		\textsc{John von Neumann (JVN) Institute,Vietnam National University.}\par\nopagebreak
+%		\textit{E-mail address}, M.~M. Ngo: \texttt{man.ngo@jvn.edu.vn}
+%	}}
+	\date{\today}
+	\maketitle
+%\vspace{-1.5cm}
+\begin{abstract}
+ In this paper, we present an application of \citet{Merton73}'s pricing formula of European down-and-out call options under the Black-Scholes framework. We first derive the formula using a probabilistic approach. We then show in detail how to apply the formula to price European down-and-out call options written on Vietnamese stocks, say FPT stock. Our case-study research can serve as a good start for future researches on Vietnamese option market, which is going to develop soon.
+\end{abstract}
+\section{Introduction}
+In Vietnam, derivatives market has just started officially very recently, in August, 2017, with its first products: futures contracts on VN30 index. Although the derivatives market is very new to Vietnamese investors, it is expected to strongly develop soon and will be one of the main pillars of Vietnamese financial market. In fact, trading volume on futures contracts on VN30 index is increasing significantly over last few months, and is expected to increase with an even faster rate. 
+This fact shows great interest of investors to financial derivatives market.
+
+One important type of financial derivatives products is options. In Vietnam, covered call (a type of call options) will be traded soon, as planed by the Vietnamese government. Options will bring greater leverage to speculators and bring more risk management tools for hedgers. Understanding clearly the pricing formulas for options is thus very urgent for investors investing in Vietnamese financial market. 
+
+
+Among options, barrier options are one of the most common ones used in foreign exchange, interest rate and equity option markets in the world. One of the reasons for the popularity of barrier options is that they provide a more flexible and cheaper way for hedging and speculating than their vanilla option counterparts. For instance,  speculators can reduce costs with a down-and-out call option compared with the corresponding vanilla call option if the price of the underlying asset remains above a certain price level during the option life. 
+
+The pricing formula for European down-and-out call options under the Black-Scholes framework was first derived by \citet{Merton73}, using the heat equation approach.
+This study derives the pricing formula using a probabilistic approach. The formula is then used to calculate the call option price written on FPT stock as an illustration for application. 
+
+%%% In addition, significant effects of some important parameters on the stock loan prices and the optimal exercise boundaries can be illustrated through selected numerical results.}
+\section{The formula's derivation }
+A down-and-out call option entitles the holder the right to buy the underlying with the exercise price $K$ at the expiry time $T$ if the underlying price has not touched a given price level $B$, called the barrier, during the option life time $[0, T]$. At any time $t$, if $S_t\le B$ then the option is knocked out, i.e.,  immediately becomes worthless.
+We thus only consider the case $S_t\hspace{0.1cm} > \hspace{0.1cm} B$. We also assume $B \leq K$, as the call option holder is more likely to cease the exercise right when the asset falls below the strike price $K$. 
+
+Under the Black-Scholes framework, the value of a European down-and-out call options depends on the asset price (paying no dividend) with risk-neutral dynamics given by a Geometric Browninan motion: 
+\beq dS_t=rS_tdt+\sigma S_t dZ_t,\label{1.2.1}\eeq
+where $\{S_t: 0\leq t\leq T\}$ is the stock price process, $\{Z_t: 0\leq t\leq T\}$ is a standard Brownian motion with respect to the risk-neutral probability space $(\Omega, \mathcal F, (\mathcal F_t)_{t\ge 0},\mathbb Q)$. Here $T, r, \sigma$, which are positive constants, represent for the expiry time, the risk-free interest rate and the volatility rate, respectively.
+The price of a European down-and-out-call option at time $t$, denoted by $C_{d/o}(S_t,t)$, satisfies the Black-Scholes equation \cite{Merton73}:
+\begin{align*}
+	\dfrac{\partial C_{d/o}}{\partial t}(S_t, t)+rS_t\dfrac{\partial C_{d/o}}{\partial S_t}(S_t, t)+\dfrac{1}{2}\sigma^2S_t^2\dfrac{\partial^2C_{d/o}}{\partial S^2}(S_t, t)-rC_{d/o}(S_t, t)=0.
+\end{align*}
+
+From the Feynman-Kac theorem \cite[p. 268]{shreve2004stochastic}, $C_{d/o}(S_t,t)$ can be computed from the formula: $$C_{d/o}(S_t,t)= e^{-r(T-t)}\mathbb{E}^\mathbb{Q}[C_{d/o}(S_T,T)|\mathcal{F}_t],$$
+where $\mathbb{E}^\mathbb{Q}$ represents the expectation under the risk neutral measure $\mathbb Q$, and $C_{d/o}(S_T, T)$ is the option pay-off:
+\begin{align*}
+	C_{d/o}(S_T, T)=\max\{S_T-K, 0\}\mathcal{I}_{\underset{t\leq u\leq T}\min S_u > B},
+\end{align*}
+with $\mathcal{I}_{\underset{t\leq u\leq T}\min S_u > B}$ is the indicator of the set $\{S_u > B\}$, i.e., $$\mathcal{I}_{\underset{t\leq u\leq T}\min S_u > B}=\begin{cases}
+1,~~~\text{if}~~~\underset{t\leq u\leq T}\min S_u > B\\
+0,~~~\text{if}~~~\underset{t\leq u\leq T}\min S_u \le B
+\end{cases}.$$
+In other words, the option holder will receive at expiry $T$ the positive difference of $S_T$ and $K$ if $S_T>K$ and the barrier has not been hit up to time $T$.
+
+Solving the stochastic differential equation \eqref{1.2.1}, we obtain:
+\begin{align}
+	\begin{split}
+		S_T=S_te^{\left(r -\frac{1}{2}\sigma^2 \right)(T-t)+\sigma W_{T-t}^\mathbb{Q}}=
+	S_te^{\sigma \widehat{W}_{T-t}}
+	\end{split} \label{eq4.1.1}
+\end{align} 
+where $\widehat{W}_{T-t}=\nu (T-t)+W_{T-t}^\mathbb{Q}$ and $\nu=\dfrac{1}{\sigma}(r-\dfrac{1}{2}\sigma^2)$. By defining
+$
+	m_{T-t}=\underset{t\leq u \leq T}\min\widehat{W}_{u-t}
+$
+we can express 
+$$
+	\underset{t\leq u \leq T}\min S_u=\underset{t\leq u \leq T}\min S_te^{\sigma \widehat{W}_{u-t}} 
+	=S_te^{\sigma \underset{t\leq u \leq T}\min\widehat{W}_{u-t}}
+	=S_te^{\sigma 	m_{T-t}}.
+$$
+As a result, the payoff can be expressed as: 
+\begin{align*}
+	&C_{d/o}(S_T,T)=\max\{S_T-K, 0\}\mathcal{I}_{\{\underset{t\leq u\leq T}\min S_u > B\}}
+	=\max\{S_te^{\sigma \widehat{W}_{T-t}}-K, 0\}\mathcal{I}_{\{S_te^{\sigma 	m_{T-t}} > B, \}}\\
+	&=(S_te^{\sigma \widehat{W}_{T-t}}-K)\mathcal{I}_{\{S_te^{\sigma m_{T-t}} > B, S_te^{\sigma \widehat{W}_{T-t}}> K\}}
+	=(S_te^{\sigma \widehat{W}_{T-t}}-K)\mathcal{I}_{\{m_{T-t}>\frac{1}{\sigma}\log \left(\frac{B}{S_t}\right), \widehat{W}_{T-t}>\frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) \}}
+\end{align*}
+The down-and-out call option price at time $t$ is
+\begin{align*}
+	C_{d/o}(S_t,t;K,B,T) &= e^{-r(T-t)}\mathbb{E}^\mathbb{Q}\left[C_{d/o}(S_T,T)|\mathcal{F}_t\right]\\
+	&=e^{-r(T-t)}\mathbb{E}^\mathbb{Q}\left[(S_te^{\sigma \widehat{W}_{T-t}}-K)\mathcal{I}_{\{m_{T-t}>\frac{1}{\sigma}\log\left(\frac{B}{S_t}\right), \widehat{W}_{T-t}>\frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) \}}\bigg|\mathcal{F}_t\right]\\
+	&=e^{-r(T-t)}\displaystyle \int_{\frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) }^{\infty}\displaystyle \int_{\frac{1}{\sigma}\log\left(\frac{B}{S_t}\right) }^{\infty}(S_te^{\sigma x}-K)f^\mathbb{Q}_{m_{T-t},\widehat{W}_{T-t}}(a, x)dadx
+\end{align*}
+where $f^\mathbb{Q}_{m_u,\widehat{W}_u}(m, \omega)$ is the joint probability density function of $(m_u, \widehat{W}_u)$ as given as in \citet[p. 212]{StochasticEric}:
+$$f^\mathbb{Q}_{m_u,\widehat{W}_u}(a, x)= \begin{cases}
+\dfrac{2(x-2a)}{u\sqrt{2\pi u}}\exp(\nu x-\dfrac12\nu^2u-\dfrac{(2a-x)^2}{2u}),~~~ a< 0, x\ge a,\\ 
+0, ~~~~\text{otherwise}.
+\end{cases}$$
+Thus, we have:
+$$f^\mathbb{Q}_{m_{T-t},\widehat{W}_{T-t}}(a, x)= \begin{cases}
+\dfrac{2(x-2a)}{(T-t)\sqrt{2\pi (T-t)}}\exp(\nu x-\dfrac12\nu^2(T-t)-\dfrac{(2a-x)^2}{2(T-t)}),~~~ a< 0, x\ge a,\\ 
+0, ~~~~\text{otherwise}.
+\end{cases}$$
+%We need to find out this function which is necessary for deriving the European barrier call option. \\ [0.5cm]
+%Given $m_t=\displaystyle \min_{0\leq t\leq T} W_t =-\displaystyle \max_{0\leq t\leq T}\{-W_t\}$ we have for $m\leq 0$ and $m\leq \omega$,
+%\begin{align*}
+%	\mathbb{P}(m_t\geq m, W_t \geq \omega)&=\mathbb{P}\left(-\displaystyle \max_{0\leq t\leq T}\{-W_t\}\geq m, W_t\geq \omega\right)\\
+%	&=\mathbb{P}\left(-\displaystyle \max_{0\leq t\leq T}\{-W_t\}\geq m, -W_t\leq -\omega\right)\\
+%	&= \mathbb{P}\left(\displaystyle \max_{0\leq t\leq T}{\widetilde{W}_t}\leq -m, \widetilde{W}_t\leq -\omega\right)
+%\end{align*}
+%where the last equality comes from the symmetric property of the standard Wiener process such that $\widetilde{W}_t=-W_t \sim \mathcal{N}(0, t)$ is also a standard Wiener process.\\
+%Since
+%\begin{align*}
+%	\mathbb{P}(\widetilde{W}_t\leq -\omega)=\mathbb{P}\left(\displaystyle \max_{0\leq t\leq T}{\widetilde{W}_t}\leq -m, \widetilde{W}_t\leq -\omega\right)+\mathbb{P}\left(\displaystyle \max_{0\leq t\leq T}{\widetilde{W}_t}\geq -m, \widetilde{W}_t\leq -\omega\right)
+%\end{align*}
+%We have
+%\begin{align}
+%\begin{split}
+%	\mathbb{P}\left(\displaystyle \max_{0\leq t\leq T}{\widetilde{W}_t}\geq -m, \widetilde{W}_t\leq -\omega\right)&=	\mathbb{P}\left(\displaystyle \min_{0\leq t\leq T}W_t \leq m, W_t\geq \omega\right)\\
+%	&=\mathbb{P}(\tilde{W}_t\hspace{0.1cm} >\hspace{0.1cm} 2m-\omega)\\
+%	&=\Phi\left(\dfrac{2m-\omega}{\sqrt{t}}\right)
+%	\end{split} \label{negative}
+%\end{align} 
+%Since T is finite, from Reflection Princciple and the strong Markov property both $W_t$ and $\tilde{W}_t$ are standard Wiener processes and independent which means that they have the same distribution.\\
+%We tend to the Brownian motion $W_t$ which has a downstream barrier $m$ over the period
+%$[0, T]$ so that $m_t \geq m$, we would like to derive the joint distribution
+%\begin{align}
+%		\mathbb{P}(m_t\geq m, W_t \geq \omega)&=\mathbb{P}\left(\displaystyle \max_{0\leq t\leq T}{\widetilde{W}_t}\leq -m, \widetilde{W}_t\leq -\omega\right) \nonumber\\
+%		&=\mathbb{P}(\widetilde{W}_t\leq -\omega)-\mathbb{P}\left(\displaystyle \max_{0\leq t\leq T}{\widetilde{W}_t}\geq -m, \widetilde{W}_t\leq -\omega\right) \nonumber \label{eq601}\\
+%		&=\Phi \left(-\dfrac{\omega}{\sqrt{t}}\right)-\Phi\left(\dfrac{2m-\omega}{\sqrt{t}}\right)
+%\end{align}
+%To obtain the joint probability density function by definition,
+%\begin{align*}
+%	f_{m_t,W_t}(m, \omega)&=\dfrac{\partial^2}{\partial m \partial \omega}\mathbb{P}(m_t\geq m, W_t \geq \omega)\\
+%	&=\dfrac{\partial^2}{\partial m \partial \omega}\left[\Phi\left(-\dfrac{\omega}{\sqrt{t}}\right)-\Phi\left(\dfrac{2m-\omega}{\sqrt{t}}\right)\right]\\
+%	&=\dfrac{\partial}{\partial m}\left[\dfrac{\partial}{\partial\left(-\frac{\omega}{\sqrt{t}}\right)}\Phi\left(-\dfrac{\omega}{\sqrt{t}}\right)\dfrac{\partial}{\partial \omega}\Phi\left(-\dfrac{\omega}{\sqrt{t}}\right)-\dfrac{\partial}{\partial\left(\frac{2m-\omega}{\sqrt{t}}\right)}\Phi\left(\dfrac{2m-\omega}{\sqrt{t}}\right)\dfrac{\partial}{\partial \omega}\Phi\left(\dfrac{2m-\omega}{\sqrt{t}}\right)\right]\\
+%	&=\dfrac{\partial}{\partial m}\left[-\dfrac{1}{\sqrt{2\pi t}}e^{-\frac{1}{2}\left(\frac{\omega}{\sqrt{t}}\right)^2}+\dfrac{1}{\sqrt{2\pi t}}e^{-\frac{1}{2}\left(\frac{2m-\omega}{\sqrt{t}}\right)^2}\right]\\
+%	&=\dfrac{-2(2m-\omega)}{t\sqrt{2\pi t}}e^{-\frac{1}{2}\left(\frac{2m-\omega}{\sqrt{t}}\right)^2}
+%\end{align*}
+%Moreover, for $m\geq 0$, since $m_t\leq W_0=0$ so $\mathbb{P}(m_t\geq m, W_t\geq \omega)=0$.\\
+%We obtain the joint probability distribution of $(m_t, W_t)$ under $\mathbb{Q}$ is
+%\begin{align*}
+%f^\mathbb{Q}_{m,W}(m, \omega)= \begin{cases}
+%\dfrac{-2(2m-\omega)}{t\sqrt{2\pi t}}e^{-\frac{1}{2t}(2m-\omega)^2} \hspace{0.2cm} &m\leq 0,m\leq \omega   \nonumber \\
+%	0 &\text{otherwise.}  \nonumber
+%\end{cases}
+%\end{align*}
+%In order to find the joint cumulative distribution function of $(m_t, W_t)$, we consider Girsanov’s theorem there exists an equivalent probability
+%measure $\mathbb{Q}$ on the filtration $\mathcal{F}_t$, $0 \leq s \leq t$ defined by the Radon–Nikody$^\prime$m derivative
+%\begin{align*}
+%	Z_s&=e^{-\int_{0}^{s}\alpha dW_u-\frac{1}{2}\int_{0}^{s}\alpha^2du}\\
+%	&=e^{-\alpha W_s-\frac{1}{2}\alpha^2s}\\
+%	&=e^{-\alpha(W_t^\mathbb{Q}-\alpha s)-\frac{1}{2}\alpha^2 s }\\
+%	&=e^{-\alpha W_t^\mathbb{Q}+\frac{1}{2}\alpha^2s}
+%\end{align*}
+%Let's  consider the joint CDF of $(m_t, W_t)$
+%\begin{align*}
+%		\mathbb{P}(m_t\leq m, W_t \leq \omega)&=\mathbb{E}^\mathbb{P}(\mathcal{H}_{\{m_t\leq m, W_t \leq \omega\}})\\
+%		&=\mathbb{E}^\mathbb{Q}(Z_t^{-1}\mathcal{H}_{\{m_t\leq m, W_t \leq \omega\}})\\
+%		&=\mathbb{E}^\mathbb{Q}(e^{\nu W_t^\mathbb{Q}-\frac{1}{2}\nu^2t}\mathcal{H}_{\{m_t\leq m, W_t \leq \omega\}})\\
+%		&=\displaystyle \int_{-\infty}^{\omega} \displaystyle \int_{-\infty}^{m}e^{\nu \omega-\frac{1}{2}\nu^2 t}f_{m_t, W_t}^\mathbb{Q}(u, \nu)dud\nu. 
+%\end{align*}
+%Therefore, 
+%\begin{align*}
+%f^\mathbb{Q}_{m_t,W_t}(m, \omega)&= \dfrac{\partial^2}{\partial m \partial \omega}\mathbb{P}(m_t\leq m, W_t \leq \omega)\\
+%&=\begin{cases}
+%\dfrac{-2(2m-\omega)}{(T-t)\sqrt{2\pi (T-t)}}e^{\nu\omega-\frac{1}{2}\nu^2(T-t)-\frac{1}{2}\left(\frac{2m-\omega}{\sqrt{T-t}}\right)^2} \hspace{0.2cm} &m\leq 0,m\leq \omega   \nonumber \\
+%0 &\text{otherwise.}  \nonumber
+%\end{cases}
+%\end{align*}
+For convenience, we recall that $\widehat{W}_{T-t}=\nu (T-t)+W_{T-t}^\mathbb{Q}$ and $\nu=\dfrac{1}{\sigma}(r-\dfrac{1}{2}\sigma^2)$.
+The option price can now be computed as:
+\begin{eqnarray*}
+	&&C_{d/o}(S_t,t;K,B,T
+	=e^{-r(T-t)}\displaystyle \int_{\frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) }^{\infty}\displaystyle \int_{\frac{1}{\sigma}\log\left(\frac{B}{S_t}\right) }^{\min(0,x)}\dfrac{2(S_te^{\sigma x}-K)(x-2a)}{(T-t)\sqrt{2\pi (T-t)}}e^{\nu x-\dfrac12\nu^2(T-t)-\frac{(2a-x)^2}{2(T-t)}}dadx\\
+	&&=e^{-r(T-t)}\displaystyle \int_{\frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) }^{\infty}\displaystyle \int_{\frac{1}{\sigma}\log\left(\frac{B}{S_t}\right) }^{\min(0,x)}\dfrac{(S_te^{\sigma x}-K)}{\sqrt{2\pi (T-t)}}d(e^{\nu x-\dfrac12\nu^2(T-t)-\frac{(2a-x)^2}{2(T-t)}})dx\\
+	&&=e^{-r(T-t)}\displaystyle \int_{\frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) }^{\infty}\displaystyle \dfrac{(S_te^{\sigma x}-K)}{\sqrt{2\pi (T-t)}}e^{\nu x-\dfrac12\nu^2(T-t)-\frac{(2a-x)^2}{2(T-t)}}\bigg|_{\frac{1}{\sigma}\log\left(\frac{B}{S_t}\right)}^{\min(0,x)}dx\\
+	&&=e^{-r(T-t)}\displaystyle \int_{\frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) }^{\infty}\displaystyle \dfrac{(S_te^{\sigma x}-K)}{\sqrt{2\pi (T-t)}}e^{\nu x-\dfrac12\nu^2(T-t)}\left[e^{-\frac{(2\min(0,x)-x)^2}{2(T-t)}}-e^{-\frac{(\frac{2}{\sigma}\log\left(\frac{B}{S_t}\right)-x)^2}{2(T-t)}} \right]dx\\
+	&&=e^{-r(T-t)}\displaystyle \int_{\frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) }^{\infty}\displaystyle \dfrac{(S_te^{\sigma x}-K)}{\sqrt{2\pi (T-t)}}e^{\nu x-\dfrac12\nu^2(T-t)}\left[e^{-\frac{x^2}{2(T-t)}}-e^{-\frac{(\frac{2}{\sigma}\log\left(\frac{B}{S_t}\right)-x)^2}{2(T-t)}} \right]dx\\
+	&&=S_tI_1-KI_2-(S_tI_3-KI_4),
+\end{eqnarray*}
+where
+\begin{eqnarray*}
+	&&I_1=\dfrac{1}{\sqrt{2\pi (T-t)}}\displaystyle \int_{\frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) }^{\infty}e^{-r(T-t)+\sigma x+ \nu x-\frac{1}{2}\nu^2(T-t)-\frac{1}{2}\left(\frac{x}{\sqrt{T-t}}\right)^2}d x\\
+	&&I_2=\dfrac{1}{\sqrt{2\pi (T-t)}}\displaystyle \int_{ \frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) }^{\infty}e^{-r(T-t)+ \nu x-\frac{1}{2}\nu^2(T-t)-\frac{1}{2}\left(\frac{ x}{\sqrt{T-t}}\right)^2}d x\\
+		&&I_3=\dfrac{1}{\sqrt{2\pi (T-t)}}\displaystyle \int_{ \frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) }^{\infty}e^{-r(T-t)+\sigma  x+ \nu x-\frac{1}{2}\nu^2(T-t)-\frac{1}{2}\left(\frac{\frac{2}{\sigma}\log\frac{B}{S_t}- x}{\sqrt{T-t}}\right)^2}d x\\
+	&&I_4=\dfrac{1}{\sqrt{2\pi (T-t)}}\displaystyle \int_{ \frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) }^{\infty}e^{-r(T-t)+ \nu x-\frac{1}{2}\nu^2(T-t)-\frac{1}{2}\left(\frac{\frac{2}{\sigma}\log\frac{B}{S_t}- x}{\sqrt{T-t}}\right)^2}d x
+\end{eqnarray*}
+The computation of $I_1, I_2, I_3, I_4$ will ultimately lead to the computation of integrals having the form: 
+$	\dfrac{1}{\sqrt{2\pi T}}\displaystyle \int_{L}^{U}e^{a x-\frac{1}{2}(\frac{ x}{\sqrt{T}})^2}d x$. We thus now focus on the latter.
+\begin{align*}
+	\dfrac{1}{\sqrt{2\pi T}}\displaystyle \int_{L}^{U}e^{a x-\frac{1}{2}(\frac{ x}{\sqrt{T}})^2}d x=\dfrac{1}{\sqrt{2\pi T}}e^{\frac{1}{2}a^2T}\displaystyle \int_{L}^{U}e^{-\frac{1}{2}\left(\frac{ x}{\sqrt{T}}-a\sqrt{T}\right)^2}d x.
+\end{align*}
+Let $y=\dfrac{ x}{\sqrt{T}}-a\sqrt{T}$, we obtain:
+\begin{align*}
+	\dfrac{1}{\sqrt{2\pi T}}\displaystyle \int_{L}^{U}e^{a x-\frac{1}{2}(\frac{ x}{\sqrt{T}})^2}d x
+	&=e^{\frac{1}{2}a^2T}\dfrac{1}{\sqrt{2\pi }}\displaystyle \int_{\frac{L-aT}{\sqrt{T}}}^{\frac{U-aT}{\sqrt{T}}}e^{-\frac{1}{2}y^2}dy\\
+	&=e^{\frac{1}{2}a^2T}\dfrac{1}{\sqrt{2\pi }}\left[\displaystyle \int_{-\infty}^{\frac{U-aT}{\sqrt{T}}}e^{-\frac{1}{2}y^2}dy-\displaystyle \int_{-\infty}^{\frac{L-aT}{\sqrt{T}}}e^{-\frac{1}{2}y^2}dy\right]\\
+	&=e^{\frac{1}{2}a^2T}\left[\Phi\left(\dfrac{U-aT}{\sqrt{T}}\right)-\Phi\left(\dfrac{L-aT}{\sqrt{T}}\right)\right],
+\end{align*}
+with
+ $\Phi(x)=\ds\int_{-\infty}^xe^{-y^2/2}dy$ is the cumulative distribution of a standard normal random variable.
+Using the above result, we can compute $I_1$ as follows:
+\begin{align*}
+	I_1&=\dfrac{1}{\sqrt{2\pi (T-t)}}e^{-r(T-t)-\frac{1}{2}\nu^2(T-t)}\displaystyle \int_{\frac{1}{\sigma}log\left(\frac{K}{S_t}\right) }^{\infty}e^{(\sigma+ \nu) x-\frac{1}{2}\left(\frac{ x}{\sqrt{T-t}}\right)^2}d x\\
+	&=e^{-r(T-t)-\frac{1}{2}\nu^2(T-t)+\frac{1}{2}(\nu+\sigma)^2(T-t)}\left[\Phi(\infty)-\Phi\left(\dfrac{\frac{1}{\sigma}\log(K/S_t)-(\nu +\sigma)(T-t)}{\sqrt{T-t}}\right)\right]\\
+&=e^{-r(T-t)-\frac{1}{2}\left(\frac{2r-\sigma^2}{2\sigma}\right)^2(T-t)+\frac{1}{2}\left(\frac{2r+\sigma^2}{2\sigma}\right)^2(T-t)}\left[1-\Phi\left(-\dfrac{\log(S_t/K)+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)\right]\\
+	&=\Phi \left(\dfrac{\log(S_t/K)+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)
+\end{align*}
+Similarly we can deduce
+\begin{align*}
+	I_2&=e^{-r(T-t)}\Phi \left(\dfrac{\log(S_t/K)+(r-\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)
+	\end{align*}
+	The computation of $I_3$ and $I_4$ is a bit more complicated as shown below:
+	\begin{align*}
+	I_3=&\dfrac{1}{\sqrt{2\pi (T-t)}}e^{-r(T-t)-\frac{1}{2}\nu^2(T-t)-\frac{2}{\sigma^2(T-t)}\log^2\left(\frac{B}{S_t}\right)}
+	\times\displaystyle \int_{\frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) }^{\infty}e^{\left[\nu+\sigma+\frac{2}{\sigma(T-t)}\log\left(\frac{B}{S_t}\right)\right] x-\frac{1}{2}\left(\frac{ x}{\sqrt{T-t}}\right)^2}d x\\
+	=&e^{-r(T-t)-\frac{1}{2}\nu^2(T-t)-\frac{2}{\sigma^2(T-t)}\log^2\left(\frac{B}{S_t}\right)+\frac{1}{2}\left[\nu+\sigma+\frac{2}{\sigma(T-t)}\log\left(\frac{B}{S_t}\right)\right]^2(T-t)}\\
+	&\times \left[\Phi(\infty)-\Phi\left(\dfrac{\frac{1}{\sigma}\log(K/S_t)-\left[\nu+\sigma+\frac{2}{\sigma(T-t)}\log(B/S_t)\right](T-t)}{\sqrt{T-t}}\right)\right]\\
+	=&\left(\dfrac{S_t}{B}\right)^{-1-\frac{2r}{\sigma^2}}\Phi\left(\dfrac{\log(B^2/(S_tK))+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)
+	\end{align*}
+	\begin{align*}I_4=&\dfrac{1}{\sqrt{2\pi (T-t)}}e^{-r(T-t)-\frac{1}{2}\nu^2(T-t)-\frac{2}{\sigma^2(T-t)}\left(\log\left(\frac{B}{S_t}\right)\right)^2}\times\displaystyle \int_{ x =\frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) }^{\infty}e^{\left[\nu+\frac{2}{\sigma(T-t)}\log\left(\frac{B}{S_t}\right)\right] x-\frac{1}{2}\left(\frac{ x}{\sqrt{T-t}}\right)^2}d x\\
+	=&e^{-r(T-t)-\frac{1}{2}\nu^2(T-t)-\frac{2}{\sigma^2(T-t)}\left(\log\left(\frac{B}{S_t}\right)\right)^2+\frac{1}{2}\left[\nu+\frac{2}{\sigma(T-t)}\log\left(\frac{B}{S_t}\right)\right]^2(T-t)}\\
+	&\times \left[\Phi(\infty)-\Phi\left(\dfrac{\frac{1}{\sigma}\log(K/S_t)-\left[\nu+\frac{2}{\sigma(T-t)}\log(B/S_t)\right](T-t)}{\sqrt{T-t}}\right)\right]\\
+	=&e^{-r(T-t)}\left(\dfrac{S_t}{B}\right)^{-1-\frac{2r}{\sigma^2}}\left[1-\Phi\left(\dfrac{\log(S_tK/B^2)-(r-\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)\right]\\
+	=&e^{-r(T-t)}\left(\dfrac{S_t}{B}\right)^{-1-\frac{2r}{\sigma^2}}\Phi\left(\dfrac{\log(B^2/(S_tK))+(r-\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)
+\end{align*}
+Therefore, 
+\begin{align}\label{main}
+	C_{d/o}\left(S_t,t;K,B,T\right)
+=	C_{bs}\left(S_t,t;K,T\right)-\left(\dfrac{S_t}{B}\right)^{\lambda}C_{bs}\left(\dfrac{B^2}{S_t},t;K,T\right)
+\end{align}
+where 
+$
+	C_{bs}(S_t,t;K,T)=S_t\Phi(d_1)-Ke^{-r(T-t)}\Phi(d_2)$, with
+	$d_1=\dfrac{\log(S_t/K)+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}$,\\
+	$d_2=d_1-\sigma\sqrt{T-t}$ and  $\lambda = 1-\dfrac{2r}{\sigma^2}$.
+
+
+\section{Application to Vietnamese financial market}
+In this section, we show how to apply the formula \eqref{main} to obtain the price of a European down-and-out call option written on Vietnamese stocks. In particular, we choose FPT stock as an example for illustration.
+More specifically, the daily adjusted closing prices of FPT stock from December 12, 2006 to November 16, 2018 are used. The data can be downloaded from the free source:
+\href{url}{https://www.cophieu68.vn/export.php}.  
+
+We price a European call option written on FPT stock with the starting date on November 16, 2018 and expiring in the next 6 months. The parameters for the option are assumed to be given as in the following table: 
+\begin{table}[!htp]
+	\centering
+	\begin{tabular}{|l|c|r|}
+		\hline
+		$S_0$ & Stock price at inception   & $42,750$ VND\\
+		\hline
+		$K$ & Strike price  & $45,000$ VND\\
+		\hline
+		$B$ & Down and out barrier price & $38,000$ VND\\
+		\hline
+		$r$ & Annual risk-free interest rate  & $7\%$ \\
+		\hline
+		$T$ & Option expiration (in years)  & 0.5\\
+		\hline	
+	\end{tabular}
+	\caption{Option parameters}
+	\label{B4.1}
+\end{table}
+To apply the formula \eqref{main}, we still need one more input: the volatility of the FPT stock. It should be noted that the volatility is the only unobservable input. We now estimate this input by using the historical volatility of the stock. More specifically, we calculate
+the annualized daily volatility of FPT returns over the data period. Note that to
+annualize the daily volatility, we multiply the standard deviation of daily returns by
+the square root of 252 (a year is assumed to have 252 trading days). The following R code is used to obtain the historical volatility:
+\begin{lstlisting}
+df <- read.csv(file="excel_fpt.csv", head=T,stringsAsFactors = F)
+df <- df[,c(2:7)]
+date <- as.Date(as.character(df$X.DTYYYYMMDD.), format="%Y%m%d")
+class(date)
+df <- cbind(date,df)
+df <- df[,-2]
+df <- df[order(df$date),]
+names(df) <- paste(c("date", "Open", "High", "Low", "Close", "Volume"))
+library(xts)
+df <- xts(df[,2:6],order.by = df[,1])
+volatility<-df[,4]
+volatility$Ret<-diff(log(volatility$Close))
+volatility<-volatility[-1,]
+hist.vol<-sd(volatility$Ret)*sqrt(252)
+vol <- hist.vol
+\end{lstlisting}
+As a result of running the above R code, we obtain the annual volatility of FPT $\sigma = 32.5\%$. We are now ready to compute the value of the European down-and-out call option by using the following R code:
+\begin{lstlisting}
+BS_call <-  function (S0,K,T,r,sigma){
+d1 <- (log(S0/K)+(r+0.5*sigma^2)*T)/(sigma*sqrt(T))
+d2 <- d1- sigma*sqrt(T)
+opt.val <- S0*pnorm(d1)-K*exp(-r*T)*pnorm(d2)
+return(opt.val)}
+down_out_call <- function (S0,K, T, r, sigma,B){
+lamda <- 1-2*r/sigma^2
+opt.val <- BS_call(S0,K,T,r,sigma)-(S0/B)^lamda*BS_call(B^2/S0,K,T,r,sigma)
+return(opt.val)}
+down_out_call(42750,45000, 0.5, 0.07, 0.325, 38000)
+\end{lstlisting}
+As a result, we obtain the European down-and-out call option price as $3,018.038$ (VND). Compare with the price of the corresponding vanilla call, $3601.607$ (VND), the barrier option is cheaper $16.2\%$. This is because the barrier option holder is willing to cease the exercise right if the stock price falls below $38,000$ (VND) during the option life.
+\section{Conclusion}
+ In this paper, the \citet{Merton73}'s pricing formula of European down-and-out call options under the Black-Scholes framework is derived, using a probabilistic approach. The application of the formula to price European down-and-out call options written on FPT stock  is presented in detail. The R code is given to show how to: manipulate data, obtain the historical volatility of the stock and compute the option price. Our future research will be on the pricing formulas of other exotic options.
+\bibliographystyle{apalike}
+\linespread{0.1}
+{\small \bibliography{review3}}
+\end{document}

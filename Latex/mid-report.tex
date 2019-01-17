@@ -1,0 +1,73 @@
+\documentclass[12pt,a4paper,oneside,titlepage]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{cases}
+\numberwithin{equation}{section}
+\usepackage{mathtools}
+\usepackage{commath}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[unicode]{hyperref}
+\setlength{\parskip}{1em}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+	\begin{large}
+		INTERNATIONAL UNIVERSITY
+	\end{large} \\
+	\begin{large}
+		DEPARTMENT OF MATHEMATICS
+	\end{large} \\
+	\textbf{-----------------------------------------}\\[1cm]
+		\begin{figure}[htp]
+			\begin{center}
+				\includegraphics[scale=.6]{logo}
+			\end{center}
+			\label{reflogo}
+		\end{figure}
+
+\vspace{1.5cm}	
+	{\fontsize{38pt}{1}\selectfont THESIS REPORT}\\[0.6cm]
+	{\fontsize{23pt}{1}\selectfont Pricing European barrier options with rebates} %cỡ chữ 32, chỡ dong 1pt,\selectfont latex hiểu đoạn văn bản ngay phía sau áp dung 32, 1pt
+\end{center}
+
+\vspace{1.5cm}
+\hspace{6cm} Author\hspace{2pt}: \hspace{4pt}
+\textbf{\parbox[t]{5cm}{    
+		Ta Thi Phuong Dung
+}}\\[1.5pt]
+
+\hspace{6cm} Supervisor\hspace{2pt}:\hspace{4pt} 
+\textbf{\parbox[t]{5cm}{    
+		Le Nhat Tan
+}}
+
+\vspace{2cm}
+\begin{center}
+	{\fontsize{12pt}{1}\selectfont 	Ho Chi Minh City, Vietnam}\\
+	{\fontsize{12pt}{1}\selectfont \today}
+\end{center}
+
+	\pagenumbering{roman} 
+	\tableofcontents
+	\listoffigures 
+		\thispagestyle{empty}
+	%\listoftables
+	
+	\pagenumbering{arabic}
+	\setcounter{page}{0}
+	\include{part0}	
+	\include{part1}
+	\include{part6}
+	\include{part2}
+%	\include{part5}
+
+	
+	
+\end{document}

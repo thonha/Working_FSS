@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <RptData>
+    <FULLNAME>TM</FULLNAME>
+    <ORDERID>05</ORDERID>
+    <DANH_MUC>TM</DANH_MUC>
+    <SYMBOL>Tien</SYMBOL>
+    <TRADEPLACE>000</TRADEPLACE>
+    <KY_TRUOC>2018-01-16T00:00:00+07:00</KY_TRUOC>
+    <KY_NAY>2018-05-16T00:00:00+07:00</KY_NAY>
+    <CURRDATE>2018-05-16T00:00:00+07:00</CURRDATE>
+  </RptData>
+</NewDataSet>

@@ -1,0 +1,21 @@
+\begin{thebibliography}{}
+
+\bibitem[Chin et~al., 2014]{StochasticEric}
+Chin, E., Olafsson, S., and Nel, D. (2014).
+\newblock {\em Problems and Solutions in Mathematical Finance: Stochastic
+  Calculus}, volume~1.
+\newblock The Wiley Finance Series.
+
+\bibitem[Merton, 1973]{Merton73}
+Merton, R.~C. (1973).
+\newblock Theory of rational option pricing.
+\newblock {\em The Bell Journal of Economics and Management Science},
+  4(1):141--183.
+
+\bibitem[Shreve, 2004]{shreve2004stochastic}
+Shreve, S.~E. (2004).
+\newblock {\em Stochastic calculus for finance II: Continuous-time models},
+  volume~11.
+\newblock Springer Science \& Business Media.
+
+\end{thebibliography}

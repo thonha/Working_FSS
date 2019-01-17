@@ -1,0 +1,387 @@
+
+\chapter{European Barrier Options with Rebates}
+
+\section{European Down and Out Call Option}
+
+\fontsize{11pt}{20pt}\selectfont We require $S_t\hspace{0.1cm} > \hspace{0.1cm} B$ for all $t$ so as to ensure the option would not knock out at the starting
+time $t$. Consider a case for the down-and-out call option price when $B \leq K$. In this case, the holder will get more payoff than $B \geq K$. the payoff of a down-and-out call option is
+\begin{align*}
+C_{d/o}(S_T)=\max\{S_T-K, 0\}\mathcal{H}_{\{min_{t\leq u\leq T}S_u > B\}}
+\end{align*}
+Under the risk-neutral measure $\mathbb{Q}$, $S_t$ follows
+\begin{align*}
+\dfrac{dS_t}{S_t}=rdt+\sigma dW_t^\mathbb{Q}
+\end{align*}
+such that $W_t^\mathbb{Q}=W_t+\left(\dfrac{\mu-r}{\sigma}\right)t$ \hspace{0.1cm}is a $\mathbb{Q}$-standard Wiener process. Following equation \eqref{eq5.5.2} with times from $t$ to $T$ for $T\hspace{0.1cm}>\hspace{0.1cm}t$, we obtain
+\begin{align}
+\begin{split}
+S_T&=S_te^{\left(r -\frac{1}{2}\sigma^2 \right)(T-t)+\sigma W_{T-t}^\mathbb{Q}}\\
+&=S_te^{\sigma \widehat{W}_{T-t}}
+\end{split} \label{eq4.1.1}
+\end{align} 
+where $\widehat{W}_{T-t}=\nu (T-t)+W_{T-t}^\mathbb{Q}$ and $\nu=\dfrac{1}{\sigma}(r-\dfrac{1}{2}\sigma^2)$. By writing
+\begin{align*}
+	m_{T-t}=min_{t\leq u \leq T}\widehat{W}_{u-t}
+\end{align*}
+Therefore, 
+\begin{align*}
+\displaystyle \min_{t\leq u \leq T}S_u&=\displaystyle \min_{t\leq u \leq T}S_te^{\sigma \widehat{W}_{u-t}} \\
+&=S_te^{\sigma \min_{t\leq u \leq T}\widehat{W}_{u-t}}\\
+&=S_te^{\sigma 	m_{T-t}}
+\end{align*} 
+and we can rewrite the payoff as  \cite{Eric}
+\begin{align*}
+C_{d/o}(S_T)&=\max\{S_T-K, 0\}\mathcal{H}_{\{min_{t\leq u\leq T}S_u > B\}}\\
+&=\max\{S_te^{\sigma \widehat{W}_{T-t}}-K, 0\}\mathcal{H}_{\{S_te^{\sigma 	m_{T-t}} > B, \}}\\
+&=(S_te^{\sigma \widehat{W}_{T-t}}-K)\mathcal{H}_{\{S_te^{\sigma m_{T-t}} > B, S_te^{\sigma \widehat{W}_{T-t}}> K\}}\\
+&=(S_te^{\sigma \widehat{W}_{T-t}}-K)\mathcal{H}_{\{m_{T-t}>\frac{1}{\sigma}\log\left(\frac{B}{S_t}\right), \widehat{W}_{T-t}>\frac{1}{\sigma}log\left(\frac{K}{S_t}\right) \}}
+\end{align*}
+The down-and-out call option price at time $t$ is
+\begin{align*}
+	C_{d/o}(S_t,t;K,B,T) &= e^{-r(T-t)}\mathbb{E}^\mathbb{Q}[C_{d/o}(S_T)|\mathcal{F}_t]\\
+	&=e^{-r(T-t)}\mathbb{E}^\mathbb{Q}[(S_te^{\sigma \widehat{W}_{T-t}}-K)\mathcal{H}_{\{m_{T-t}>\frac{1}{\sigma}\log\left(\frac{B}{S_t}\right), \widehat{W}_{T-t}>\frac{1}{\sigma}\log\left(\frac{K}{S_t}\right) \}}\bigg|\mathcal{F}_t]\\
+	&=e^{-r(T-t)}\displaystyle \int_{\omega =\frac{1}{\sigma}log\left(\frac{K}{S_t}\right) }^{\infty}\displaystyle \int_{m =\frac{1}{\sigma}log\left(\frac{B}{S_t}\right) }^{m=\omega}(S_te^{\sigma \omega}-K)f^\mathbb{Q}_{m,\widehat{W}}(m, \omega)dmd\omega
+\end{align*}
+where $f^\mathbb{Q}_{m,\widehat{W}}(m, \omega)$ is the joint probability density function of $(m, \widehat{W})$. We need to find out this function which is necessary for deriving the European barrier call option. \\ [0.5cm]
+Given $m_t=\displaystyle \min_{0\leq t\leq T} W_t =-\displaystyle \max_{0\leq t\leq T}\{-W_t\}$ we have for $m\leq 0$ and $m\leq \omega$,
+\begin{align*}
+	\mathbb{P}(m_t\geq m, W_t \geq \omega)&=\mathbb{P}\left(-\displaystyle \max_{0\leq t\leq T}\{-W_t\}\geq m, W_t\geq \omega\right)\\
+	&=\mathbb{P}\left(-\displaystyle \max_{0\leq t\leq T}\{-W_t\}\geq m, -W_t\leq -\omega\right)\\
+	&= \mathbb{P}\left(\displaystyle \max_{0\leq t\leq T}{\widetilde{W}_t}\leq -m, \widetilde{W}_t\leq -\omega\right)
+\end{align*}
+where the last equality comes from the symmetric property of the standard Wiener process such that $\widetilde{W}_t=-W_t \sim \mathcal{N}(0, t)$ is also a standard Wiener process.\\
+Since
+\begin{align*}
+	\mathbb{P}(\widetilde{W}_t\leq -\omega)=\mathbb{P}\left(\displaystyle \max_{0\leq t\leq T}{\widetilde{W}_t}\leq -m, \widetilde{W}_t\leq -\omega\right)+\mathbb{P}\left(\displaystyle \max_{0\leq t\leq T}{\widetilde{W}_t}\geq -m, \widetilde{W}_t\leq -\omega\right)
+\end{align*}
+We have
+\begin{align}
+\begin{split}
+	\mathbb{P}\left(\displaystyle \max_{0\leq t\leq T}{\widetilde{W}_t}\geq -m, \widetilde{W}_t\leq -\omega\right)&=	\mathbb{P}\left(\displaystyle \min_{0\leq t\leq T}W_t \leq m, W_t\geq \omega\right)\\
+	&=\mathbb{P}(\tilde{W}_t\hspace{0.1cm} >\hspace{0.1cm} 2m-\omega)\\
+	&=\Phi\left(\dfrac{2m-\omega}{\sqrt{t}}\right)
+	\end{split} \label{negative}
+\end{align} 
+Since T is finite, from Reflection Princciple and the strong Markov property both $W_t$ and $\tilde{W}_t$ are standard Wiener processes and independent which means that they have the same distribution.\\
+We tend to the Brownian motion $W_t$ which has a downstream barrier $m$ over the period
+$[0, T]$ so that $m_t \geq m$, we would like to derive the joint distribution
+\begin{align}
+		\mathbb{P}(m_t\geq m, W_t \geq \omega)&=\mathbb{P}\left(\displaystyle \max_{0\leq t\leq T}{\widetilde{W}_t}\leq -m, \widetilde{W}_t\leq -\omega\right) \nonumber\\
+		&=\mathbb{P}(\widetilde{W}_t\leq -\omega)-\mathbb{P}\left(\displaystyle \max_{0\leq t\leq T}{\widetilde{W}_t}\geq -m, \widetilde{W}_t\leq -\omega\right) \nonumber \label{eq601}\\
+		&=\Phi \left(-\dfrac{\omega}{\sqrt{t}}\right)-\Phi\left(\dfrac{2m-\omega}{\sqrt{t}}\right)
+\end{align}
+To obtain the joint probability density function by definition,
+\begin{align*}
+	f_{m_t,W_t}(m, \omega)&=\dfrac{\partial^2}{\partial m \partial \omega}\mathbb{P}(m_t\geq m, W_t \geq \omega)\\
+	&=\dfrac{\partial^2}{\partial m \partial \omega}\left[\Phi\left(-\dfrac{\omega}{\sqrt{t}}\right)-\Phi\left(\dfrac{2m-\omega}{\sqrt{t}}\right)\right]\\
+	&=\dfrac{\partial}{\partial m}\left[\dfrac{\partial}{\partial\left(-\frac{\omega}{\sqrt{t}}\right)}\Phi\left(-\dfrac{\omega}{\sqrt{t}}\right)\dfrac{\partial}{\partial \omega}\Phi\left(-\dfrac{\omega}{\sqrt{t}}\right)-\dfrac{\partial}{\partial\left(\frac{2m-\omega}{\sqrt{t}}\right)}\Phi\left(\dfrac{2m-\omega}{\sqrt{t}}\right)\dfrac{\partial}{\partial \omega}\Phi\left(\dfrac{2m-\omega}{\sqrt{t}}\right)\right]\\
+	&=\dfrac{\partial}{\partial m}\left[-\dfrac{1}{\sqrt{2\pi t}}e^{-\frac{1}{2}\left(\frac{\omega}{\sqrt{t}}\right)^2}+\dfrac{1}{\sqrt{2\pi t}}e^{-\frac{1}{2}\left(\frac{2m-\omega}{\sqrt{t}}\right)^2}\right]\\
+	&=\dfrac{-2(2m-\omega)}{t\sqrt{2\pi t}}e^{-\frac{1}{2}\left(\frac{2m-\omega}{\sqrt{t}}\right)^2}
+\end{align*}
+Moreover, for $m\geq 0$, since $m_t\leq W_0=0$ so $\mathbb{P}(m_t\geq m, W_t\geq \omega)=0$.\\
+We obtain the joint probability distribution of $(m_t, W_t)$ under $\mathbb{Q}$ is
+\begin{align*}
+f^\mathbb{Q}_{m,W}(m, \omega)= \begin{cases}
+\dfrac{-2(2m-\omega)}{t\sqrt{2\pi t}}e^{-\frac{1}{2t}(2m-\omega)^2} \hspace{0.2cm} &m\leq 0,m\leq \omega   \nonumber \\
+	0 &\text{otherwise.}  \nonumber
+\end{cases}
+\end{align*}
+In order to find the joint cumulative distribution function of $(m_t, W_t)$, we consider Girsanov’s theorem there exists an equivalent probability
+measure $\mathbb{Q}$ on the filtration $\mathcal{F}_t$, $0 \leq s \leq t$ defined by the Radon–Nikody$^\prime$m derivative
+\begin{align*}
+	Z_s&=e^{-\int_{0}^{s}\alpha dW_u-\frac{1}{2}\int_{0}^{s}\alpha^2du}\\
+	&=e^{-\alpha W_s-\frac{1}{2}\alpha^2s}\\
+	&=e^{-\alpha(W_t^\mathbb{Q}-\alpha s)-\frac{1}{2}\alpha^2 s }\\
+	&=e^{-\alpha W_t^\mathbb{Q}+\frac{1}{2}\alpha^2s}
+\end{align*}
+Let's  consider the joint CDF of $(m_t, W_t)$
+\begin{align*}
+		\mathbb{P}(m_t\leq m, W_t \leq \omega)&=\mathbb{E}^\mathbb{P}(\mathcal{H}_{\{m_t\leq m, W_t \leq \omega\}})\\
+		&=\mathbb{E}^\mathbb{Q}(Z_t^{-1}\mathcal{H}_{\{m_t\leq m, W_t \leq \omega\}})\\
+		&=\mathbb{E}^\mathbb{Q}(e^{\nu W_t^\mathbb{Q}-\frac{1}{2}\nu^2t}\mathcal{H}_{\{m_t\leq m, W_t \leq \omega\}})\\
+		&=\displaystyle \int_{-\infty}^{\omega} \displaystyle \int_{-\infty}^{m}e^{\nu \omega-\frac{1}{2}\nu^2 t}f_{m_t, W_t}^\mathbb{Q}(u, \nu)dud\nu. 
+\end{align*}
+Therefore, 
+\begin{align*}
+f^\mathbb{Q}_{m_t,W_t}(m, \omega)&= \dfrac{\partial^2}{\partial m \partial \omega}\mathbb{P}(m_t\leq m, W_t \leq \omega)\\
+&=\begin{cases}
+\dfrac{-2(2m-\omega)}{(T-t)\sqrt{2\pi (T-t)}}e^{\nu\omega-\frac{1}{2}\nu^2(T-t)-\frac{1}{2}\left(\frac{2m-\omega}{\sqrt{T-t}}\right)^2} \hspace{0.2cm} &m\leq 0,m\leq \omega   \nonumber \\
+0 &\text{otherwise.}  \nonumber
+\end{cases}
+\end{align*}
+Thus, we attend to our problem with  $\widehat{W}_{T-t}=\nu (T-t)+W_{T-t}^\mathbb{Q}$ and $\nu=\dfrac{1}{\sigma}(r-\dfrac{1}{2}\sigma^2)$.
+\begin{flushleft}
+$C_{d/o}(S_t,t;K,B,T)$ \\ \vspace{0.1cm}
+ 
+$=-e^{-r(T-t)}\displaystyle \int_{\omega =\frac{1}{\sigma}log\left(\frac{K}{S_t}\right) }^{\infty}(S_te^{\sigma \omega}-K)$\\
+$\times \dfrac{1}{\sqrt{2\pi (T-t)}}e^{\nu\omega-\frac{1}{2}\nu^2(T-t)-\frac{1}{2}\left(\frac{2m-\omega}{\sqrt{T-t}}\right)^2}\bigg|_{m=\frac{1}{\omega}log\left(\frac{B}{S_t}\right)}^{m=\omega}d\omega$\\
+$=e^{-r(T-t)}\displaystyle \int_{\omega =\frac{1}{\sigma}log\left(\frac{K}{S_t}\right) }^{\infty}(S_te^{\sigma \omega}-K)\dfrac{1}{\sqrt{2\pi (T-t)}}e^{\nu\omega-\frac{1}{2}\nu^2(T-t)-\frac{1}{2}\left(\frac{\omega}{\sqrt{T-t}}\right)^2}d\omega$\\
+$-e^{-r(T-t)}\displaystyle \int_{\omega =\frac{1}{\sigma}log\left(\frac{K}{S_t}\right) }^{\infty}(S_te^{\sigma \omega}-K)\dfrac{1}{\sqrt{2\pi (T-t)}}e^{\nu\omega-\frac{1}{2}\nu^2(T-t)-\frac{1}{2}\left(\frac{\frac{2}{\sigma}log\frac{B}{S_t}-\omega}{\sqrt{T-t}}\right)^2}d\omega$\\ \vspace{0.1cm}
+
+$=S_tI_1-KI_2-(S_tI_3-KI_4)$
+\end{flushleft}
+Where
+\begin{align*}
+	I_1=\dfrac{1}{\sqrt{2\pi (T-t)}}\displaystyle \int_{\omega =\frac{1}{\sigma}log\left(\frac{K}{S_t}\right) }^{\infty}e^{-r(T-t)+\sigma \omega+ \nu\omega-\frac{1}{2}\nu^2(T-t)-\frac{1}{2}\left(\frac{\omega}{\sqrt{T-t}}\right)^2}d\omega\\
+	I_2=\dfrac{1}{\sqrt{2\pi (T-t)}}\displaystyle \int_{\omega =\frac{1}{\sigma}log\left(\frac{K}{S_t}\right) }^{\infty}e^{-r(T-t)+ \nu\omega-\frac{1}{2}\nu^2(T-t)-\frac{1}{2}\left(\frac{\omega}{\sqrt{T-t}}\right)^2}d\omega\\
+	I_3=\dfrac{1}{\sqrt{2\pi (T-t)}}\displaystyle \int_{\omega =\frac{1}{\sigma}log\left(\frac{K}{S_t}\right) }^{\infty}e^{-r(T-t)+\sigma \omega+ \nu\omega-\frac{1}{2}\nu^2(T-t)-\frac{1}{2}\left(\frac{\frac{2}{\sigma}log\frac{B}{S_t}-\omega}{\sqrt{T-t}}\right)^2}d\omega\\
+	I_4=\dfrac{1}{\sqrt{2\pi (T-t)}}\displaystyle \int_{\omega =\frac{1}{\sigma}log\left(\frac{K}{S_t}\right) }^{\infty}e^{-r(T-t)+ \nu\omega-\frac{1}{2}\nu^2(T-t)-\frac{1}{2}\left(\frac{\frac{2}{\sigma}log\frac{B}{S_t}-\omega}{\sqrt{T-t}}\right)^2}d\omega
+\end{align*}
+
+\indent{\itshape\bfseries Key Result} \vspace{0.2cm}
+
+\begin{align}
+	\dfrac{1}{\sqrt{2\pi T}}\displaystyle \int_{L}^{U}e^{a\omega-\frac{1}{2}(\frac{\omega}{\sqrt{T}})^2}d\omega=e^{\frac{1}{2}a^2T}\left[\Phi\left(\dfrac{U-aT}{\sqrt{T}}\right)-\Phi\left(\dfrac{L-aT}{\sqrt{T}}\right)\right]  \label{eq6.0.1}
+\end{align}
+
+\indent{\itshape\bfseries Proof} \\ \vspace{0.3cm}
+
+Consider the following expression:
+\begin{align}
+	\dfrac{1}{\sqrt{2\pi T}}\displaystyle \int_{L}^{U}e^{a\omega-\frac{1}{2}(\frac{\omega}{\sqrt{T}})^2}d\omega&=\dfrac{1}{\sqrt{2\pi T}}\displaystyle \int_{L}^{U}e^{-\frac{1}{2}(\frac{\omega^2}{T}-2a\omega)}d\omega \nonumber\\
+	&=\dfrac{1}{\sqrt{2\pi T}}\displaystyle \int_{L}^{U}e^{-\frac{1}{2}\left(\frac{\omega}{\sqrt{T}}-a\sqrt{T}\right)^2+\frac{1}{2}a^2T}d\omega \nonumber\\
+	&=\dfrac{1}{\sqrt{2\pi T}}e^{\frac{1}{2}a^2T}\displaystyle \int_{L}^{U}e^{-\frac{1}{2}\left(\frac{\omega}{\sqrt{T}}-a\sqrt{T}\right)^2}d\omega \label{eq6.0.2}
+\end{align}
+Let $y=\dfrac{\omega}{\sqrt{T}-a\sqrt{T}}$. This implies that $dy=\dfrac{d\omega}{\sqrt{T}}$ or $d\omega=\sqrt{T}dy$.\\ When
+\begin{align*}
+\omega&=L \rightarrow y=\dfrac{L}{\sqrt{T}}-a\sqrt{T}=\dfrac{L-aT}{\sqrt{T}}\\
+\omega&=U \rightarrow y=\dfrac{U}{\sqrt{T}}-a\sqrt{T}=\dfrac{U-aT}{\sqrt{T}}
+\end{align*}
+The equation \refeq{eq6.0.2} becomes
+\begin{align*}
+	\dfrac{1}{\sqrt{2\pi T}}\displaystyle \int_{L}^{U}e^{a\omega-\frac{1}{2}(\frac{\omega}{\sqrt{T}})^2}d\omega&=\dfrac{1}{\sqrt{2\pi T}}e^{\frac{1}{2}a^2T}\displaystyle \int_{\frac{L-aT}{\sqrt{T}}}^{\frac{U-aT}{\sqrt{T}}}e^{-\frac{1}{2}y^2}\sqrt{T}dy\\
+	&=e^{\frac{1}{2}a^2T}\dfrac{1}{\sqrt{2\pi }}\displaystyle \int_{\frac{L-aT}{\sqrt{T}}}^{\frac{U-aT}{\sqrt{T}}}e^{-\frac{1}{2}y^2}dy\\
+	&=e^{\frac{1}{2}a^2T}\dfrac{1}{\sqrt{2\pi }}\left[\displaystyle \int_{-\infty}^{\frac{U-aT}{\sqrt{T}}}e^{-\frac{1}{2}y^2}dy-\displaystyle \int_{-\infty}^{\frac{L-aT}{\sqrt{T}}}e^{-\frac{1}{2}y^2}dy\right]\\
+	&=e^{\frac{1}{2}a^2T}\left[\Phi\left(\dfrac{U-aT}{\sqrt{T}}\right)-\Phi\left(\dfrac{L-aT}{\sqrt{T}}\right)\right]
+\end{align*}
+Since according to CDF of standard normal RV 
+\begin{align*}
+	\Phi(x)=\dfrac{1}{\sqrt{2\pi}}\displaystyle \int_{-\infty}^{x}e^{-\frac{y^2}{2}}dy
+\end{align*}
+Using the equation \eqref{eq6.0.1} that is proved above. We have
+\begin{align*}
+	I_1&=\dfrac{1}{\sqrt{2\pi (T-t)}}e^{-r(T-t)-\frac{1}{2}\nu^2(T-t)}\displaystyle \int_{\omega =\frac{1}{\sigma}log\left(\frac{K}{S_t}\right) }^{\infty}e^{(\sigma+ \nu)\omega-\frac{1}{2}\left(\frac{\omega}{\sqrt{T-t}}\right)^2}d\omega\\
+	&=e^{-r(T-t)-\frac{1}{2}\nu^2(T-t)+\frac{1}{2}(\nu+\sigma)^2(T-t)}\left[\Phi(\infty)-\Phi\left(\dfrac{\frac{1}{\sigma}log(K/S_t)+(\nu +\sigma)(T-t)}{\sqrt{T-t}}\right)\right]
+\end{align*}
+and knowing that $\nu=\dfrac{1}{\sigma}(r-\dfrac{1}{2}\sigma^2)$, we have
+\begin{align*}
+	I_1&=e^{-r(T-t)-\frac{1}{2}\left(\frac{2r-\sigma^2}{2\sigma}\right)^2(T-t)+\frac{1}{2}\left(\frac{2r+\sigma^2}{2\sigma}\right)^2(T-t)}\left[1-\Phi\left(\dfrac{\frac{1}{\sigma}log(K/S_t)-(\nu +\sigma)(T-t)}{\sqrt{T-t}}\right)\right]\\
+	&=e^0\left[1-\Phi\left(\dfrac{\frac{1}{\sigma}log(K/S_t)-(\nu +\sigma)(T-t)}{\sqrt{T-t}}\right)\right]\\
+	&=1-\Phi\left(\dfrac{\frac{1}{\sigma}log(K/S_t)-(\nu +\sigma)(T-t)}{\sqrt{T-t}}\right)\\
+	&=\Phi \left(\dfrac{log(S_t/K)+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)
+\end{align*}
+Similarly we can deduce
+\begin{align*}
+I_2&=\dfrac{1}{\sqrt{2\pi (T-t)}}e^{-r(T-t)-\frac{1}{2}\nu^2(T-t)}\displaystyle \int_{\omega =\frac{1}{\sigma}log\left(\frac{K}{S_t}\right) }^{\infty}e^{\nu\omega-\frac{1}{2}\left(\frac{\omega}{\sqrt{T-t}}\right)^2}d\omega\\
+	&=e^{-r(T-t)-\frac{1}{2}\nu^2(T-t)+\frac{1}{2}\nu^2(T-t)}\left[\Phi(\infty)-\Phi\left(\dfrac{\frac{1}{\sigma}log(K/S_t)-\nu(T-t)}{\sqrt{T-t}}\right)\right]\\
+&=e^{-r(T-t)}\left[1-\Phi\left(\dfrac{\frac{1}{\sigma}log(K/S_t)-\nu(T-t)}{\sqrt{T-t}}\right)\right]\\
+&=e^{-r(T-t)}\Phi \left(\dfrac{log(S_t/K)+(r-\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)\\
+I_3=&\dfrac{1}{\sqrt{2\pi (T-t)}}e^{-r(T-t)-\frac{1}{2}\nu^2(T-t)-\frac{2}{\sigma^2(T-t)}\left(log\left(\frac{B}{S_t}\right)\right)^2}\\
+&\times\displaystyle \int_{\omega =\frac{1}{\sigma}log\left(\frac{K}{S_t}\right) }^{\infty}e^{\left[\nu+\sigma+\frac{2}{\sigma(T-t)}log\left(\frac{B}{S_t}\right)\right]\omega-\frac{1}{2}\left(\frac{\omega}{\sqrt{T-t}}\right)^2}d\omega\\
+=&e^{-r(T-t)-\frac{1}{2}\nu^2(T-t)-\frac{2}{\sigma^2(T-t)}\left(log\left(\frac{B}{S_t}\right)\right)^2+\frac{1}{2}\left[\nu+\sigma+\frac{2}{\sigma(T-t)}log\left(\frac{B}{S_t}\right)\right]^2(T-t)}\\
+&\times \left[\Phi(\infty)-\Phi\left(\dfrac{\frac{1}{\sigma}log(K/S_t)-\left[\nu+\sigma+\frac{2}{\sigma(T-t)}log(B/S_t)\right](T-t)}{\sqrt{T-t}}\right)\right]\\
+=&\left(\dfrac{S_t}{B}\right)^{-1-\frac{2r}{\sigma^2}}\left[1-\Phi\left(\dfrac{log(S_tK/B^2)-(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)\right]\\
+=&\left(\dfrac{S_t}{B}\right)^{-1-\frac{2r}{\sigma^2}}\Phi\left(\dfrac{log(B^2/(S_tK))+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)\\
+I_4=&\dfrac{1}{\sqrt{2\pi (T-t)}}e^{-r(T-t)-\frac{1}{2}\nu^2(T-t)-\frac{2}{\sigma^2(T-t)}\left(log\left(\frac{B}{S_t}\right)\right)^2}\\
+&\times\displaystyle \int_{\omega =\frac{1}{\sigma}log\left(\frac{K}{S_t}\right) }^{\infty}e^{\left[\nu+\frac{2}{\sigma(T-t)}log\left(\frac{B}{S_t}\right)\right]\omega-\frac{1}{2}\left(\frac{\omega}{\sqrt{T-t}}\right)^2}d\omega\\
+=&e^{-r(T-t)-\frac{1}{2}\nu^2(T-t)-\frac{2}{\sigma^2(T-t)}\left(log\left(\frac{B}{S_t}\right)\right)^2+\frac{1}{2}\left[\nu+\frac{2}{\sigma(T-t)}log\left(\frac{B}{S_t}\right)\right]^2(T-t)}\\
+&\times \left[\Phi(\infty)-\Phi\left(\dfrac{\frac{1}{\sigma}log(K/S_t)-\left[\nu+\frac{2}{\sigma(T-t)}log(B/S_t)\right](T-t)}{\sqrt{T-t}}\right)\right]\\
+=&e^{-r(T-t)}\left(\dfrac{S_t}{B}\right)^{-1-\frac{2r}{\sigma^2}}\left[1-\Phi\left(\dfrac{log(S_tK/B^2)-(r-\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)\right]\\
+=&e^{-r(T-t)}\left(\dfrac{S_t}{B}\right)^{-1-\frac{2r}{\sigma^2}}\Phi\left(\dfrac{log(B^2/(S_tK))+(r-\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)
+\end{align*}
+Therefore, 
+\begin{align*}
+C_{d/o}(S_t,t;K,B,T) \\
+=&S_tI_1-KI_2-(S_tI_3-KI_4)\\
+=&S_t\Phi \left(\dfrac{log(S_t/K)+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)\\
+&-Ke^{-r(T-t)}\Phi \left(\dfrac{log(S_t/K)+(r-\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)\\
+&-S_t\left(\dfrac{S_t}{B}\right)^{-1-\frac{2r}{\sigma^2}}\Phi\left(\dfrac{log(B^2/(S_tK))+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)\\
+&+Ke^{-r(T-t)}\left(\dfrac{S_t}{B}\right)^{-1-\frac{2r}{\sigma^2}}\Phi\left(\dfrac{log(B^2/(S_tK))+(r-\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\right)\\
+=&C_{bs}(S_t,t;K,T)-\left(\dfrac{S_t}{B}\right)^{2\lambda}C_{bs}(\dfrac{B^2}{S_t},t;K,T)
+\end{align*}
+where $\lambda = \dfrac{1}{2}\left(1-\dfrac{r}{\frac{1}{2}\sigma^2}\right)$ and
+\begin{align*}
+	C_{bs}(S_t,t;K,T)&=S_tN(d_1)-Ke^{-r(T-t)}N(d2)\\
+	d_1&=\dfrac{log(S_t/K)+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\\
+	d_2&=d_1-\sigma\sqrt{T-t}=\dfrac{log(S_t/K)+(r-\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\\
+	C_{bs}(\dfrac{B^2}{S_t},t;K,T)&=\dfrac{B^2}{S_t}N(d_3)-Ke^{-r(T-t)}N(d4)\\
+	d_3&=\dfrac{log(B^2/(S_tK))+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}\\
+	d_4&=d_3-\sigma\sqrt{T-t}=\dfrac{log(B^2/(S_tK))+(r-\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}
+\end{align*}
+
+\subsection*{Illustration}
+
+We will make an European call option under FPT stock with time for expiration of half year. Let's take the data in Table 3.1 and the knock-out occurs when a barrier is crossed and in our case this barrier is $55$ VND. We will summarize this data. Look at the following table\\
+\begin{table}[!htp]
+	\centering
+	\begin{tabular}{|l|c|r|}
+		\hline
+		$S_0$ & Stock price at time zero   & $59.8$ VND\\
+		\hline
+		$K$ & Strike price  & $62$ VND\\
+		\hline
+		$B$ & Down and out barrier price & $55$ VND\\
+		\hline
+		$\sigma$ &  Annual volitility & $24\%$\\
+		\hline
+		$r$ & Annual riskless rate  & $3\%$ \\
+		\hline
+		$T$ & Option expiration (in years)  & 0.5\\
+		\hline	
+	\end{tabular}
+	\caption{Option Pricing Parameters}
+	\label{B4.1}
+\end{table}
+
+Subtitute the above data we can get
+\begin{align*}
+	d_1=\dfrac{log(S_0/K)+(r+\frac{1}{2}\sigma^2)T}{\sigma\sqrt{T}}&= -0.03964939\\
+	d_2=d_1-\sigma\sqrt{T}&=-0.21\\
+	d_3=\dfrac{log(B^2/(S_0K))+(r+\frac{1}{2}\sigma^2)T}{\sigma\sqrt{T}}&=-0.209355\\
+	d_4=d_3-\sigma\sqrt{T}&=-1.195445\\
+	\lambda = \dfrac{1}{2}\left(1-\dfrac{r}{\frac{1}{2}\sigma^2}\right)&=  -0.02083\\
+	C_{bs}(S_0,0;K,T)=S_0N(d_1)-Ke^{-rT}N(d2)&=3.480033\\
+	C_{bs}(\dfrac{B^2}{S_0},0;K,T)=\dfrac{B^2}{S_0}N(d_3)-Ke^{-rT}N(d4)&=0.63234662\\
+	C_{bs}(S_0,0;K,T)-\left(\dfrac{S_0}{B}\right)^{2\lambda}C_{bs}(\dfrac{B^2}{S_0},0;K,T)&= 2.849887	
+\end{align*}
+Therefore, the value of European down-and-out call option without rebates is $2.85$ VND.
+\section{Rebates Value}
+
+\fontsize{11pt}{20pt}\selectfont Rebates is a part on the premium paid to the option holder. This leads to European barrier call option with rebates which is cheaper than the respective standard European options. Thus, let's $R$ is a payable rebate at knock-out time $\tau, t \leq \tau \leq T$. Let 
+$C^R_{d/o}(S_t, t;K, B, T)$ be the European down-and-out option respectively
+with common barrier $B$, strike price $K$, rebate $R$ and expiry time $T$. \\
+We have
+\begin{align*}
+	C^R_{d/o}(S_t,t;K,B,T)=C_{d/o}(S_t,t;K,B,T)+\tilde{C}^R_{d/o}(S_t,t;K,B,T)
+\end{align*} 
+where $C_{d/o}(S_t,t;K,B,T)$ is the European down-and-out option prices without rebates while $\tilde{C}^R_{d/o}(S_t, t;K, B, T)$ is the corresponding option prices associated with immediate rebate at knock-out time \cite{Eric}. Thus, it is important for finding out rebates value. \\[0.5cm]
+Let's consider the reflection principle of Brownian motion from figure 2.5 with given assumptions, we obtain the joint distribution function for the zero-drift case as follows:
+\begin{align*}
+	\mathbb{P}(W^0_T>x, m^T_0<m)&=\mathbb{P}(\widetilde{W}^0_T<2m-x)=\mathbb{P}(W^0_T<2m-x)\\
+	&=\Phi \left(\dfrac{2m-x}{\sigma\sqrt{T}}\right), \hspace{0.2cm} m \leq \min(x, 0).  
+\end{align*}
+Next, we apply the Girsanov Theorem to effect the change of measure for finding
+the above joint distribution when the Brownian motion has nonzero drift. Suppose
+under the measure $\mathbb{P}$,$W^\mu_t$
+is a Brownian motion with drift rate $\mu$. We change the
+measure from $\mathbb{P}$ to $\mathbb{Q}$ such that $W_t^\mu$ becomes a Brownian process with zero drift
+under 
+$\mathbb{Q}$. From equation \refeq{Radon} of the Randon-Nikodym derivative, we have the following joint distribution \cite{Kwok}
+\begin{align*}
+	\mathbb{P}(W^\mu_T>x, m^T_0<m)&=E_\mathbb{P}\left[\mathcal{H}_{\displaystyle \{W^\mu_T>x\}} \mathcal{H}_{\displaystyle\{m^T_0<m\}}\right]\\
+	&=E_\mathbb{Q}\left[\mathcal{H}_{\displaystyle \{W^\mu_T>x\}} \mathcal{H}_{\displaystyle\{m^T_0<m\}}Z^{-1}_T\right]\\
+	&=E_\mathbb{Q}\left[\mathcal{H}_{\displaystyle \{W^\mu_T>x\}} \mathcal{H}_{\displaystyle\{m^T_0<m\}}e^{\frac{\mu W^\mu_T }{\sigma^2}-\frac{\mu^2 T}{2\sigma^2}}\right]
+\end{align*}
+Then, by applying the reflection principle and observing
+that $W^\mu_T$ is a zero-drift Brownian motion under 
+$\mathbb{Q}$, we obtain
+\begin{align*}
+	\mathbb{P}(W^\mu_T>x, m^T_0<m)&=E_\mathbb{Q}\left[\mathcal{H}_{\displaystyle \{W^\mu_T<2m-x\}}e^{\frac{\mu W^\mu_T }{\sigma^2}-\frac{\mu^2 T}{2\sigma^2}}\right]\\
+	&=E_\mathbb{Q}\left[\mathcal{H}_{\displaystyle \{2m-W^\mu_T>x\}}e^{\frac{\mu }{\sigma^2}(2m-W^\mu_T)-\frac{\mu^2 T}{2\sigma^2}}\right]\\
+	&=e^{\frac{2\mu m}{\sigma^2}}E_\mathbb{Q}\left[\mathcal{H}_{\displaystyle \{W^\mu_T<2m-x\}}e^{-\frac{\mu }{\sigma^2}W^\mu_T-\frac{\mu^2 T}{2\sigma^2}}\right]\\
+	&=e^{\frac{2\mu m}{\sigma^2}}\displaystyle \int_{-\infty}^{2m-x}\dfrac{1}{\sqrt{2\pi\sigma^2 T}}e^{-\frac{z^2}{2\sigma^2 T}}e^{-\frac{\mu }{\sigma^2}W^\mu_T-\frac{\mu^2 T}{2\sigma^2}}dz\\
+	&=e^{\frac{2\mu m}{\sigma^2}}\displaystyle \int_{-\infty}^{2m-x}\dfrac{1}{\sqrt{2\pi\sigma^2 T}}e^{\left(-\frac{(z+\mu T)^2}{2\sigma^2 T}\right)}dz\\
+	&=e^{\frac{2\mu m}{\sigma^2}}\Phi\left(\dfrac{2m-x+\mu T}{\sigma\sqrt{T}}\right), \hspace{0.2cm} m\leq min(x, 0).
+\end{align*}
+Suppose the Brownian motion $W^\mu_t$ has a downstream barrier $m$ over the period
+$[0, T ]$ so that $m^T_0
+> m$, we would like to derive the joint distribution
+\begin{align*}
+		\mathbb{P}(W^\mu_T>x, m^T_0>m), \hspace{0.2cm} \textnormal{where} \hspace{0.2cm} m\leq \min(x, 0).
+\end{align*}
+By applying the law of total probabilities, we obtain
+\begin{align*}
+	&\mathbb{P}(W^\mu_T>x, m^T_0>m)\\
+	=&\mathbb{P}(W^\mu_t>x)-\mathbb{P}(W^\mu_T>x, m^T_0<m)\\
+	=&\Phi\left(\dfrac{-x+\mu T}{\sigma\sqrt{T}}\right)-e^{\frac{2\mu m}{\sigma^2}}\Phi\left(\dfrac{2m-x+\mu T}{\sigma\sqrt{T}}\right), \hspace{0.2cm} m\leq \min(x, 0).
+\end{align*}
+Under the special case $m = x$, since $W^\mu_T$ is implicitly implied from $m^T_0>m$,
+we have
+\begin{align}
+	\mathbb{P}(m^T_0>m)=\Phi\left(\dfrac{-m+\mu T}{\sigma\sqrt{T}}\right)-e^{\frac{2\mu m}{\sigma^2}}\Phi\left(\dfrac{m+\mu T}{\sigma\sqrt{T}}\right)\label{eq421}
+\end{align}
+\subsubsection*{First Passage Time Density Functions}
+Let $Q(u; m)$ denote the density function of the first passage time at which the downstream
+barrier $m$ is first hit by the Brownian path $W^\mu_t$, that is, $Q(u; m)du=\mathbb{P}(\tau_m \in du)$ which means that probability Brownian path hits $m$ within interval of time $(u, u+du)$. First, we determine the distribution function $\mathbb{P}(\tau_m \in du)$ by observing that
+$\{\tau_m > du\}$ and $m^u_0>m$ are equivalent events. By equation (\refeq{eq421}), we obtain
+\begin{align*}
+	\mathbb{P}(\tau_m > du)&=\mathbb{P}(m^u_0>m)\\
+	&=\Phi\left(\dfrac{-m+\mu T}{\sigma\sqrt{T}}\right)-e^{\frac{2\mu m}{\sigma^2}}\Phi\left(\dfrac{m+\mu T}{\sigma\sqrt{T}}\right)
+\end{align*}
+The density function $Q(u; m)$ is then given by
+\begin{align}
+	Q(u; m)du&=\mathbb{P}(\tau_m \in du)\nonumber\\
+	&=-\dfrac{\partial}{\partial u}\left[\Phi\left(\dfrac{-m+\mu u}{\sigma\sqrt{u}}\right)-e^{\frac{2\mu m}{\sigma^2}}\Phi\left(\dfrac{m+\mu u}{\sigma\sqrt{u}}\right)\right]du\mathcal{H}_{\{m<0\}}\label{eq422}
+\end{align}
+Let $V_1=\dfrac{-m+\mu m}{\sigma\sqrt{u}}$ and $V_2=\dfrac{m+\mu m}{\sigma\sqrt{u}}$. Then equation \refeq{eq422} becomes
+\begin{align}
+		Q(u; m)du&=-\left[\dfrac{\partial}{\partial V_1}\Phi(V_1)\dfrac{\partial}{\partial u}V_1-e^{\frac{2\mu  m}{\sigma^2}}\dfrac{\partial}{\partial V_2}\Phi(V_2)\dfrac{\partial}{\partial u}V_2\right] \nonumber \\ 
+		&=-\left[\dfrac{1}{\sqrt{2\pi}}e^{-\frac{\left(\frac{-m+\mu m}{\sigma\sqrt{u}}\right)^2}{2}}\left(\dfrac{-m}{2\sigma\sqrt{u^3}}+\dfrac{\mu}{2\sigma\sqrt{u}}\right)-e^{\frac{2\mu m}{\sigma^2}}\dfrac{1}{\sqrt{2\pi}}e^{-\frac{\left(\frac{m+\mu m}{\sigma\sqrt{u}}\right)^2}{2}}\left(\dfrac{m}{2\sigma\sqrt{u^3}}+\dfrac{\mu}{2\sigma\sqrt{u}}\right)\right] \nonumber \\
+		&=\dfrac{-m}{\sqrt{2\pi \sigma^2 u^3}}e^{-\frac{(m-\mu u)^2}{2\sigma^2 u}}du\mathcal{H}_{\{m<0\}} \label{eq423}
+\end{align}
+Suppose the asset price $S_t$ follows the GBM under the
+risk neutral measure such that $\ln\frac{S_t}{S}=W^\mu_t$, 
+where $S$ is the asset price at time zero
+and the drift rate $\mu=r-\frac{\sigma^2}{2}$. We write B as the barrier level, then equation \refeq{eq423} becomes
+\begin{align*}
+	Q(u; B)=-\dfrac{\ln \frac{B}{S}}{\sqrt{2\pi \sigma^2 u^3}}e^{-\frac{[\ln \frac{B}{S}-(r-\frac{\sigma^2}{2})u]^2}{2\sigma^2 u}}
+\end{align*}
+A rebate $R$ is paid to the option holder upon breaching the barrier
+at level B by the asset price path at time $t$, $0 < t < T$. Since the expected rebate
+payment over the time interval $[u, u+du]$ is given by $R\hspace{0.1cm}Q(u; B) du$, the expected
+present value of the rebate is given by
+\begin{align*}
+	\textnormal{rebates value}&=R \displaystyle \int_{0}^{T} e^{-ru}Q(u; B)du\\
+	&=-R \displaystyle \int_{0}^{T} e^{-ru}\dfrac{\ln \frac{B}{S}}{\sqrt{2\pi \sigma^2 u^3}}e^{-\frac{[\ln \frac{B}{S}-(r-\frac{\sigma^2}{2})u]^2}{2\sigma^2 u}}du\\
+	&=R\left[\left(\dfrac{B}{S}\right)^{\alpha_+}\Phi\left(-\dfrac{\ln \frac{B}{S}+\beta T}{\sigma\sqrt{T}}\right)+\left(\dfrac{B}{S}\right)^{\alpha_-}\Phi\left(-\dfrac{\ln \frac{B}{S}-\beta T}{\sigma\sqrt{T}}\right)\right]
+\end{align*}
+where
+\begin{align*}
+	\beta=\sqrt{\left(r-\dfrac{\sigma^2}{2}\right)^2+2r\sigma^2}, \hspace{0.2cm} \alpha_\pm = \dfrac{r-\frac{\sigma^2}{2}\pm B}{\sigma^2}
+\end{align*}
+Therefore, the final result of European barrier call option with rebates is
+\begin{align*}
+      C^R_{d/o}(S_t,t;K,B,T)&=C_{bs}(S_t,t;K,T)-\left(\dfrac{S_t}{B}\right)^{2\lambda}C_{bs}(\dfrac{B^2}{S_t},t;K,T)\\
+       &+R\left[\left(\dfrac{B}{S}\right)^{\alpha_+}\Phi\left(-\dfrac{\ln \frac{B}{S}+\beta T}{\sigma\sqrt{T}}\right)+\left(\dfrac{B}{S}\right)^{\alpha_-}\Phi\left(-\dfrac{\ln \frac{B}{S}-\beta T}{\sigma\sqrt{T}}\right)\right]
+\end{align*}
+\section{Application}
+
+Let's look at an example to make the previous formula more clearly. Given a constant rebate $\$1$ is paid any time the option are knocked-out within the lives of the down-and-out barrier option. Other parameters remain the same as Table 4.1. Let's summarize the data:\\
+\begin{table}[!htp]
+	\centering
+	\begin{tabular}{|l|c|r|}
+		\hline
+		$S$ & Stock price at time zero   & $59.8$ VND\\
+		\hline
+		$K$ & Strike price  & $62$ VND\\
+		\hline
+		$B$ & Down and out barrier price & $55$ VND\\
+		\hline
+		$\sigma$ &  Annual volitility & $24\%$\\
+		\hline
+		$r$ & Annual riskless rate  & $3\%$ \\
+		\hline
+		$T$ & Option expiration (in years)  & 0.5\\
+		\hline	
+		$R$ & Rebates & $10$\\
+		\hline
+	\end{tabular}
+	\caption{Option Pricing Parameters with rebates}
+	\label{B4.3}
+\end{table}
+We already get the value of European down-and-out call option without rebates is $2.85$ VND. Then, rebates value will be calculated. We will first calculate each components:
+\begin{align*}
+	\beta=\sqrt{\left(r-\dfrac{\sigma^2}{2}\right)^2+2r\sigma^2}&=0.0588\\
+	\alpha_+ = \dfrac{r-\frac{\sigma^2}{2}+ B}{\sigma^2}&= 1.041667\\
+	\alpha_- = \dfrac{r-\frac{\sigma^2}{2}- B}{\sigma^2}&=-1\\
+	\Phi\left(-\dfrac{\ln \frac{B}{S}+\beta T}{\sigma\sqrt{T}}\right)=\Phi(0.009144972)&= -0.3198036
+	\\
+	\Phi\left(-\dfrac{\ln \frac{B}{S}-\beta T}{\sigma\sqrt{T}}\right)=\Phi( 0.7162518)&=-0.666286\\
+	\text{rebates value}&=6.179553
+\end{align*}
+Thus, the final result we obtain
+\begin{align*}
+	C^R_{d/o}(S_t,t;K,B,T)=9.02944
+\end{align*}
+This means that the European barrier down-and-out call option has price of $9.03$ VND.
+

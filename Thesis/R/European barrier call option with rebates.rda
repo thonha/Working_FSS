@@ -1,0 +1,55 @@
+> #Pricing of European down-and-out call option with rebates
+
+> #Assigning variables
+
+> S<-59.8 #Stock price at time zero 
+
+> K<-62 #Strike price
+
+> B<-55 #Down and out barrier price
+
+> sigma<-0.24 #Annual volitility
+
+> r<-0.03 #Annual riskless rate 
+
+> T<-0.5 #Option expiration
+
+>R<-10
+
+> #We already calculate the European down-and-out call option without rebates is $2.85. Next it will be for rebates and final result.
+
+>beta<-sqrt((r-(sigma^2)/2)^2+2*r*(sigma^2))
+
+> beta
+[1] 0.0588
+
+>alpha1<-(r-((sigma^2)/2)+beta)/(sigma^2)
+
+> alpha1
+[1] 1.041667
+
+>alpha2<-(r-((sigma^2)/2)-beta)/(sigma^2)
+
+> alpha2
+[1] -1
+
+>l1<-(log(B/S)+beta*T)/(sigma*sqrt(T))
+
+> l1
+[1] -0.3198036
+
+>l2<-(log(B/S)-beta*T)/(sigma*sqrt(T))
+
+> l2
+[1] -0.666286
+
+> R<-1
+
+>RV<-R*(((B/s)^alpha1)*pnorm(l1)+((B/s)^alpha2)*pnorm(l2))
+> RV
+[1] 6.179553
+
+> Result<-C+RV
+
+> Result
+[1] 9.02944

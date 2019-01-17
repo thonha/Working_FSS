@@ -1,0 +1,9 @@
+﻿2018-12-24 13:58:09,523 WARN  [12548] Start the Listener FSS.RTDF.JMSMessageListener [(null)] - 
+2018-12-24 13:58:10,657 INFO  [11948] About to connect to activemq:tcp://192.168.121.207:61216 FSS.RTDF.JMSMessageListener [(null)] - 
+2018-12-24 13:58:47,950 ERROR [11948] Listening::Connection:JMSMessageListener.:_brokerurl.:activemq:tcp://192.168.121.207:61216_id.:TRUONGLD_Flex_636812566893060233_dataname.:NTSInternal.ADMIN_isqueue.:True_username.:admin_password.:admin@123 FSS.RTDF.JMSMessageListener [(null)] - 
+Apache.NMS.NMSConnectionException: Error connecting to 192.168.121.207:61216. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at Apache.NMS.ActiveMQ.Transport.Tcp.TcpTransportFactory.DoConnect(String host, Int32 port, String localAddress, Int32 localPort)
+   --- End of inner exception stack trace ---
+   at Apache.NMS.ActiveMQ.ConnectionFactory.CreateConnection(String userName, String password)
+   at FSS.RTDF.JMSMessageListener.ListenThreadStart() in \\192.168.18.198\projects\VCBS\SourceCode\Development\@DIRECT\FSS.RTDF\JMSMessageListener.cs:line 97
+2018-12-24 13:58:48,064 INFO  [11948] About to connect to activemq:tcp://192.168.121.207:61216 FSS.RTDF.JMSMessageListener [(null)] - 

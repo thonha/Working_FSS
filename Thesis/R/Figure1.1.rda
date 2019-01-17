@@ -1,0 +1,18 @@
+> #Figure 1.1: Payoff of call option 
+
+> getwd() #print the current working directory
+[1] "C:/Users/tapud_000/Documents"
+
+> setwd("E:/Thesis/R") #change to mydirectory
+
+> S<-read.csv("ex1.csv") #Read CSV into R 
+
+> attach(S) #make the data available to the R search path
+
+>plot(Stock.price,Payoff,xlim=c(0,100),ylim = c(-10,60),type = "l",col="blue", xlab="Stock price", ylab = "Profit",main = "Profit diagram of a call option",lwd=1.5) #sketch diagram of call option
+
+> q<-rep(0,101) # Profit is according to stock price
+
+>lines(Stock.price,q,col="red",lwd=1.5) #sketch the line describes payoff is equal zero to help comparison easily
+
+>plot(Stock.price,Payoff,xlim=c(0,100),ylim = c(-10,60),type = "l",col="blue", ylab = "Profit",main = "Profit diagram of a call option",lwd=1.5, legend("topright", legend=c("Call, K = $50, A premium = $5"),col=("blue"), lty=1:2, cex=0.8))# add legend to plot in R

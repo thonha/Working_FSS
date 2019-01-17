@@ -1,0 +1,18 @@
+>  #Figure 3.1: The distribution of FPT stock 
+
+> FPT=read.csv("stock.csv") #Read CSV into R 
+
+> attach(FPT) #make the data available to the R search path
+
+> names(FPT) #show name of objects  is stored in R
+[1] "Stock"                    "Day(i)"                 
+[3] "Stock.price" "Daily.Return"            
+[5] "Volatility"  
+
+> DailyReturn=na.omit(Daily.Return) #remove NAs value from Daily.Return
+
+>  #Using quantitle-quantitle (QQ) plots to check data normality in R
+
+> qqnorm(DailyReturn)  #produces a normal QQ plot of the variable
+
+> qqline(DailyReturn,col=2,lwd=1.5) #adds a reference line

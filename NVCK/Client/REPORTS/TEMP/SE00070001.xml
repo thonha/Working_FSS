@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <RptData>
+    <I_DATE>16/05/2018</I_DATE>
+    <TRADEPLACE>002</TRADEPLACE>
+    <SYMBOL>ACB</SYMBOL>
+    <PARVALUE>10000</PARVALUE>
+    <FULLNAME>Nguyễn Thị Hồng Diễm</FULLNAME>
+    <IDCODE>211866960</IDCODE>
+    <COUNTRY>Viet Nam</COUNTRY>
+    <ADDRESS>173A Nguyễn Văn Trỗi, P.11, Q. Phú nhuận, TP.HCM</ADDRESS>
+    <SYMBOLNAME>Ngân hàng Thương mại CP Á Châu</SYMBOLNAME>
+    <ACCTNO>0001000006</ACCTNO>
+    <AMT>6000</AMT>
+    <EMAIL>diemphumy@yahoo.com</EMAIL>
+    <FAX1>0938724968</FAX1>
+    <CUSTODYCD>049C686868</CUSTODYCD>
+    <ACCTNO1>0001000006</ACCTNO1>
+  </RptData>
+  <RptData>
+    <I_DATE>16/05/2018</I_DATE>
+    <TRADEPLACE>002</TRADEPLACE>
+    <SYMBOL>ACB</SYMBOL>
+    <PARVALUE>10000</PARVALUE>
+    <FULLNAME>Nguyễn Thị Hồng Diễm</FULLNAME>
+    <IDCODE>211866960</IDCODE>
+    <COUNTRY>Viet Nam</COUNTRY>
+    <ADDRESS>173A Nguyễn Văn Trỗi, P.11, Q. Phú nhuận, TP.HCM</ADDRESS>
+    <SYMBOLNAME>Ngân hàng Thương mại CP Á Châu</SYMBOLNAME>
+    <ACCTNO>0001000007</ACCTNO>
+    <AMT>1000</AMT>
+    <EMAIL>diemphumy@yahoo.com</EMAIL>
+    <FAX1>0938724968</FAX1>
+    <CUSTODYCD>049C686868</CUSTODYCD>
+    <ACCTNO1>0001000007</ACCTNO1>
+  </RptData>
+</NewDataSet>

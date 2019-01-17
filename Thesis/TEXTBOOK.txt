@@ -1,0 +1,4 @@
+http://www.worldcat.org/title/mathematical-models-of-financial-derivatives/oclc/249111907/viewport
+https://math.stackexchange.com/questions/900911/proof-of-the-black-scholes-pricing-formula-for-european-call-option
+
+https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/black-scholes/v/implied-volatility

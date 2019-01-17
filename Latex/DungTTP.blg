@@ -1,0 +1,12 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: DungTTP.aux
+The style file: apalike.bst
+I couldn't open database file review3.bib
+---line 34 of file DungTTP.aux
+ : \bibdata{review3
+ :                 }
+I'm skipping whatever remains of this command
+I found no database files---while reading file DungTTP.aux
+Warning--I didn't find a database entry for "Merton73"
+Warning--I didn't find a database entry for "shreve2004stochastic"
+Warning--I didn't find a database entry for "StochasticEric"
+(There were 2 error messages)

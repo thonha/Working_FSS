@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <RptData>
+    <CUSTID>0001000036</CUSTID>
+    <FULLNAME>DUNGTA01</FULLNAME>
+    <TXDATE>2018-06-27T00:00:00+07:00</TXDATE>
+    <CUSTODYCD>049C000032</CUSTODYCD>
+    <TYPE_ORDER>Tên đầy đủ</TYPE_ORDER>
+    <OLD>TẠ PHƯƠNG DUNG</OLD>
+    <NEW>DUNGTA01</NEW>
+    <VSD>Y</VSD>
+    <MAKER>ADMIN</MAKER>
+    <CHECKER>ADMIN</CHECKER>
+    <MA_TYPE>N</MA_TYPE>
+    <STATUS_VSD>Y</STATUS_VSD>
+  </RptData>
+</NewDataSet>

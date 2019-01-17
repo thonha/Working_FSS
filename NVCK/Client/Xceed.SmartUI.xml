@@ -1,0 +1,2002 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<doc>
+    <assembly>
+        <name>Xceed.SmartUI</name>
+    </assembly>
+    <members>
+        <member name="N:Xceed.SmartUI">
+            <summary>The Xceed.SmartUI namespace regroups all of the classes which make up the core of Xceed SmartUI for .NET.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.IExpandable">
+            <summary>Provides the functionality for a SmartItem to expand and collapse.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.IExpandable.Expanded">
+            <summary>Gets or sets a boolean value indicating if the SmartItem is expanded.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.IShortcut">
+            <summary>Provides the functionality for a SmartItem to expose a shortcut.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.IShortcut.Shortcut">
+            <summary>Gets or sets the shortcut associated with a SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.IShortcut.ShortcutText">
+            <summary>Gets or sets the Shortcut's text.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.IShortcut.ShowShortcut">
+            <summary>Gets or sets a boolean value indicating if a SmartItem's Shortcut will be displayed.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.ClickSource">
+            <summary>Value representing the source of the click.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.ClickSource.Mouse">
+            <summary>A mouse button was pressed.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.ClickSource.Mnemonic">
+            <summary>A mnemonic key was pressed.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.ClickSource.Shortcut">
+            <summary>A shortcut key was used.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.ClickSource.Keyboard">
+            <summary>A key on the keyboard was pressed.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.ClickSource.Code">
+            <summary>The click was invoked programmatically.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.MnemonicUsage">
+            <summary>Value representing how (and if) mnemonics are activated.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.MnemonicUsage.None">
+            <summary>No mnemonics are used.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.MnemonicUsage.AltChar">
+            <summary>The Alt key is used to activate the mnemonics.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.ScrollBarStyle">
+            <summary>Value representing the style of the scrollbars.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.ScrollBarStyle.Standard">
+            <summary>Standard scrollbars will be used.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.ScrollBarStyle.Buttons">
+            <summary>Scrollbars that do not have a shaft will be used.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.ScrollBarVisibility">
+            <summary>Value representing the visiblity of a scrollbar.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.ScrollBarVisibility.Hidden">
+            <summary>The scrollbar is never visible.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.ScrollBarVisibility.VisibleWhenNeeded">
+            <summary>The scrollbar is only visible when needed.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.ScrollBarVisibility.AlwaysVisible">
+            <summary>The scrollbar is always visible but disabled when not needed.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartItemSection">
+            <summary>Value representing the section of a SmartItem at a specific Point.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.SmartItemSection.Outside">
+            <summary>The point is outside of the SmartItem's "hot" section.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.SmartItemSection.Inside">
+            <summary>The point is inside of the SmartItem's "hot" section.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.SmartItemSection.DropDown">
+            <summary>The point is in the SmartItem's dropdown section.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.SmartItemSection.Edit">
+            <summary>The point is in the SmartItem's edit section.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartItemState">
+            <summary>Value representing the state of the SmartItem.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.SmartItemState.Any">
+            <summary>The SmartItem is in any possible state.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.SmartItemState.Selectable">
+            <summary>The SmartItem is both visible and can be selected.</summary>
+        </member>
+        <member name="F:Xceed.SmartUI.SmartItemState.Visible">
+            <summary>The SmartItem is visible.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.DoubleLineBorders">
+            <summary>Represents a double-line border.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.DoubleLineBorders.#ctor">
+            <summary>Initializes a new instance of the DoubleLineBorders class.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.DoubleLineBorders.OnInnerLineColorChanged(System.EventArgs)">
+            <summary>Raises the InnerLineColorChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.DoubleLineBorders.OnOuterLineColorChanged(System.EventArgs)">
+            <summary>Raises the OuterLineColorChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.DoubleLineBorders.OnPaint(Xceed.SmartUI.SmartPaintEventArgs)">
+            <summary>Raises the Paint event.</summary>
+            <param name="e">A SmartPaintEventArgs that contains the event data.</param>
+        </member>
+        <member name="P:Xceed.SmartUI.DoubleLineBorders.InnerLineColor">
+            <summary>Gets or sets the color of the inner border.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.DoubleLineBorders.OuterLineColor">
+            <summary>Gets or sets the color of the outer border.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.DoubleLineBorders.InnerLineColorChanged">
+            <summary>Raised when the value of the InnerLineColor property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.DoubleLineBorders.OuterLineColorChanged">
+            <summary>Raised when the value of the OuterLineColor property is changed.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.Licenser">
+            <summary>Class which is used to register Xceed SmartUI for .NET.</summary>
+            <remarks>    We recommend you set the LicenseKey property in the main     entry point of the application. For example, the LicenseKey     property can be set, for C# users, in the static main function.     For VB.NET users, it can be set in the constructor of the main     form or in the "Sub Main" procedure. If no entry point is     available, it is recommended that the LicenseKey property be     set in a static constructor of a class that will be accessed     systematically before any of the library's classes are     instantiated or, you can simply set the LicenseKey property     immediately BEFORE you instantiate a class.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.Licenser.Unlock">
+            <summary>This method is reserved for internal use and is not intended to be used directly from your code.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.Licenser.LicenseKey">
+            <summary>Gets or sets the license key used to license this product.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.RaisedBorders">
+            <summary>Represents the borders of a SmartItemCollection that have 3D appearance.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.RaisedBorders.#ctor">
+            <summary>Initializes a new instance of the RaisedBorders class.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.RaisedBorders.#ctor">
+            <summary>Initializes a new instance of the RaisedBorders class.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.RaisedBorders.#ctor(System.Drawing.Color)">
+            <summary>Initializes a new instance of the RaisedBorders class.</summary>
+            <param name="baseColor">A Color structure representing the base color of the border.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.RaisedBorders.OnPaint(Xceed.SmartUI.SmartPaintEventArgs)">
+            <summary>Raises the Paint event.</summary>
+            <param name="e">A SmartPaintEventArgs that contains the event data.</param>
+        </member>
+        <member name="P:Xceed.SmartUI.RaisedBorders.BaseColor">
+            <summary>Gets or sets the base color of the border.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SingleLineBorders">
+            <summary>Represents a single-line border.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SingleLineBorders.#ctor">
+            <summary>Initializes a new instance of the SingleLineBorders class.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SingleLineBorders.OnColorChanged(System.EventArgs)">
+            <summary>Raises the ColorChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SingleLineBorders.OnPaint(Xceed.SmartUI.SmartPaintEventArgs)">
+            <summary>Raises the Paint event.</summary>
+            <param name="e">A SmartPaintEventArgs that contains the event data.</param>
+        </member>
+        <member name="P:Xceed.SmartUI.SingleLineBorders.Color">
+            <summary>Gets or sets the color of the border.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SingleLineBorders.ColorChanged">
+            <summary>Raised when the value of the Color property is changed.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartBorders">
+            <summary>Represents the borders that can be applied to a SmartItemCollection.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartBorders.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>Initializes a new instance of the SmartBorders class specifying the width of each border.</summary>
+            <param name="left">The width of the left border.</param>
+            <param name="right">The width of the right border.</param>
+            <param name="top">The width of the top border.</param>
+            <param name="bottom">The width of the bottom border.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartBorders.OnPaint(Xceed.SmartUI.SmartPaintEventArgs)">
+            <summary>Raises the Paint event.</summary>
+            <param name="e">A SmartPaintEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartBorders.Refresh">
+            <summary>Forces the SmartBorders to invalidate its client area and immediately redraw itself.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartBorders.Bottom">
+            <summary>Gets the width, in pixels, of the bottom border.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartBorders.Left">
+            <summary>Gets the width, in pixels, of the left border.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartBorders.Right">
+            <summary>Gets the width, in pixels, of the right border.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartBorders.Top">
+            <summary>Gets the width, in pixels, of the top border.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartBorders.Paint">
+            <summary>Raised when a SmartBorders is being painted.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartControl">
+            <summary>Represents any SmartControl and exposes properties and methods that allow their manipulation.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.CreateDefaultLayout">
+            <summary>Creates the default SmartLayout for the SmartControl.</summary>
+            <returns>A reference to a SmartLayout representing the default layout of the SmartControl. Unless overridden, [LangWord]null.</returns>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.CreateDesignTimeSmartItem(System.Type)">
+            <summary>This method is reserved for internal use and is not intended to be used directly from your code.</summary>
+            <returns/>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.Dispose">
+            <summary>Releases the unmanaged resources used by the SmartControl and optionally releases the managed resources.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.Dispose(System.Boolean)">
+            <summary>Releases the unmanaged resources used by the SmartControl and optionally releases the managed resources.</summary>
+            <param name="disposing">[LangWord]true to release both managed and unmanaged resources; [LangWord]false to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.GetItemAtPoint(System.Drawing.Point)">
+            <summary>Retrieves the SmartItem at a specified point.</summary>
+            <returns>A reference to the SmartItem at point. Can be [LangWord]null if there is no SmartItem at the specified point.</returns>
+            <param name="point">A Point structure representing the location at which to retrieve the SmartItem.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.GetItemsFromType">
+            <summary>Retrieves a non-recursive list of the child SmartItems that have the specified type (or sub type).</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.GetItemsFromType(System.Type)">
+            <summary>Retrieves a non-recursive list of the child SmartItems that have the specified type (or sub type).</summary>
+            <returns>A reference to a SmartItemList containing the child SmartItems of the specified type (or sub type).</returns>
+            <param name="type">The type of SmartItem to retrieve.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.GetItemsFromType(System.Type,System.Boolean)">
+            <summary>Retrieves a list of the child SmartItems that have the specified type (or sub type).</summary>
+            <returns>A reference to a SmartItemList containing the child SmartItems of the specified type (or sub type).</returns>
+            <param name="type">The type of SmartItem to retrieve.</param>
+            <param name="recursive">[LangWord]true if child SmartItems should also be returned; [LangWord]false otherwise.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.GetNextItem(Xceed.SmartUI.SmartItem)">
+            <summary>Retrieves the next SmartItem of the specified item in the Items collection in a non-hierarchical manner.</summary>
+            <returns>A reference to a SmartItem representing the next SmartItem of the specified item in the Items collection in a non-hierarchical manner.</returns>
+            <param name="item">The SmartItem from which to begin the search.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.GetPreviousItem(Xceed.SmartUI.SmartItem)">
+            <summary>Retrieves the previous SmartItem of the specified item in the Items collection in a non-hierarchical manner.</summary>
+            <returns>A reference to a SmartItem representing the previous SmartItem of the specified item in the Items collection in a non-hierarchical manner.</returns>
+            <param name="item">The SmartItem from which to begin the search.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.GetPropertyValue(System.Object,System.Object)">
+            <summary>Retrieves the value of the specified property.</summary>
+            <returns>An object representing the value of the property. In the case where key is not explicitly defined, defaultValue will be returned.</returns>
+            <param name="key">The property whose value to retrieve.</param>
+            <param name="defaultValue">The value returned in the case where key is not explicitly defined.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.IsInputKey(System.Windows.Forms.Keys)">
+            <summary>Determines whether the specified key is a regular input key or a special key that requires preprocessing</summary>
+            <returns>[LangWord]true if the specified key is a regular input key; [LangWord]false otherwise.</returns>
+            <param name="keyData">One of the Keys values.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.IsUIStyleSupported(Xceed.SmartUI.UIStyle.UIStyle)">
+            <summary>Retrieves a boolean value indicating if the specified UIStyle is supported by the SmartControl.</summary>
+            <returns>[LangWord]true if the UIStyle is supported; [LangWord]false otherwise.</returns>
+            <param name="style">The UIStyle to verify.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnDoubleClick(System.EventArgs)">
+            <summary>Raises the DoubleClick event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnDropDownBegun(System.EventArgs)">
+            <summary>Raises the DropDownBegun event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnDropDownEnded(System.EventArgs)">
+            <summary>Raises the DropDownEnded event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnEnter(System.EventArgs)">
+            <summary>Raises the Enter event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnFontChanged(System.EventArgs)">
+            <summary>Raises the FontChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnGainFocusOnMouseDownChanged(System.EventArgs)">
+            <summary>Raises the GainFocusOnMouseDownChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnGotFocus(System.EventArgs)">
+            <summary>Raises the GotFocus event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnItemAdded(Xceed.SmartUI.SmartItemEventArgs)">
+            <summary>Raises the ItemAdded event.</summary>
+            <param name="e">A SmartItemEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnItemClick(Xceed.SmartUI.SmartItemClickEventArgs)">
+            <summary>Raises the ItemClick event.</summary>
+            <param name="e">A SmartItemClickEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnItemDoubleClick(Xceed.SmartUI.SmartItemEventArgs)">
+            <summary>Raises the ItemDoubleClick event.</summary>
+            <param name="e">A SmartItemEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnItemMouseDown(Xceed.SmartUI.SmartItemMouseEventArgs)">
+            <summary>Raises the ItemMouseDown event.</summary>
+            <param name="e">A SmartItemMouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnItemMouseHover(Xceed.SmartUI.SmartItemEventArgs)">
+            <summary>Raises the ItemMouseHover event.</summary>
+            <param name="e">A SmartItemEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnItemMouseUp(Xceed.SmartUI.SmartItemMouseEventArgs)">
+            <summary>Raises the ItemMouseUp event.</summary>
+            <param name="e">A SmartItemMouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnItemRemoved(System.EventArgs)">
+            <summary>Raises the ItemRemoved event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnItemsImageListChanged(System.EventArgs)">
+            <summary>Raises the ItemsImageListChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <summary>Raises the KeyDown event.</summary>
+            <param name="e">A KeyEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnKeyPress(System.Windows.Forms.KeyPressEventArgs)">
+            <summary>Raises the KeyPress event.</summary>
+            <param name="e">A KeyPressEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnKeyUp(System.Windows.Forms.KeyEventArgs)">
+            <summary>Raises the KeyUp event.</summary>
+            <param name="e">A KeyEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnLeave(System.EventArgs)">
+            <summary>Raises the Leave event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnLocationChanged(System.EventArgs)">
+            <summary>Raises the LocationChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnLostFocus(System.EventArgs)">
+            <summary>Raises the LostFocus event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>Raises the MouseDown event.</summary>
+            <param name="e">A MouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnMouseHover(System.EventArgs)">
+            <summary>Raises the MouseHover event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnMouseLeave(System.EventArgs)">
+            <summary>Raises the MouseLeave event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>Raises the MouseMove event.</summary>
+            <param name="e">A MouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>Raises the MouseUp event.</summary>
+            <param name="e">A MouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnMouseWheel(System.Windows.Forms.MouseEventArgs)">
+            <summary>Raises the MouseWheel event.</summary>
+            <param name="e">A MouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>Raises the Paint event.</summary>
+            <param name="e">A PaintEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnParentChanged(System.EventArgs)">
+            <summary>Raises the ParentChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnResize(System.EventArgs)">
+            <summary>Raises the Resize event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnSelectedItemChanged(System.EventArgs)">
+            <summary>Raises the SelectedItemChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnSystemColorsChanged(System.EventArgs)">
+            <summary>Raises the SystemColorsChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnTextChanged(System.EventArgs)">
+            <summary>Raises the TextChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnUIStyleChanged(System.EventArgs)">
+            <summary>Raises the UIStyleChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.OnUIStyleResourceAssemblyChanged(System.EventArgs)">
+            <summary>Raises the UIStyleResourceAssemblyChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.PaintItemsBackground(Xceed.SmartUI.SmartPaintEventArgs)">
+            <summary>Paints the background of the child SmartItems.</summary>
+            <param name="e">A SmartPaintEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.ProcessMnemonic(System.Char)">
+            <summary>Processes a mnemonic character.</summary>
+            <returns>[LangWord]true if the character was processed as a mnemonic by the control; [LangWord]false otherwise.</returns>
+            <param name="charCode">The character to process.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.Refresh">
+            <summary>Forces the SmartControl to invalidate its client area and immediately redraw itself.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.Refresh">
+            <summary>Forces the SmartControl to invalidate its client area and immediately redraw itself.</summary>
+            <remarks>Child SmartControls and SmartItems will not be refreshed.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.Refresh(System.Boolean)">
+            <summary>Forces the SmartControl to invalidate its client area and immediately redraw itself.</summary>
+            <param name="refreshChildren">[LangWord]true if any child SmartControls or SmartItems should also be refreshed; [LangWord]false otherwise.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.ResetBackColor">
+            <summary>Resets the value of the BackColor property to its default value, DefaultBackColor.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.ResetGainFocusOnMouseDown">
+            <summary>Resets the value of the GainFocusOnMouseDown property to its default value, DefaultGainFocusOnMouseDown.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.ResumeUpdate">
+            <summary>Signals that the SmartControl and all its child SmartItems that they can execute the pending painting operations.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.ScrollHorizontal(System.Int32)">
+            <summary>Scrolls the container horiztonally.</summary>
+            <param name="offset">A value representing the number of pixels by which to horizontally scroll the container. If a negative value is provided, the container will be scrolled to the left. If a positive value is provided, the container will be scrolled to the right.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.ScrollVertical(System.Int32)">
+            <summary>Scrolls the container vertically.</summary>
+            <param name="offset">A value representing the number of pixels by which to vertically scroll the container. If a negative value is provided, the container will be scrolled upwards. If a positive value is provided, the container will be scrolled downwards.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.Select">
+            <summary>Activates a child SmartItem. Optionally specifies the direction in the tab order to select the SmartItem from.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.Select(System.Boolean,System.Boolean)">
+            <summary>Activates a child SmartItem. Optionally specifies the direction in the tab order to select the SmartItem from.</summary>
+            <param name="directed">[LangWord]true to specify the direction of the SmartItem to select; [LangWord]false otherwise.</param>
+            <param name="forward">[LangWord]true to move forward in the tab order; [LangWord]false to move backward in the tab order.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.SelectNextItem">
+            <summary>Selects the next SmartItem of the currently selected one in the Items collection.</summary>
+            <returns>[LangWord]true if a SmartItem was selected; [LangWord]false otherwise.</returns>
+            <remarks>    This method will select the next SmartItem whose     CanBeSelected property is set to [LangWord]true.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.SelectPreviousItem">
+            <summary>Retrieves the next SmartItem of the currently selected one, in the Items collection.</summary>
+            <returns>A reference to a SmartItem representing the next SmartItem in the Items collection.</returns>
+            <remarks>    This method will iterate through the SmartItems in the     collection and select the first SmartItem whose CanBeSelected     property is set to [LangWord]true.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.SetPropertyValue(System.Object,System.Object)">
+            <summary>Sets the specified property.</summary>
+            <param name="key">The property to set.</param>
+            <param name="value">The value to assign to the property.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.ShouldSerializeBackColor">
+            <summary>Retrieves a boolean value indicating if the BackColor property should be persisted.</summary>
+            <returns>[LangWord]true if the property value has changed from its default; [LangWord]false otherwise.</returns>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartControl.SuspendUpdate">
+            <summary>Prevents the SmartControl and all its child SmartItems from being repainted until ResumeUpdate is called.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.BackColor">
+            <summary>Gets or sets the background color of the SmartControl.</summary>
+            <remarks>    To reset the value of the BackColor property to its     default value, DefaultBackColor, the ResetBackColor method must     be called or Empty assigned to the BackColor property.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.Cursor">
+            <summary>Gets or sets the cursor that is displayed when the mouse pointer is over the SmartControl</summary>
+            <remarks>    The cursor returned by this property can depend on the     SmartItem over which the mouse is located.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.DefaultBackColor">
+            <summary>Gets the default value of the BackColor property.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.DefaultFont">
+            <summary>Gets the default value of the Font property.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.DefaultGainFocusOnMouseDown">
+            <summary>Gets the default value of the GainFocusOnMouseDown property.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.DefaultUIStyle">
+            <summary>Gets the default value of the UIStyle property.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.ExcludedSmartItemTypes">
+            <summary>Gets the types of the child SmartItems which cannot be added at design-time to this SmartControl.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.Font">
+            <summary>Gets or sets the Font of the SmartControl.</summary>
+            <remarks>    Because the Font object is immutable (meaning that you     cannot adjust any of its properties), you can only assign the     Font property a new Font object. However, you can base the new     font on the existing font.     If the Font property has not been explicitly set or is     set to [LangWord]null, then its value is inherited from its     parent.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.GainFocusOnMouseDown">
+            <summary>Gets or sets a boolean value indicating if the SmartControl gains focus when the mouse button is pressed.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.HasOpenDropDown">
+            <summary>Gets a boolean value indicating if one of the SmartItems in the Items collection has an open dropdown or is a dropdown that is open.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.InternalItems">
+            <summary>Gets a list of the internal child SmartItems.</summary>
+            <remarks>    An internal SmartItem is one that has the     InternalSmartItem attribute set to its class definition.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.Items">
+            <summary>Gets the collection of child SmartItems associated with the SmartControl.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.ItemsImageList">
+            <summary>Gets or sets the list of images that will be used by the Items of the SmartControl.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.ParentItem">
+            <summary>Gets the parent SmartItem of the SmartControl.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.PreferredSmartItemTypes">
+            <summary>Gets the types of the child SmartItems which can be added at design-time to this SmartControl.</summary>
+            <remarks>    The first SmartItem in the array is the "default"     SmartItem. The default SmartItem is the item that is added to     the SmartControl when the "New item" placeholder is     double-clicked.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.ScrollPoint">
+            <summary>Gets or sets a Point representing the upper-left corner of the visible portion of the container.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.SelectedItem">
+            <summary>Gets or sets the currently selected SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.SmartDesignMode">
+            <summary>Gets a boolean value indicating if the SmartControl is selected in design-time.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.UIStyle">
+            <summary>Gets or sets the appearance of the SmartControl and its SmartItems.</summary>
+            <remarks>             Not all SmartControls support all styles. The following         table provides a list of the available SmartControls and         their supported styles.                                       SmartCheckedListBox                 The Windows Classic, OfficeXP,                 WindowsXP and ResourceAssembly styles are                 supported.                                           SmartExplorerTaskPane                 The Windows Classic, WindowsXP and                 ResourceAssembly styles are                 supported.                                           SmartMenuBar                 The Windows Classic, OfficeXP,                 WindowsXP, Office2003 and ResourceAssembly styles                 are supported.                                           SmartOfficeTaskPane                 The OfficeXP and Office2003 styles are                 supported.                                           SmartOptionList                 The Windows Classic, OfficeXP,                 WindowsXP and ResourceAssembly styles are                 supported.                                           SmartOutlookShortcutBar                 The Windows Classic, OfficeXP,                 WindowsXP and ResourceAssembly styles are                 supported.                                           SmartStatusBar                 The Windows Classic, OfficeXP,                 WindowsXP, Office2003 and ResourceAssembly styles                 are supported.                                           SmartTabStrip                 The OfficeXP style is                 supported.                                           SmartToolBar                 The Windows Classic, OfficeXP,                 WindowsXP, Office2003 and ResourceAssembly styles                 are supported.                                           SmartTreeView                 The Windows Classic, WindowsXP and                 ResourceAssembly styles are                 supported.                                When set to WindowsXP on non-Windows XP machines, the     blue XP theme style will be used. On Windows XP machines, the     current theme will be used. If you want to force a style in     particular, for example the Blue, Olive Green or Silver XP     themes, the resource assembly must be assigned to the     UIStyleResourceAssembly property and the UIStyle property set     to UIStyle.ResourceAssembly.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.UIStyleResourceAssembly">
+            <summary>Gets or sets the assembly representing the resource from which the style is loaded.</summary>
+            <remarks>    The assembly assigned to the UIStyleResourceAssembly     property is only taken into consideration when UIStyle is set     to ResourceAssembly.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartControl.VisibleItems">
+            <summary>Gets a list of the visible child SmartItems.</summary>
+            <remarks>    All child SmartItems whose IsVisible property returns     [LangWord]true will be returned.</remarks>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartControl.DropDownBegun">
+            <summary>Raised when a SmartControl's dropdown operation begins.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartControl.DropDownEnded">
+            <summary>Raised when the dropdown section of a SmartControl has dropped down.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartControl.GainFocusOnMouseDownChanged">
+            <summary>Raised when the value of the GainFocusOnMouseDown property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartControl.ItemAdded">
+            <summary>Raised when a SmartItem is added to the Items collection.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartControl.ItemClick">
+            <summary>Raised when a SmartItem is clicked.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartControl.ItemDoubleClick">
+            <summary>Raised when a SmartItem is double-clicked.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartControl.ItemMouseDown">
+            <summary>Raised when the mouse pointer is over a SmartItem and a mouse button is pressed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartControl.ItemMouseHover">
+            <summary>Raised when the mouse pointer hovers over a SmartItem.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartControl.ItemMouseUp">
+            <summary>Raised when the mouse pointer is over a SmartItem and a mouse button is released.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartControl.ItemRemoved">
+            <summary>Raised when a SmartItem is removed from the Items collection.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartControl.ItemsImageListChanged">
+            <summary>Raised when the value of the ItemsImageList property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartControl.SelectedItemChanged">
+            <summary>Raised when the value of the SelectedItem property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartControl.UIStyleChanged">
+            <summary>Raised when the value of the UIStyle property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartControl.UIStyleResourceAssemblyChanged">
+            <summary>Raised when the value of the UIStyleResourceAssembly property is changed.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartItem">
+            <summary>Represents any SmartItem and exposes properties and methods that allow their manipulation.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.AllowTabStop(Xceed.SmartUI.SmartItem,System.Boolean)">
+            <summary>Retrieves a boolean value indicating whether the user can give the focus to this SmartItem using the TAB key.</summary>
+            <returns>[LangWord]true if the SmartItem cab receive focus; [LangWord]false otherwise. Unless overridden, [LangWord]false is always returned.</returns>
+            <param name="selectedSmartItem">A reference to the currently selected SmartItem.</param>
+            <param name="forward">[LangWord]true if the tab direction is going forward; [LangWord]false if it is going backwards.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.CalculateIdealSize">
+            <summary>Calculates the IdealSize needed to paint the SmartItem.</summary>
+            <remarks>Refresh will be called in the case where the IdealSize changes.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.CalculateSize(System.Drawing.Graphics,System.Drawing.Font,System.Drawing.StringFormat)">
+            <summary>Calculates the size needed to paint the SmartItem.</summary>
+            <remarks>When overriding CalculateSize in a derived class, if the font of the SmartItem is needed to calculate the size, the font parameter, and not the Font property, should be used.</remarks>
+            <returns>A Size structure representing the size needed to paint the SmartItem.</returns>
+            <param name="graphics">A Graphics object representing the graphics that will be used to draw the SmartItem.</param>
+            <param name="font">A Font object representing the font that will be used by the SmartItem.</param>
+            <param name="format">A StringFormat object representing the string format that will be used by the SmartItem.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.CloseDropDown">
+            <summary>Closes the SmartItem's dropdown.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.CloseDropDown">
+            <summary>Closes the SmartItem's dropdown.</summary>
+            <remarks>    In the case where the SmartItem does not have a dropdown,     nothing will happen.     The possible dropdowns of child SmartItems will not be     closed.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.CloseDropDown(System.Boolean)">
+            <summary>Closes the SmartItem's and all its child SmartItems', dropdowns.</summary>
+            <remarks>    In the case where the SmartItem does not have a dropdown,     nothing will happen.</remarks>
+            <param name="allLevels">[LangWord]true if the dropdowns of all parent and child SmartItems should also be closed; [LangWord]false otherwise.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.CreateAccessibilityInstance">
+            <summary>This method is reserved for internal use and is not intended to be used directly from your code.</summary>
+            <returns/>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.CreateDefaultLayout">
+            <summary>Creates the default SmartLayout for the SmartItem.</summary>
+            <returns>A reference to a SmartLayout representing the default layout of the SmartItem. Unless overridden, [LangWord]null.</returns>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.CreateVirtualControl">
+            <summary>This method is reserved for internal use and is not intended to be used directly from your code.</summary>
+            <returns/>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.DoClick">
+            <summary>Simulates a mouse click action on the SmartItem.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.DoClick">
+            <summary>Simulates a mouse click action on the SmartItem.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.DoClick(Xceed.SmartUI.ClickSource)">
+            <summary>Simulates a mouse click on the SmartItem.</summary>
+            <param name="action">A ClickSource value representing the source of the mouse click.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.EnsureVisible">
+            <summary>Ensures that the SmartItem is visible within the ParentItem or ParentSmartControl, scrolling the contents of the parent if necessary.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.GetPropertyValue(System.Object,System.Object)">
+            <summary>Retrieves the value of the specified property.</summary>
+            <returns>An object representing the value of the property. In the case where key is not explicitly defined, defaultValue will be returned.</returns>
+            <param name="key">The property whose value to retrieve.</param>
+            <param name="defaultValue">The value returned in the case where key is not explicitly defined.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.Hide">
+            <summary>Hides the SmartItem.</summary>
+            <remarks>    Calling the Hide method will set the SmartItem's Visible     property to [LangWord]false.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.HitTest">
+            <summary>Retrieves the section of the SmartItem at the current mouse cursor position relative to the ClientRectangle.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.HitTest">
+            <summary>Retrieves the section of the SmartItem at the current mouse cursor position relative to the ClientRectangle.</summary>
+            <returns>A SmartItemSection value representing the section of the SmartItem at the current mouse cursor position relative to the ClientRectangle.</returns>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.HitTest(System.Drawing.Point)">
+            <summary>Retrieves the section of the SmartItem at a specified Point relative to the ClientRectangle.</summary>
+            <returns>A SmartItemSection value representing the section of the SmartItem at the specified Point.</returns>
+            <param name="point">A Point structure representing the location of the SmartItem relative to the ClientRectangle..</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.Invalidate">
+            <summary>Invalidates the SmartItem's area in order to force redraw.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.Invalidate">
+            <summary>Invalidates the SmartItem's area in order to force redraw.</summary>
+            <remarks>The SmartItem's children will not be invalidated.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.Invalidate(System.Boolean)">
+            <summary>Invalidates the SmartItem's area, including any potential children, in order to force redraw.</summary>
+            <param name="invalidateChildren">[LangWord]true to invalidate the SmartItem's child items; [LangWord]false otherwise.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.IsMnemonic(System.Windows.Forms.Keys)">
+            <summary>Determines if the specified key is the mnemonic character for the SmartItem.</summary>
+            <returns>[LangWord]true if the key is the mnemonic character for the SmartItem; [LangWord]false otherwise.</returns>
+            <param name="key">The Key to test.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.MakeVisible">
+            <summary>Renders the SmartItem visible no matter its state or its parent's state.</summary>
+            <remarks>    When overriding MakeVisible in a derived class, you must     make sure that the SmartItem is always made visible, no matter     its state or its parent state. For example, if the SmartItem is     in a collapsed group, the group should be expanded.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnAddedToCollection(System.EventArgs)">
+            <summary>Raises the AddedToCollection event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnBoundsChanged(System.EventArgs)">
+            <summary>Raises the BoundsChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnClick(Xceed.SmartUI.SmartItemClickEventArgs)">
+            <summary>Raises the Click event.</summary>
+            <param name="e">A SmartItemClickEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnCursorChanged(System.EventArgs)">
+            <summary>Raises the CursorChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnDisabledImageIndexChanged(System.EventArgs)">
+            <summary>Raises the DisabledImageIndexChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnDoubleClick(System.EventArgs)">
+            <summary>Raises the DoubleClick event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnDownImageIndexChanged(System.EventArgs)">
+            <summary>Raises the DownImageIndexChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnDropDownClosed(System.EventArgs)">
+            <summary>Raises the DropDownClosed event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnEnabledChanged(System.EventArgs)">
+            <summary>Raises the EnabledChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnFitHeightToLayoutChanged(System.EventArgs)">
+            <summary>Raises the FitHeightToLayoutChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnFitWidthToLayoutChanged(System.EventArgs)">
+            <summary>Raises the FitWidthToLayoutChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnFontChanged(System.EventArgs)">
+            <summary>Raises the FontChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnForeColorChanged(System.EventArgs)">
+            <summary>Raises the ForeColorChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnImageChanged(System.EventArgs)">
+            <summary>Raises the ImageChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnImageIndexChanged(System.EventArgs)">
+            <summary>Raises the ImageIndexChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnIndexChanged(System.EventArgs)">
+            <summary>Raises the IndexChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnKeyChanged(System.EventArgs)">
+            <summary>Raises the KeyChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <summary>Raises the KeyDown event.</summary>
+            <param name="e">A KeyEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnKeyPress(System.Windows.Forms.KeyPressEventArgs)">
+            <summary>Raises the KeyPress event.</summary>
+            <param name="e">A KeyPressEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnKeyUp(System.Windows.Forms.KeyEventArgs)">
+            <summary>Raises the KeyUp event.</summary>
+            <param name="e">A KeyEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>Raises the MouseDown event.</summary>
+            <param name="e">A MouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnMouseEnter(System.EventArgs)">
+            <summary>Raises the MouseEnter event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnMouseHover(System.EventArgs)">
+            <summary>Raises the MouseHover event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnMouseLeave(System.EventArgs)">
+            <summary>Raises the MouseLeave event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>Raises the MouseMove event.</summary>
+            <param name="e">A MouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>Raises the MouseUp event.</summary>
+            <param name="e">A MouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnOpeningDropDown(System.EventArgs)">
+            <summary>Raises the OpeningDropDown event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnOverFontChanged(System.EventArgs)">
+            <summary>Raises the OverFontChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnOverForeColorChanged(System.EventArgs)">
+            <summary>Raises the OverForeColorChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnOverImageIndexChanged(System.EventArgs)">
+            <summary>Raises the OverImageIndexChanged event.</summary>
+            <param name="e">A EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnQueryAccessibilityHelp(System.Windows.Forms.QueryAccessibilityHelpEventArgs)">
+            <summary>Raises the QueryAccessibilityHelp event.</summary>
+            <remarks>When overriding OnQueryAccessibilityHelp in a derived class, be sure to call the base class's OnQueryAccessibilityHelp method so that registered delegates receive the event.</remarks>
+            <param name="e">A QueryAccessibilityHelpEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnSelectedChanged(System.EventArgs)">
+            <summary>Raises the SelectedChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnTagChanged(System.EventArgs)">
+            <summary>Raises the TagChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnTextChanged(System.EventArgs)">
+            <summary>Raises the TextChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnToolTipTextChanged(System.EventArgs)">
+            <summary>Raises the ToolTipTextChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnUseMnemonicChanged(System.EventArgs)">
+            <summary>Raises the UseMnemonicChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OnVisibleChanged(System.EventArgs)">
+            <summary>Raises the VisibleChanged event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.OpenDropDown">
+            <summary>Opens the SmartItem's dropdown.</summary>
+            <remarks>    In the case where the SmartItem does not have a dropdown,     nothing will happen.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.PaintForeground(Xceed.SmartUI.SmartItemPaintEventArgs)">
+            <summary>Paints the foreground of the SmartItem.</summary>
+            <param name="e">A SmartItemPaintEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.PaintItemsBackground(Xceed.SmartUI.SmartPaintEventArgs)">
+            <summary>Paints the background of the child SmartItems.</summary>
+            <param name="e">A SmartPaintEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ProcessMnemonic">
+            <summary>Processes a mnemonic character.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.RaiseEvent(System.Object,System.EventArgs)">
+            <summary>Raises the specified event using the provided EventArgs.</summary>
+            <param name="eventKey">The event to raise.</param>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.Refresh">
+            <summary>Forces the SmartItem to invalidate its client area and immediately redraw itself and any child SmartItem.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ResetAccessibleDefaultActionDescription">
+            <summary>Resets the value of the AccessibleDefaultActionDescription property to its default value, DefaultAccessibleDefaultActionDescription.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ResetAccessibleDescription">
+            <summary>Resets the value of the AccessibleDescription property to its default value, DefaultAccessibleDescription.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ResetAccessibleName">
+            <summary>Resets the value of the AccessibleName property to its default value, DefaultAccessibleName.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ResetCursor">
+            <summary>Resets the value of the Cursor property to its default value, DefaultCursor.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ResetFitHeightToLayout">
+            <summary>Resets the value of the FitHeightToLayout property to its default value, DefaultFitHeightToLayout.</summary>
+            <remarks>    The default value of the FitHeightToLayout property     depends on the type of SmartItem.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ResetFitWidthToLayout">
+            <summary>Resets the value of the FitWidthToLayout property to its default value, DefaultFitWidthToLayout.</summary>
+            <remarks>    The default value of the FitWidthToLayout property     depends on the type of SmartItem.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ResetFont">
+            <summary>Resets the value of the Font property to its default value, [LangWord]null.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ResetForeColor">
+            <summary>Resets the value of the ForeColor property to its default value, DefaultForeColor.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ResetOverFont">
+            <summary>Resets the value of the OverFont property to its default value, [LangWord]null.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ResetText">
+            <summary>Resets the value of the Text property to its default value, DefaultText.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.Select">
+            <summary>Selects the SmartItem.</summary>
+            <remarks>    Selecting the SmartItem means that it gain focus and its     Selected property will be set to [LangWord]true.     If CanBeSelected is set to false, the SmartItem will not     be selected.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.SetPropertyValue(System.Object,System.Object)">
+            <summary>Sets the specified property.</summary>
+            <param name="key">The property to set.</param>
+            <param name="value">The value to assign to the property.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.SetVirtualControlBounds(System.Drawing.Rectangle)">
+            <summary>This method is reserved for internal use and is not intended to be used directly from your code.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ShouldSerializeCursor">
+            <summary>Retrieves a boolean value indicating if the Cursor property should be persisted.</summary>
+            <returns>[LangWord]true if the property value has changed from its default; [LangWord]false otherwise.</returns>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ShouldSerializeFitHeightToLayout">
+            <summary>Retrieves a boolean value indicating if the FitHeightToLayout property should be persisted.</summary>
+            <returns>[LangWord]true if the property value has changed from its default; [LangWord]false otherwise.</returns>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ShouldSerializeFitWidthToLayout">
+            <summary>Retrieves a boolean value indicating if the FitWidthToLayout property should be persisted.</summary>
+            <returns>[LangWord]true if the property value has changed from its default; [LangWord]false otherwise.</returns>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.ShouldSerializeForeColor">
+            <summary>Retrieves a boolean value indicating if the ForeColor property should be persisted.</summary>
+            <returns>[LangWord]true if the property value has changed from its default; [LangWord]false otherwise.</returns>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItem.Show">
+            <summary>Displays the SmartItem.</summary>
+            <remarks>    Calling the Show method will set the SmartItem's Visible     property to [LangWord]true.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.AccessibilityObject">
+            <summary>This property is reserved for internal use and is not intended to be used directly from your code.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.AccessibleDefaultActionDescription">
+            <summary>Gets or sets the default action description of the element for use by accessibility client applications.</summary>
+            <remarks>    An object's AccessibleDefaultActionDescription property     describes the object's primary method of manipulation from the     user's viewpoint. This property should be a verb or a short     verb phrase.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.AccessibleDescription">
+            <summary>Gets or sets the description of the element used by accessibility client applications.</summary>
+            <remarks>    An object's AccessibleDescription property provides a     textual description about an object's visual appearance. The     description is primarily used to provide greater context for     low-vision or blind users, but can also be used for context     searching or other applications</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.AccessibleName">
+            <summary>Gets or sets the name of the element used by accessibility client applications.</summary>
+            <remarks>    The AccessibleName property is a label that briefly     describes and identifies the object within its     container.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.Bounds">
+            <summary>Gets the location of the SmartItem according to its parent and its size.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.CanBeSelected">
+            <summary>Gets a boolean value indicating if the SmartItem can be selected.</summary>
+            <remarks>    To determine which item is currently selected, the     SelectedItem property can be consulted.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.ContainerSize">
+            <summary>Gets the size needed by the parent layout to paint the SmartItem as well as its sibling SmartItems.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.ContainingCollection">
+            <summary>Gets the collection to which the SmartItem belongs.</summary>
+            <remarks>    This property corresponds to the Items property of the     parent SmartControl or SmartItem.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.Cursor">
+            <summary>Gets or sets the cursor that is displayed when the mouse pointer is over the SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.DefaultAccessibleDefaultActionDescription">
+            <summary>Gets the default value of the AccessibleDefaultActionDescription property.</summary>
+            <remarks>    When overriding DefaultAccessibleDefaultActionDescription     in a derived class, the value returned by your implementation     of DefaultAccessibleDefaultActionDescription should not     be dynamic.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.DefaultAccessibleDescription">
+            <summary>Gets the default value of the AccessibleDescription property.</summary>
+            <remarks>    When overriding DefaultAccessibleDescription in a derived     class, the value returned by your implementation of     DefaultAccessibleDescription should not be     dynamic.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.DefaultAccessibleName">
+            <summary>Gets the default value of the AccessibleName property.</summary>
+            <remarks>    When overriding DefaultAccessibleName in a derived class,     the value returned by your implementation of     DefaultAccessibleName should not be dynamic.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.DefaultCursor">
+            <summary>Gets the default value of the Cursor property.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.DefaultFitHeightToLayout">
+            <summary>Gets the default value of the FitHeightToLayout property.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.DefaultFitWidthToLayout">
+            <summary>Gets the default value of the FitWidthToLayout property.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.DefaultForeColor">
+            <summary>Gets the default value of the ForeColor property.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.DefaultText">
+            <summary>Gets the default value of the Text property.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.DisabledImageIndex">
+            <summary>Gets or sets the index of the image retrieved from the ImageList, displayed when the SmartItem is disabled.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.DisplayRectangle">
+            <summary>Gets the display rectangle of the SmartItem. The rectangle is in coordinates relative to the RootSmartControl.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.DownImageIndex">
+            <summary>Gets or sets the index of the image retrieved from the ImageList, displayed when the mouse button is pressed over the SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.Enabled">
+            <summary>Gets or sets a value indicating whether the SmartItem can respond to user interaction.</summary>
+            <remarks>    This property does not take the enabled state of the     ParentItem, ParentSmartControl or RootSmartControl into     consideration. Therefore, if the parent SmartItem is not     enabled but the child is, Enabled will still return     [LangWord]true. To get the actual enabled state (taking the     parents into consideration), the IsEnabled property should be     consulted.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.ExcludedSmartItemTypes">
+            <summary>Gets the types of the child SmartItems which cannot be added at design-time to this SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.FitHeightToLayout">
+            <summary>Gets or sets a boolean value indicating if height of the item should be adjusted to the height of its layout.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.FitWidthToLayout">
+            <summary>Gets or sets a boolean value indicating if width of the item should be adjusted to the width of its layout.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.Focused">
+            <summary>Gets a boolean value indicating whether the SmartItem has input focus.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.Font">
+            <summary>Gets or sets the Font of the SmartItem.</summary>
+            <remarks>    Because the Font object is immutable (meaning that you     cannot adjust any of its properties), you can only assign the     Font property a new Font object. However, you can base the new     font on the existing font.     If the Font property has not been explicitly set or is     set to [LangWord]null, then its value is inherited from its     parent.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.ForeColor">
+            <summary>Gets or sets the foreground color of the SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.HasDropDown">
+            <summary>Gets a boolean value indicating if possible child SmartItems are to be displayed in a dropdown form.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.HasImage">
+            <summary>Gets a boolean value indicating if an image is associated with the SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.HasMouseDown">
+            <summary>Gets a boolean value indicating if a mouse button was pressed while the mouse was over the SmartItem.</summary>
+            <remarks>    If HasMouseDown returns [LangWord]true, this does not     necessarily mean that the mouse is still over the     SmartItem.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.HasMouseOver">
+            <summary>Gets a boolean value indicating if the mouse is currently over the SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.IdealSize">
+            <summary>Gets the size that would be ideal to paint the SmartItem.</summary>
+            <remarks>    The IdealSize does not necessarily correspond to the     actual size that the SmartItem will paint itself in. The layout     associated to the parent SmartControl or SmartItem may decide     to extend or reduce the SmartItem's ideal size.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.Image">
+            <summary>Gets or sets the image associated with the SmartItem.</summary>
+            <remarks>    The image can be located in the SmartItem's ImageList or     it can be explicitly set via the Image property.     If both the Image and ImageIndex properties are set, the     image assigned to the Image property will be used.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.ImageIndex">
+            <summary>Gets or sets a value representing the index of the image retrieved from the ImageList.</summary>
+            <remarks>    If both the Image and ImageIndex properties are set, the     image assigned to the Image property will be used.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.ImageList">
+            <summary>Gets the list of images that will be used by the SmartItem.</summary>
+            <remarks>    This property will search through the parent SmartItems     and retrieve the ItemsImageList of the first SmartItem whose     ItemsImageList property has been explicitly set. In the case     where no parent SmartItem's ItemsImageList property has been     explicitly set, the ParentSmartControl's ItemsImageList will be     returned.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.ImageSize">
+            <summary>Gets the size of the images in the ImageList.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.Index">
+            <summary>Gets or sets the zero-based index of the SmartItem within its ContainingCollection.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.InternalItems">
+            <summary>Gets a list of the internal child SmartItems.</summary>
+            <remarks>    An internal SmartItem is one that has the     InternalSmartItem attribute set to its class definition.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.IsDropDownOpen">
+            <summary>Gets a boolean value indicating if the SmartItem's dropdown is open.</summary>
+            <remarks>    In the case where the SmartItem does not have a dropdown,     this property will always return [LangWord]false.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.IsEnabled">
+            <summary>Gets a boolean value indicating the actual enabled state of the SmartItem.</summary>
+            <remarks>    This property takes the enabled state of the ParentItem,     ParentSmartControl and RootSmartControl into consideration.     Therefore, if the parent SmartItem is not enabled but the child     is, IsEnabled will return [LangWord]false.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.IsSelected">
+            <summary>Gets a boolean value indicating the actual selection state of the SmartItem.</summary>
+            <remarks>    This property takes the selection state of the SmartItem     and any possible child items into consideration. Therefore, if     a child SmartItem is selected, IsSelected will return     [LangWord]true.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.IsVisible">
+            <summary>Gets a boolean value indicating the actual visible state of the SmartItem.</summary>
+            <remarks>    This property takes the visible state of the ParentItem,     ParentSmartControl and RootSmartControl into consideration.     Therefore, if the parent SmartItem is not visible but the child     is, IsVisible will return [LangWord]false.     The collapsed or expanded state of the parent SmartItem     will also be taken into consideration in the case where the     parent SmartItem implements the IExpandable interface. For     example, if the parent SmartItem is collapsed, IsVisible will     return [LangWord]false.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.Items">
+            <summary>Gets the collection of child SmartItems associated with the SmartItem..</summary>
+            <remarks>    To know if a SmartItem can have child SmartItems, you can     verify if it has an associated layout. For example,     this.Items.Layout != null;</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.ItemsImageList">
+            <summary>Gets the list of images that will be used by the child items of the SmartItem.</summary>
+            <remarks>    To retrieve the list of images used by this SmartItem,     consult the ImageList property.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.Key">
+            <summary>Gets or sets a unique string which identifies the SmartItem in its ContainingCollection.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.Name">
+            <summary>Gets or sets the name of the SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.OverFont">
+            <summary>Gets or sets the Font of the SmartItem when the mouse passes over it.</summary>
+            <remarks>    Because the Font object is immutable (meaning that you     cannot adjust any of its properties), you can only assign the     OverFont property a new Font object. However, you can base the     new font on the existing font.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.OverForeColor">
+            <summary>Gets or sets the foreground color of the SmartItem when the mouse passes over it.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.OverImageIndex">
+            <summary>Gets or sets the index of the image retrieved from the ImageList, displayed when the mouse passes over the SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.ParentItem">
+            <summary>Gets the parent SmartItem of the SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.ParentSmartControl">
+            <summary>Gets the parent SmartControl of the SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.PreferredSmartItemTypes">
+            <summary>Gets the types of the child SmartItems which can be added at design-time to this SmartItem.</summary>
+            <remarks>    Via code, any SmartItem can be added as a child SmartItem     to the SmartItem.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.RootSmartControl">
+            <summary>Gets the root SmartControl of the SmartItem.</summary>
+            <remarks>    The root SmartControl does not necessarily correspond to     ParentSmartControl.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.Selected">
+            <summary>Gets or sets a boolean value indicating whether the SmartItem is selected.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.SmartDesignMode">
+            <summary>Gets a boolean value indicating if the parent SmartControl is selected in design-time.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.Tag">
+            <summary>Gets or sets the object that contains data about the SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.Text">
+            <summary>Gets or sets the text associated with this SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.ToolTipText">
+            <summary>Gets or sets the ToolTip text associated with the SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.UseMnemonic">
+            <summary>Gets or sets a boolean value indicating if the SmartItem interprets an ampersand character (&amp;) in its Text property to be an access key prefix character.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.VirtualControl">
+            <summary>Gets the VirtualControl associated with the SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.Visible">
+            <summary>Gets or sets a boolean value indicating if the SmartItem is visible.</summary>
+            <remarks>    This property does not take the visible state or the     ParentItem, ParentSmartControl or RootSmartControl into     consideration. Therefore, if the parent SmartItem is not     visible but the child is, Visible will still return     [LangWord]true. To get the actual visible state (taking the     parents into consideration), the IsVisible property should be     consulted.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItem.VisibleItems">
+            <summary>Gets a list of the visible child SmartItems.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.AddedToCollection">
+            <summary>Raised when a new child SmartItem is added to the Items collection.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.BoundsChanged">
+            <summary>Raised when the value of the Bounds property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.Click">
+            <summary>Raised when the SmartItem is clicked.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.CursorChanged">
+            <summary>Raised when the value of the Cursor property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.DisabledImageIndexChanged">
+            <summary>Raised when the value of the DisabledImageIndex property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.DoubleClick">
+            <summary>Raised when the SmartItem is double-clicked.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.DownImageIndexChanged">
+            <summary>Raised when the value of the DownImageIndex property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.DropDownClosed">
+            <summary>Raised when a SmartItem's dropdown is closed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.EnabledChanged">
+            <summary>Raised when the value of the Enabled property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.FitHeightToLayoutChanged">
+            <summary>Raised when the value of the FitHeightToLayout property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.FitWidthToLayoutChanged">
+            <summary>Raised when the value of the FitWidthToLayout property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.FontChanged">
+            <summary>Raised when the value of the Font property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.ForeColorChanged">
+            <summary>Raised when the value of the ForeColor property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.ImageChanged">
+            <summary>Raised when the value of the Image property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.ImageIndexChanged">
+            <summary>Raised when the value of the ImageIndex property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.IndexChanged">
+            <summary>Raised when the value of the Index property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.ItemsImageListChanged">
+            <summary>Raised when the value of the ItemsImageList property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.KeyChanged">
+            <summary>Raised when the value of the Key property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.KeyDown">
+            <summary>Raised when a key is pressed while the SmartItem has focus.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.KeyPress">
+            <summary>Raised when a key is pressed while the SmartItem has focus.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.KeyUp">
+            <summary>Raised when a key is released while the SmartItem has focus.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.MouseDown">
+            <summary>Raised when the mouse pointer is over the SmartItem and a mouse button is pressed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.MouseEnter">
+            <summary>Raised when the mouse pointer enters the SmartItem.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.MouseHover">
+            <summary>Raised when the mouse pointer hovers over the SmartItem.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.MouseLeave">
+            <summary>Raised when the mouse pointer leaves the SmartItem.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.MouseMove">
+            <summary>Raised when the mouse pointer is moved over the SmartItem.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.MouseUp">
+            <summary>Raised when the mouse pointer is over the SmartItem and a mouse button is released.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.OpeningDropDown">
+            <summary>Raised when a SmartItem's dropdown is opened.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.OverFontChanged">
+            <summary>Raised when the value of the OverFont property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.OverForeColorChanged">
+            <summary>Raised when the value of the OverForeColor property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.OverImageIndexChanged">
+            <summary>Raised when the value of the OverImageIndex property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.Paint">
+            <summary>Raised when the SmartItem is painted.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.QueryAccessibilityHelp">
+            <summary>Raised when an Accessibility client invokes help for that element.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.SelectedChanged">
+            <summary>Raised when the value of the Selected property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.TagChanged">
+            <summary>Raised when the value of the Tag property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.TextChanged">
+            <summary>Raised when the value of the Text property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.ToolTipTextChanged">
+            <summary>Raised when the value of the ToolTipText property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.UseMnemonicChanged">
+            <summary>Raised when the value of the UseMnemonic property is changed.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItem.VisibleChanged">
+            <summary>Raised when the value of the Visible property is changed.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartItemClickEventArgs">
+            <summary>Provides information on the SmartItem that was clicked.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemClickEventArgs.Source">
+            <summary>Gets a value representing the source of the click.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartItemCollection">
+            <summary>Contains a list of SmartItems.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.Add">
+            <summary>Adds a SmartItem to the collection.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.Add(Xceed.SmartUI.SmartItem)">
+            <summary>Adds a SmartItem to the collection.</summary>
+            <returns>The index at which the SmartItem was added.</returns>
+            <param name="item">A reference to the SmartItem object to add to the list.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.Add(System.String)">
+            <summary>Adds a default SmartItem to the collection specifying its Text.</summary>
+            <returns>The index at which the SmartItem was added.</returns>
+            <remarks>    The default SmartItem that will be added is different for     each SmartControl.</remarks>
+            <param name="text">The text displayed by the SmartItem.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.Add(System.String,System.Int32)">
+            <summary>Adds a default SmartItem to the collection specifying its Text and ImageIndex.</summary>
+            <returns>The index at which the SmartItem was added.</returns>
+            <param name="text">The text displayed by the SmartItem.</param>
+            <param name="imageIndex">The index of the image displayed by the SmartItem.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.AddRange">
+            <summary>Adds each element of an object array to the end of the collection as a SmartItem.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.AddRange(System.Object[])">
+            <summary>Adds each element of an object array to the end of the collection as a SmartItem.</summary>
+            <remarks>    If an array item is a SmartItem, it will be added as is;     otherwise a default SmartItem will be added and its Text     property set to the result of ToString().</remarks>
+            <param name="items">An array of objects representing the SmartItems to add to the end of the collection.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.AddRange(Xceed.SmartUI.SmartItem[])">
+            <summary>Adds each element of a SmartItem array to the end of the collection.</summary>
+            <param name="items">An array of SmartItems representing the SmartItems to add to the end of the collection.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.Clear">
+            <summary>Removes all SmartItems from the collection.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.Contains(Xceed.SmartUI.SmartItem)">
+            <summary>Retrieves a boolean value indicating if a specific SmartItem exists in the list.</summary>
+            <returns>[LangWord]true if the SmartItem exists in the collection; [LangWord]false otherwise.</returns>
+            <param name="item">A reference to the SmartItem object to locate</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.CopyTo(System.Array,System.Int32)">
+            <summary>Copies the items of the collection to an array, starting at a particular array index.</summary>
+            <param name="array">The one-dimensional array that is the destination of the items copied from the collection. The Array must have zero-based indexing.</param>
+            <param name="startIndex">The zero-based index in array at which copying begins.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.GetFirstItem(Xceed.SmartUI.SmartItemState)">
+            <summary>Retrieves the first SmartItem in the collection that has the specified state.</summary>
+            <returns>A reference to a SmartItem representing the first SmartItem in the collection that has the specified state.</returns>
+            <param name="state">A SmartItemState value representing the state of the SmartItem to locate.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.GetLastItem(Xceed.SmartUI.SmartItemState)">
+            <summary>Retrieves the last SmartItem in the collection that has the specified state.</summary>
+            <returns>A reference to a SmartItem representing the last SmartItem in the collection that has the specified state.</returns>
+            <param name="state">A SmartItemState value representing the state of the SmartItem to locate.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.GetNextItem(Xceed.SmartUI.SmartItem,Xceed.SmartUI.SmartItemState)">
+            <summary>Retrieves the next SmartItem in the collection that has the specified state.</summary>
+            <returns>A reference to a SmartItem representing the next SmartItem in the collection that has the specified state.</returns>
+            <param name="item">The SmartItem from which to begin the search.</param>
+            <param name="state">A SmartItemState value representing the state of the SmartItem to locate.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.GetPreviousItem(Xceed.SmartUI.SmartItem,Xceed.SmartUI.SmartItemState)">
+            <summary>Retrieves the previous SmartItem in the collection that has the specified state.</summary>
+            <returns>A reference to a SmartItem representing the previous SmartItem in the collection that has the specified state.</returns>
+            <param name="item">The SmartItem from which to begin the search.</param>
+            <param name="state">A SmartItemState value representing the state of the SmartItem to locate.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.GetRequiredSize">
+            <summary>Retrieves the size required to display all of the SmartItems contained within the collection.</summary>
+            <returns>A Size structure representing the size required to display all of the SmartItems contained within the collection. The Margins of the collection are included.</returns>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.IndexOf(Xceed.SmartUI.SmartItem)">
+            <summary>Searches for the specified SmartItem in the collection and returns its zero-based index.</summary>
+            <returns>The index of the SmartItem or -1 if the SmartItem was not found in the collection.</returns>
+            <param name="item">The SmartItem to locate in the collection. Can be [LangWord]null.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.Insert(System.Int32,Xceed.SmartUI.SmartItem)">
+            <summary>Inserts a SmartItem into the collection at the specified index.</summary>
+            <param name="index">The zero-based index at which to insert the SmartItem.</param>
+            <param name="item">A reference to the SmartItem to insert.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.Refresh">
+            <summary>Refreshes the collection non-recursively.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.Refresh">
+            <summary>Refreshes the collection non-recursively.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.Refresh(System.Boolean)">
+            <summary>Forces the collection to invalidate its client area and immediately redraw itself.</summary>
+            <param name="refreshChildren">[LangWord]true if any child collections should also be refreshed; [LangWord]false otherwise.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.Remove(Xceed.SmartUI.SmartItem)">
+            <summary>Removes the specified SmartItem from the collection.</summary>
+            <param name="smartItem">A reference to the SmartItem to remove.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.RemoveAt(System.Int32)">
+            <summary>Removes the SmartItem at the specified index from the collection.</summary>
+            <param name="index">The index of the SmartItem to remove.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.SelectFirstItem">
+            <summary>Selects the first SmartItem in the collection.</summary>
+            <returns>[LangWord]true if a SmartItem was selected; [LangWord]false otherwise.</returns>
+            <remarks>    This method will iterate through the SmartItems in the     collection and select the first SmartItem whose CanBeSelected     returns [LangWord]true.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.SelectLastItem">
+            <summary>Selects the last SmartItem in the collection.</summary>
+            <returns>[LangWord]true if a SmartItem was selected; [LangWord]false otherwise.</returns>
+            <remarks>    This method will iterate through the SmartItems in the     collection and select the last SmartItem whose CanBeSelected     property returns [LangWord]true.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.SelectNextItem">
+            <summary>Selects the next SmartItem in the collection.</summary>
+            <returns>[LangWord]true if a SmartItem was selected; [LangWord]false otherwise.</returns>
+            <remarks>    This method will select the next SmartItem whose     CanBeSelected property returns [LangWord]true.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.SelectPreviousItem">
+            <summary>Selects the previous SmartItem in the collection.</summary>
+            <returns>[LangWord]true if a SmartItem was selected; [LangWord]false otherwise.</returns>
+            <remarks>    This method will select the previous SmartItem whose     CanBeSelected property returns [LangWord]true.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.Sort">
+            <summary>Sorts the collection non-recursively (only 1 level).</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemCollection.UpdateHasShortcuts">
+            <summary>This method is reserved for internal use and is not intended to be used directly from your code.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.BackColor">
+            <summary>Gets or sets the background color of every SmartItem in the collection whose own BackColor property has not been explicitly set.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.Borders">
+            <summary>Gets or sets the SmartBorders associated with the collection.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.Comparer">
+            <summary>Gets or sets the comparer to use for the collection.</summary>
+            <remarks>    The comparer is only used when the Sorted property is set     to [LangWord]true.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.Count">
+            <summary>Gets the number of SmartItems contained in the collection.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.DroppedDownItem">
+            <summary>Gets or sets the SmartItem that is currently dropped down.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.FirstVisibleItem">
+            <summary>Gets or sets the first SmartItem that is completely or partial visible in the collection.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.Font">
+            <summary>Gets the font of every SmartItem in the collection whose own Font property has not been explicitly set.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.HasShortcuts">
+            <summary>This property is reserved for internal use and is not intended to be used directly from your code.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.HorizontalScrollBarVisibility">
+            <summary>Gets or sets a value indicating the visibility of the horizontal scrollbar.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.InnerMargins">
+            <summary>Gets or set the inner margins (inside the Borders) for this collection.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.IsFixedSize">
+            <summary>Gets a value indicating whether the collection has a fixed size.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.IsReadOnly">
+            <summary>Gets a value indicating whether the collection is readonly</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.Item">
+            <summary>Gets the SmartItem associated with the specified key.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.Item(System.String)">
+            <summary>Gets the SmartItem associated with the specified key.</summary>
+            <param name="key">The key of the SmartItem to retrieve.</param>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.Item(System.Int32)">
+            <summary>Gets the SmartItem at the specified index.</summary>
+            <param name="index">The zero-based index at which to get the SmartItem.</param>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.Layout">
+            <summary>Gets or sets the SmartLayout associated with the collection.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.Margins">
+            <summary>Gets the margins for this collection. It represents the sum of the InnerMargins, OuterMargins and Borders to which the space required to display the scrollbars is added if needed.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.MnemonicUsage">
+            <summary>Gets or sets a value indicating how (and if) mnemonics are activated.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.OuterMargins">
+            <summary>Gets or sets the outer margins (outside the Borders) for this collection.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.OuterMarginsColor">
+            <summary>Gets or sets the color of the collection's OuterMargins.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.ParentItem">
+            <summary>Gets the collection's parent SmartItem.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.ScrollBarStyle">
+            <summary>Gets or sets the style of the collection's scrollbars.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.Sorted">
+            <summary>Gets or sets a boolean value indicating if the collection is sorted</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemCollection.VerticalScrollBarVisibility">
+            <summary>Gets or sets a boolean value indicating the visibility of the vertical scrollbar.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartItemCollection.ScrollChange">
+            <summary>Raised when the collection updates its scroll offset.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartItemEventArgs">
+            <summary>Provides information on a SmartItem that has raised an event.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemEventArgs.Item">
+            <summary>Gets the SmartItem which raised the event.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartItemList">
+            <summary>Exposes an enumerator, which supports a simple iteration over a SmartItemCollection.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemList.GetEnumerator">
+            <summary>Returns an enumerator that can iterate through a SmartItemCollection.</summary>
+            <returns>An IEnumerator that can be used to iterate through a SmartItemCollection.</returns>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemList.Count">
+            <summary>Gets the number of SmartItems contained in the list.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartItemMouseEventArgs">
+            <summary>Provides information on the SmartItem that raised a mouse event.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemMouseEventArgs.Item">
+            <summary>Gets the SmartItem which raised the mouse event.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartItemPaint">
+            <summary>Provides theme-sensitive functionalities required to draw SmartItems.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemPaint.DrawCheckBox">
+            <summary>Draws a checkbox with the specified check state within the specified rectangle.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemPaint.DrawCheckBox(System.Drawing.Rectangle,System.Windows.Forms.CheckState)">
+            <summary>Draws a checkbox with the specified check state within the specified rectangle.</summary>
+            <remarks>    The checkbox will be drawn according to the style defined     by the UIStyle and UIStyleResourceAssembly properties.</remarks>
+            <param name="rectangle">A Rectangle structure representing the rectangle in which to draw the checkbox.</param>
+            <param name="checkState">A CheckState value representing the check state of the checkbox.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemPaint.DrawCheckBox(System.Drawing.Rectangle,System.Windows.Forms.CheckState,System.Boolean)">
+            <summary>Draws a checkbox with the specified check and enable state within the specified rectangle.</summary>
+            <remarks>    The checkbox will be drawn according to the style defined     by the UIStyle and UIStyleResourceAssembly properties.</remarks>
+            <param name="rectangle">A Rectangle structure representing the rectangle in which to draw the checkbox.</param>
+            <param name="checkState">A CheckState value representing the check state of the checkbox.</param>
+            <param name="enabled">[LangWord]true if the checkbox should be drawn enabled; [LangWord]false otherwise.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemPaint.DrawImage">
+            <summary>Draws the image in the ImageList that corresponds to ImageIndex at the specified point.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemPaint.DrawImage(System.Drawing.Point,System.Boolean)">
+            <summary>Draws the image in the ImageList that corresponds to ImageIndex at the specified point.</summary>
+            <param name="point">A Point structure representing the position at which to draw the image.</param>
+            <param name="disabled">[LangWord]true if the image should be drawn disabled; [LangWord]false otherwise.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemPaint.DrawRadioButton">
+            <summary>Draws a radio button within the specified rectangle.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemPaint.DrawRadioButton(System.Drawing.Rectangle,System.Boolean)">
+            <summary>Draws a radio button within the specified rectangle.</summary>
+            <remarks>    The radio button will be drawn according to the style     defined by the UIStyle and UIStyleResourceAssembly     properties.</remarks>
+            <param name="rectangle">A Rectangle structure representing the rectangle in which to draw the radio button.</param>
+            <param name="selected">[LangWord]true if the radio button should be drawn selected; [LangWord]false otherwise.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartItemPaint.DrawRadioButton(System.Drawing.Rectangle,System.Boolean,System.Boolean)">
+            <summary>Draws a radio button with the specified selection and enable state within the specified rectangle.</summary>
+            <remarks>    The radio button will be drawn according to the style     defined by the UIStyle and UIStyleResourceAssembly     properties.</remarks>
+            <param name="rectangle">A Rectangle structure representing the rectangle in which to draw the radio button.</param>
+            <param name="selected">[LangWord]true if the radio button should be drawn selected; [LangWord]false otherwise.</param>
+            <param name="enabled">[LangWord]true if the radio button should be drawn enabled; [LangWord]false otherwise.</param>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemPaint.ForeColor">
+            <summary>Gets or sets the foreground color to paint on subsequent calls to the Draw methods.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemPaint.ImageList">
+            <summary>Gets the list of images that will be used to paint on subsequent calls to the Draw methods.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemPaint.ImageSize">
+            <summary>Gets the size of the images in the ImageList on subsequent calls to the Draw methods.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartItemPaintEventArgs">
+            <summary>Provides information on the SmartItem being drawn.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemPaintEventArgs.Bounds">
+            <summary>Gets the rectangle that represents the bounds of the SmartItem being drawn.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemPaintEventArgs.Graphics">
+            <summary>Gets the Graphics object used to draw.</summary>
+            <remarks>    Although you can draw using Graphics, SmartPaint provides     various methods which can be used to draw everything from     straight lines to checkboxes.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemPaintEventArgs.Item">
+            <summary>Gets a reference to the SmartItem being drawn.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartItemPaintEventArgs.SmartPaint">
+            <summary>Gets a reference to a SmartPaint object which contains various drawing methods.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartLayout">
+            <summary>Represents a layout used to organize the disposition of SmartItems.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartLayout.Layout">
+            <summary>Reorganizes the disposition of the SmartItems.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartLayout.LayoutVerticalSubItems(Xceed.SmartUI.SmartItem,System.Int32,System.Int32,System.Int32)">
+            <summary>Generic method to layout SmartItems vertically when a layout isn't aware of any particularities in regards to its SmartItems.</summary>
+            <returns>The total height of layout's SmartItems.</returns>
+            <param name="item">A reference to a SmartItem representing the SmartItem whose child SmartItems' layouts are to be updated.</param>
+            <param name="topOffset">A value representing the offset at which to start disposing the SmartItems.</param>
+            <param name="leftMargin">A value representing the left margin of the layout.</param>
+            <param name="rightMargin">A value representing the left margin of the layout.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartLayout.OnLayoutComplete(System.EventArgs)">
+            <summary>Raises the LayoutComplete event.</summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartLayout.Refresh">
+            <summary>Forces the layout to invalidate its client area and immediately redraw itself.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartLayout.SetSizeForDrawingSmartItems(System.Drawing.Size)">
+            <summary>Set the size required to draw the SmartItems.</summary>
+            <param name="size">A Size structure representing the size required to draw the SmartItems.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartLayout.SetSmartItemBounds(Xceed.SmartUI.SmartItem,System.Drawing.Rectangle)">
+            <summary>Sets the specified bounds to the specified SmartItem.</summary>
+            <param name="item">A reference to a SmartItem representing the SmartItem whose bounds are to be set.</param>
+            <param name="bounds">The new bounds of the specified SmartItem.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartLayout.SetSmartItemLocation(Xceed.SmartUI.SmartItem,System.Drawing.Point)">
+            <summary>Sets the specified SmartItem at the specified location.</summary>
+            <param name="item">A reference to a SmartItem representing the SmartItem whose location is to be set.</param>
+            <param name="location">The new location of the specified SmartItem.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartLayout.SetSmartItemsBounds(Xceed.SmartUI.SmartItem,System.Drawing.Rectangle)">
+            <summary>This method is reserved for internal use and is not intended to be used directly from your code.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartLayout.AutoHeight">
+            <summary>Gets a boolean value indicating if height of the layout should be adjusted to the height/disposition of its items.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartLayout.AutoWidth">
+            <summary>Gets a boolean value indicating if width of the layout should be adjusted to the width/disposition of its items.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartLayout.ContainerSize">
+            <summary>Gets the size needed by the layout to paint its SmartItems.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartLayout.InternalSmartItems">
+            <summary>Gets a list of the internal child SmartItems.</summary>
+            <remarks>    An internal SmartItem is one that has the     InternalSmartItem attribute set to its class definition.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartLayout.MaxIdealSize">
+            <summary>Gets the ideal size needed to display the SmartItems.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartLayout.SmartControl">
+            <summary>Gets the SmartControl associated with the layout.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartLayout.SmartItems">
+            <summary>Gets the collection of child SmartItems associated with the layout.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartLayout.VisibleSmartItems">
+            <summary>Gets a list of the visible SmartItems.</summary>
+        </member>
+        <member name="E:Xceed.SmartUI.SmartLayout.LayoutComplete">
+            <summary>Raised when a Layout operation has completed.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartPaint">
+            <summary>Provides theme-sensitive functionalities required to draw SmartControls and SmartItems.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.CreateBitmapMask">
+            <summary>Creates a mask of the bitmap specified by the index using the specified color.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.CreateBitmapMask(System.Drawing.Color,System.Int32)">
+            <summary>Creates a mask of the bitmap specified by the index using the specified color.</summary>
+            <returns>A Bitmap representing the masked bitmap.</returns>
+            <param name="maskColor">The color to use to create the masked bitmap. All non-transparent colors will be replaced by maskColor.</param>
+            <param name="imageIndex">The index of the image, within the ImageList for which to create a mask.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.CreateBitmapMask(System.Drawing.Color,System.Drawing.Bitmap)">
+            <summary>Creates a mask of the specified bitmap and color.</summary>
+            <returns>A Bitmap representing the masked bitmap.</returns>
+            <param name="maskColor">The color to use to create the masked bitmap. All non-transparent colors will be replaced by maskColor.</param>
+            <param name="originalBitmap">The bitmap for which to create a mask.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.Draw3DBorder">
+            <summary>Draws a 3D border around a SmartControl or SmartItem.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.Draw3DBorder">
+            <summary>Draws a 3D border around a SmartControl or SmartItem.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.Draw3DBorder(System.Drawing.Rectangle)">
+            <summary>Draws a 3D border for the specified rectangle.</summary>
+            <param name="rectangle">A Rectangle structure representing the rectangle for which to draw the border.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawBitmap(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>Draws the bitmap at the specified coordinates.</summary>
+            <param name="image">A reference to Image representing the image to draw.</param>
+            <param name="x">The x-coordinate at which to draw the bitmap.</param>
+            <param name="y">The y-coordinate at which to draw the bitmap.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawBorder(System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle)">
+            <summary>Draws a border for the specified rectangle with the specified colors.</summary>
+            <param name="leftTopColor">A Color structure representing the top and left color of the border.</param>
+            <param name="rightBottomColor">A Color structure representing the bottom and right color of the border.</param>
+            <param name="rectangle">A Rectangle structure representing the rectangle for which to draw the border.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawDottedLine(System.Drawing.Color,System.Drawing.Color,System.Drawing.Point,System.Drawing.Point)">
+            <summary>Draws a dotted line using the specified colors from the first point to the second.</summary>
+            <param name="color1">A Color structure representing the background color of the dotted line.</param>
+            <param name="color2">A Color structure representing the foreground color of the dotted line.</param>
+            <param name="point1">A Point representing the point at which to begin drawing the line.</param>
+            <param name="point2">A Point representing the point at which to stop drawing the line.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawDottedRectangle(System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle)">
+            <summary>Draws a dotted rectangle using the specified colors for the specified rectangle.</summary>
+            <param name="color1">A Color structure representing the background color of the dotted rectangle.</param>
+            <param name="color2">A Color structure representing the foreground color of the dotted rectangle.</param>
+            <param name="rectangle">A Rectangle structure representing the rectangle for which to draw the dotted rectangle.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawFlatBorder">
+            <summary>Draws a flat border for Bounds.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawFlatBorder">
+            <summary>Draws a flat border for Bounds.</summary>
+            <remarks>    The border will be drawn with the ControlLightLight color     for the top and left borders and ControlDarkDark for the right     and bottom borders.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawFlatBorder(System.Drawing.Rectangle)">
+            <summary>Draws a flat border for the specified rectangle.</summary>
+            <remarks>    The border will be drawn with the ControlLightLight color     for the top and left borders and ControlDarkDark for the right     and bottom borders.</remarks>
+            <param name="rectangle">A Rectangle structure representing the rectangle for which to draw the border.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawImage">
+            <summary>Draws the image that corresponds to ImageIndex with the specified alignment.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawImage(System.Drawing.ContentAlignment)">
+            <summary>Draws the image that corresponds to ImageIndex with the specified alignment.</summary>
+            <param name="alignment">A ContentAlignment value representing the alignment of the image.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawImage(System.Drawing.ContentAlignment,System.Boolean)">
+            <summary>Draws the image that corresponds to ImageIndex with the specified alignment in an enabled or disabled state.</summary>
+            <param name="alignment">A ContentAlignment value representing the alignment of the image.</param>
+            <param name="disabled">[LangWord]true if the image should be drawn disabled; [LangWord]false otherwise.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawImage(System.Drawing.Rectangle)">
+            <summary>Draws the image that corresponds to ImageIndex in the specified rectangle.</summary>
+            <param name="rectangle">A Rectangle structure representing the rectangle in which to draw the image.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawImage(System.Drawing.Rectangle,System.Boolean)">
+            <summary>Draws the image that corresponds to ImageIndex in the specified rectangle with an enabled or disabled state.</summary>
+            <param name="rectangle">A Rectangle structure representing the rectangle in which to draw the image.</param>
+            <param name="disabled">[LangWord]true if the image should be drawn disabled; [LangWord]false otherwise.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawImage(System.Drawing.Rectangle,System.Drawing.ContentAlignment)">
+            <summary>Draws the image that corresponds to ImageIndex in the specified rectangle with the specified alignment.</summary>
+            <param name="rectangle">A Rectangle structure representing the rectangle in which to draw the image.</param>
+            <param name="alignment">A ContentAlignment value representing the alignment of the image.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawImage(System.Drawing.Rectangle,System.Drawing.ContentAlignment,System.Boolean)">
+            <summary>Draws the image that corresponds to ImageIndex in the specified rectangle with the specified alignment in an enabled or disabled state.</summary>
+            <param name="rectangle">A Rectangle structure representing the rectangle in which to draw the image.</param>
+            <param name="alignment">A ContentAlignment value representing the alignment of the image.</param>
+            <param name="disabled">[LangWord]true if the image should be drawn disabled; [LangWord]false otherwise.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawImage(System.Drawing.Point,System.Boolean)">
+            <summary>Draws the image that corresponds to ImageIndex at the specified point in an enabled or disabled state.</summary>
+            <param name="point">A Point structure representing the position at which to draw the image.</param>
+            <param name="disabled">[LangWord]true if the image should be drawn disabled; [LangWord]false otherwise.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawInvertedFlatBorder">
+            <summary>Draws an inverted flat border for the specified rectangle.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawInvertedFlatBorder(System.Drawing.Rectangle)">
+            <summary>Draws an inverted flat border for the specified rectangle.</summary>
+            <remarks>    The border will be drawn with the ControlDarkDark color     for the top and left borders and ControlLightLight for the     right and bottom borders.</remarks>
+            <param name="rectangle">A Rectangle structure representing the rectangle for which to draw the border.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawInvertedFlatBorder">
+            <summary>Draws an inverted flat border for Bounds.</summary>
+            <remarks>    The border will be drawn with the ControlDarkDark color     for the top and left borders and ControlLightLight for the     right and bottom borders.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawLine(System.Drawing.Color,System.Drawing.Point,System.Drawing.Point)">
+            <summary>Draws the line with the specified color from the first point to the second.</summary>
+            <param name="color">A Color structure representing the color of the line.</param>
+            <param name="point1">A Point representing the point at which to begin drawing the line.</param>
+            <param name="point2">A Point representing the point at which to stop drawing the line.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawMinus(System.Drawing.Rectangle)">
+            <summary>Draws a minus sign (-) in a box within the specified rectangle.</summary>
+            <remarks>    The minus sign will be drawn according to the style     defined by the UIStyle and UIStyleResourceAssembly     properties.</remarks>
+            <param name="rectangle">A Rectangle structure representing the rectangle in which to draw the minus sign.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawPlus(System.Drawing.Rectangle)">
+            <summary>Draws a plus sign (+) in a box within the specified rectangle.</summary>
+            <remarks>    The plus sign will be drawn according to the style     defined by the UIStyle and UIStyleResourceAssembly     properties.</remarks>
+            <param name="rectangle">A Rectangle structure representing the rectangle in which to draw the plus sign.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawProgressBar(System.Drawing.Rectangle,System.Double)">
+            <summary>Draws a progress bar in the specified rectangle.</summary>
+            <remarks>    The progress bar will be drawn according to the style     defined by the UIStyle and UIStyleResourceAssembly     properties.</remarks>
+            <param name="rectangle">A Rectangle structure representing the rectangle in which to draw the progress bar.</param>
+            <param name="percent">A value representing the value of the progress bar.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawRectangle(System.Drawing.Color,System.Drawing.Rectangle)">
+            <summary>Draws the rectangle with the specified border color.</summary>
+            <param name="borderColor">A Color structure representing the color of the rectangles border.</param>
+            <param name="rectangle">A Rectangle structure representing the rectangle to draw.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawSizeGrip(System.Drawing.Rectangle,System.Drawing.Color)">
+            <summary>Draws a size grip for the specified rectangle.</summary>
+            <param name="rectangle">A Rectangle structure representing the rectangle for which to draw the size grip.</param>
+            <param name="backColor">A Color structure representing the background color of the size grip.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawString">
+            <summary>Draws the string with the specified alignment.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawString(System.String,System.Drawing.ContentAlignment)">
+            <summary>Draws the string with the specified alignment.</summary>
+            <param name="s">The string the draw.</param>
+            <param name="alignment">A ContentAlignment value representing the alignment of the string.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawString(System.String,System.Drawing.Rectangle)">
+            <summary>Draws the string in the specified rectangle.</summary>
+            <param name="s">The string the draw.</param>
+            <param name="rectangle">A Rectangle structure representing the rectangle in which to draw the string.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawString(System.String,System.Drawing.Rectangle,System.Drawing.ContentAlignment)">
+            <summary>Draws the string in the specified rectangle with the specified alignment.</summary>
+            <param name="s">The string the draw.</param>
+            <param name="rectangle">A Rectangle structure representing the rectangle in which to draw the string.</param>
+            <param name="alignment">A ContentAlignment value representing the alignment of the string.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawSunkenBorder">
+            <summary>Draws a sunken border for Bounds.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawSunkenBorder">
+            <summary>Draws a sunken border for Bounds.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawSunkenBorder(System.Drawing.Rectangle)">
+            <summary>Draws a sunken border for the specified rectangle.</summary>
+            <param name="rectangle">A Rectangle structure representing the rectangle for which to draw the border.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.DrawThemePart(Xceed.SmartUI.UIStyle.ThemePart,System.Drawing.Rectangle)">
+            <summary>Draws the theme part in the specified rectangle.</summary>
+            <remarks>    A theme part represents a graphical element that can be     found throughout Windows.</remarks>
+            <param name="themePart">A ThemePart value representing the theme part to draw. If ThemePart.None, no theme part will be drawn.</param>
+            <param name="rectangle">A Rectangle structure representing the rectangle in which to draw the theme part.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.FillRectangle(System.Drawing.Color,System.Drawing.Rectangle)">
+            <summary>Fills the interior of the rectangle with the specified color.</summary>
+            <param name="color">A Color structure representing the color that will be used to fill the rectangle.</param>
+            <param name="rectangle">A Rectangle structure representing the rectangle to fill.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.GetColorFromTheme">
+            <summary>Retrieves the current color of the specified ThemeColor.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.GetColorFromTheme(Xceed.SmartUI.UIStyle.ThemeColor)">
+            <summary>Retrieves the current color of the specified ThemeColor.</summary>
+            <returns>A Color structure representing the current color of the specified ThemeColor.</returns>
+            <param name="themeColor">A ThemeColor value.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.GetColorFromTheme(Xceed.SmartUI.UIStyle.ThemeColor,Xceed.SmartUI.SmartControl)">
+            <summary>Retrieves the current color of the specified ThemeColor according to the SmartControl's theme.</summary>
+            <returns>A Color structure representing the current color of the specified ThemeColor.</returns>
+            <param name="themeColor">A ThemeColor value.</param>
+            <param name="smartControl">A reference to a SmartControl representing the SmartControl from whose theme the color is to be retrieved.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.GetInvertedColor(System.Drawing.Color)">
+            <summary>Retrieves the opposite color of the specified color.</summary>
+            <returns>A Color structure representing the opposite color of originalColor.</returns>
+            <remarks>    The alpha component of originalColor is not     modified.</remarks>
+            <param name="originalColor">A Color structure represeting the color whose opposite color is to be retrieved.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.GetStringHeight">
+            <summary>Retrieves the height of the specified string assuming that the string will be drawn on one line.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.GetStringHeight(System.String)">
+            <summary>Retrieves the height of the specified string assuming that the string will be drawn on one line.</summary>
+            <returns>A value representing the height of text.</returns>
+            <remarks>    The Font and StringFormat are taken into consideration     when calculating the height of the string.</remarks>
+            <param name="text">The string whose height is to be retrieved.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.GetStringHeight(System.String,System.Int32)">
+            <summary>Retrieves the height of the specified string.</summary>
+            <returns>A value representing the height of text.</returns>
+            <remarks>    The Font and StringFormat are taken into consideration     when calculating the height of the string.</remarks>
+            <param name="text">The string whose height is to be retrieved.</param>
+            <param name="width">The width of the string.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.GetStringHeight">
+            <summary>Retrieves the height of the largest character in regards to Font.</summary>
+            <returns>A value representing the height of the largest character.</returns>
+            <remarks>    The Font and StringFormat are taken into consideration     when calculating the height of the string.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.GetStringWidth(System.String)">
+            <summary>Retrieves the width of the specified string.</summary>
+            <returns>A value representing the width of text.</returns>
+            <remarks>    The Font and StringFormat are taken into consideration     when calculating the width of the string.</remarks>
+            <param name="text">The string whose width is to be retrieved.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.MeasureString(System.Drawing.Graphics,System.String,System.Drawing.Font,System.Drawing.StringFormat)">
+            <summary>Retrieves the size of the specified string according to the specified font and StringFormat.</summary>
+            <returns>The size of the specified string according to the specified font and StringFormat.</returns>
+            <remarks>    Graphics.MeasureString always returns a value that     accomodates the maximum size the text can take in the "worst     case scenario". This means that if the text is regular (no bold     nor italic), this size will include some padding space. This     method will try to always give this spacing no matter what the     FontStyle is.</remarks>
+            <param name="graphics">The Graphics that will be used to draw the string.</param>
+            <param name="text">The string to measure.</param>
+            <param name="font">The font object that defines the text format of the string.</param>
+            <param name="format">A StringFormat object that represents formatting information, such as line spacing, for the string.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartPaint.SetClip(System.Drawing.Rectangle)">
+            <summary>Sets the clipping region to the specified rectangle.</summary>
+            <remarks>    A clip region is a rectangle or set of rectangles used to     control which portions of an image/item are displayed.</remarks>
+            <param name="rectangle">A Rectangle structure representing the clipping region.</param>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartPaint.Font">
+            <summary>Gets or sets the Font to use when painting on subsequent calls to the Draw methods.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartPaint.ForeColor">
+            <summary>Gets or sets the foreground color to paint on subsequent calls to the Draw methods.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartPaint.ImageIndex">
+            <summary>Gets or sets a value representing the index of the image, within the ImageList, to paint on subsequent calls to the Draw methods.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartPaint.ImageList">
+            <summary>Gets the list of images that will be used to paint on subsequent calls to the Draw methods.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartPaint.ImageSize">
+            <summary>Gets the size of the images in the ImageList on subsequent calls to the Draw methods.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartPaint.Opacity">
+            <summary>Gets or sets the opacity level of the SmartControl or SmartItem on subsequent calls to the Draw methods.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartPaint.ShowFocusCues">
+            <summary>Gets a value indicating if the SmartControl or SmartItem should display focus rectangles on subsequent calls to the Draw methods.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartPaint.StringFormat">
+            <summary>Gets or sets the StringFormat to use when painting on subsequent calls to the Draw methods.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartPaint.UIStyle">
+            <summary>Gets the value of the UIStyle property on subsequent calls to the Draw methods.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartPaintEventArgs">
+            <summary>Provides information on the SmartControl being drawn.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartPaintEventArgs.Bounds">
+            <summary>Gets the rectangle that represents the bounds of the SmartControl being drawn.</summary>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartPaintEventArgs.Graphics">
+            <summary>Gets the Graphics object used to draw.</summary>
+            <remarks>    Although you can draw using Graphics, SmartPaint provides     various methods which can be used to draw everything from     straight lines to checkboxes.</remarks>
+        </member>
+        <member name="P:Xceed.SmartUI.SmartPaintEventArgs.SmartPaint">
+            <summary>Gets a reference to a SmartPaint object which contains various drawing methods.</summary>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartUIException">
+            <summary>The exception that is thrown by SmartUI when an error occurs.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartUIException.#ctor">
+            <summary>Initializes a new instance of the SmartUIException class with a specified error message.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartUIException.#ctor(System.String)">
+            <summary>Initializes a new instance of the SmartUIException class with a specified error message.</summary>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartUIException.#ctor(System.String,System.Exception)">
+            <summary>Initializes a new instance of the SmartUIException class with a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+            <param name="message">A message that describes the error.</param>
+            <param name="inner">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartUIInternalException">
+            <summary>The exception that is thrown by SmartUI when a fatal SmartUI-specific error occurs.</summary>
+            <remarks>    This exception means that there was an internal failure     in the control and that nothing could be done to prevent it.     Such failures should never occur.     To get more details about what went wrong, you can     inspect the InnerException property which is a reference to the     exception that caused the internal failure.     If you ever catch this exception in your code, please     contact Xceed Software Technical Support immediately.</remarks>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartUIInternalException.#ctor">
+            <summary>Initializes a new instance of the SmartUIInternalException class.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartUIInternalException.#ctor">
+            <summary>Initializes a new instance of the SmartUIInternalException class.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartUIInternalException.#ctor(System.Exception)">
+            <summary>Initializes a new instance of the SmartUIInternalException class with a reference to the inner exception that is the cause of this exception.</summary>
+            <param name="inner">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartUIInternalException.#ctor(System.String)">
+            <summary>Initializes a new instance of the SmartUIInternalException class with a specified error message.</summary>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:Xceed.SmartUI.SmartUIInternalException.#ctor(System.String,System.Exception)">
+            <summary>Initializes a new instance of the SmartUIInternalException class with a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+            <param name="message">A message that describes the error.</param>
+            <param name="inner">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Xceed.SmartUI.SoftSunkenBorders">
+            <summary>Represents the borders that can be applied to a SmartItemCollection and have a width of 1 pixel.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SoftSunkenBorders.#ctor">
+            <summary>Initializes a new instance of the SoftSunkenBorders class.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SoftSunkenBorders.OnPaint(Xceed.SmartUI.SmartPaintEventArgs)">
+            <summary>Raises the Paint event.</summary>
+            <param name="e">A SmartPaintEventArgs that contains the event data.</param>
+        </member>
+        <member name="T:Xceed.SmartUI.SunkenBorders">
+            <summary>Represents the borders that can be applied to a SmartItemCollection and have a width of 2 pixels.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SunkenBorders.#ctor">
+            <summary>Initializes a new instance of the SunkenBorders class.</summary>
+        </member>
+        <member name="M:Xceed.SmartUI.SunkenBorders.OnPaint(Xceed.SmartUI.SmartPaintEventArgs)">
+            <summary>Raises the Paint event.</summary>
+            <param name="e">A SmartPaintEventArgs that contains the event data.</param>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartItemClickEventHandler">
+            <summary>Represents the method that will handle the Click and ItemClick events.</summary>
+            <param name="sender">The object on which the method was called.</param>
+            <param name="e">A SmartItemClickEventArgs that contains the event data.</param>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartItemEventHandler">
+            <summary>Represents the method that will handle the various SmartItem events.</summary>
+            <param name="sender">The object on which the method was called.</param>
+            <param name="e">A SmartItemEventArgs that contains the event data.</param>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartItemMouseEventHandler">
+            <summary>Represents the method that will handle various SmartItem mouse events.</summary>
+            <param name="sender">The object on which the method was called.</param>
+            <param name="e">A SmartItemMouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartItemPaintEventHandler">
+            <summary>Represents the method that will handle various SmartItem drawing events.</summary>
+            <param name="sender">The object on which the method was called.</param>
+            <param name="e">A SmartItemPaintEventArgs that contains the event data.</param>
+        </member>
+        <member name="T:Xceed.SmartUI.SmartPaintEventHandler">
+            <summary>Represents the method that will handle various SmartControl drawing events.</summary>
+            <param name="sender">The object on which the method was called.</param>
+            <param name="e">A SmartPaintEventArgs that contains the event data.</param>
+        </member>
+    </members>
+</doc>

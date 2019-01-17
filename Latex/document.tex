@@ -1,0 +1,244 @@
+\documentclass[12pt,a4paper,left=2cm,right=2cm,oneside,titlepage]{report}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{cases}
+\numberwithin{equation}{section}
+\usepackage{mathtools}
+\usepackage{commath}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{url}
+\usepackage[titletoc]{appendix}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=R,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+\usepackage[unicode]{hyperref}
+\usepackage{hyperref}
+\setlength{\parskip}{1em}
+\usepackage[top=3.5cm,bottom=3.5cm,left=2.5cm,right=2.5cm]{geometry}
+\allowdisplaybreaks
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+	\fontsize{12pt}{18pt}\selectfont \textbf{VIETNAM NATIONAL UNIVERSITY – HO CHI MINH CITY\\
+	INTERNATIONAL UNVERSITY\\
+	DEPARTMENT OF MATHEMATICS} \vspace{0.8cm}
+	
+		\begin{figure}[htp]
+			\begin{center}
+				\includegraphics[scale=.6]{logo}
+			\end{center}
+		\end{figure}	
+	\begin{center}
+		\fontsize{12pt}{18pt}\selectfont \textbf{GRADUATION THESIS:} \\ \vspace{36pt}
+		
+		\fontsize{14pt}{16pt}\selectfont \textbf{PRICING EUROPEAN BARRIER OPTIONS WITH REBATES} \\ \vspace{2pt}
+		
+		\fontsize{12pt}{18pt}\selectfont \textbf{Submitted in partial fulfillment of the requirements for the degree of \\
+		BACHELOR OF ENGINEERING in\\ 
+		FINANCIAL ENGINEERING AND RISK MANAGEMENT} \\ \vspace{18pt}
+		
+			\fontsize{12pt}{18pt}\selectfont \textbf{Student’s Name:	Ta Thi Phuong Dung\\
+		Student’s ID:	MAMAIU13067\\
+		Thesis Supervisor:	Dr. Le Nhat Tan}
+		
+	\end{center}
+\end{center}
+
+\vspace{4.4cm}
+
+\begin{center}
+	\fontsize{12pt}{18pt}\selectfont \textbf{Ho Chi Minh City, Vietnam \\
+    January, 2018}
+\end{center}
+
+\newpage
+\pagenumbering{roman}
+\begin{center}
+	\fontsize{12pt}{18pt}\selectfont \textbf{VIETNAM NATIONAL UNIVERSITY – HO CHI MINH CITY\\
+		INTERNATIONAL UNVERSITY} \vspace{0.8cm}
+	
+	\begin{figure}[htp]
+		\begin{center}
+			\includegraphics[scale=.6]{logo}
+		\end{center}
+		\label{reflogo}
+	\end{figure}	
+	\begin{center}
+		\fontsize{12pt}{18pt}\selectfont \textbf{GRADUATION THESIS:} \\ \vspace{36pt}
+		
+		\fontsize{14pt}{16pt}\selectfont \textbf{PRICING EUROPEAN BARRIER OPTIONS WITH REBATES} \\ \vspace{2pt}
+		
+		\fontsize{12pt}{18pt}\selectfont \textbf{Submitted to DEPARTMENT OF MATHEMATICS \\
+			In partial fulfillment of the requirements for the degree of \\
+			BACHELOR OF ENGINEERING in\\ 
+			FINANCIAL ENGINEERING AND RISK MANAGEMENT} \\ \vspace{18pt}
+		
+		\fontsize{12pt}{18pt}\selectfont \textbf{Student’s Name:	Ta Thi Phuong Dung\\
+			Student’s ID:	MAMAIU13067\\
+			Thesis Supervisor:	Dr. Le Nhat Tan}
+		
+	\end{center}
+\end{center}
+
+\vspace{4.4cm}
+
+\begin{center}
+	\fontsize{12pt}{18pt}\selectfont \textbf{Ho Chi Minh City, Vietnam\\
+	January, 2018}
+\end{center}
+
+\newpage
+
+\begin{center}
+	\fontsize{11pt}{18pt}\selectfont \textbf{PRICING EUROPEAN BARRIER OPTIONS WITH REBATES}\\
+	\fontsize{11pt}{18pt}\selectfont By\\
+	TA THI PHUONG DUNG\\ \vspace{18pt}
+
+	SUBMITTED TO DEPARTMENT OF MATHEMATICS,\\
+	INTERNATIONAL UNIVERSITY, HO CHI MINH CITY\\
+	IN PARTIAL FULFILLMENT OF REQUIREMENTS FOR THE DEGREE OF\\ BACHELOR OF ENGINEERING IN FINANCIAL ENGINEERING AND RISK MANAGEMENT\\
+	JANUARY 2018 	
+\end{center}
+
+	\vspace{54pt}	
+\fontsize{12pt}{0pt}\selectfont Signature of Student: \hspace{50pt}\rule[0.02cm]{8cm}{0.0006cm}
+\begin{flushright}
+	Ta Thi Phuong Dung
+\end{flushright} \vspace{18pt}
+\hspace{14pt} \fontsize{12pt}{0pt}\selectfont Certified by: \hspace{94pt}\rule[0.02cm]{8cm}{0.0006cm}
+\begin{flushright}
+	Le Nhat Tan, Dr.\\ \vspace{10pt}
+	Thesis Supervisor
+\end{flushright}  \vspace{18pt}
+\hspace{14pt} \fontsize{12pt}{0pt}\selectfont Approved by: \hspace{90pt}\rule[0.02cm]{8cm}{0.0006cm}
+\begin{flushright}
+	Assoc. Prof. Pham Huu Anh Ngoc\\ \vspace{10pt}
+	Head of Department of Mathematics
+\end{flushright}
+
+\chapter*{Acknowledgements}
+
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\fontsize{11pt}{20pt}\selectfont  First of all, I would like to express my very great appreciation to Dr. Le Nhat Tan for his valuable and constructive suggestions during the planning and development on my research work. His willingness to give his time so generously has been very much appreciated. He has given me practical and urgent research topics for my choice. Moreover, whatever topic I chose, he always supports thoughtful reference materials related to that topic. More meaningful things, are his extensive knowledge of financial mathematics and dedication to education, have given me a passion and a great source of knowledge about my subject. One of the things,  I really be grateful to him thanks to asking for troubles I was stuck in and reminding me to finish my thesis on time. Further, in order to get a good research, the thesis needs to gain not only right content, but also a logical and coherent structure which he taught me. \\[0.5cm]
+Subsequently, I would also like to extend my thanks to all the lecturers at Department of Mathematics
+(International University, IU-VNU), especially Assoc. Prof. Dr. Sc. Nguyen
+Dinh, Assoc. Prof. Dr. Pham Huu Anh Ngoc, Assoc. Prof. Dr. Nguyen Ngoc Hai, Dr. Nguyen Minh Quan. Under their endless efforts and excellent teaching, I have received a useful mathematical knowledge along with some practical experiences supporting my future work. Especially, I have the foundation of mathematics to solve problems about financial mathematics in this research. \\[0.5cm]
+Last but not least, my special thanks should be given to my family for their loving
+support, motivation and patience during the undergraduate years. I wish to thank my university friends, especially Do Duy Viet and Ha Thi Phi Yen for making me happy to go to school and being interested in learning.\\[0.5cm] 
+ One can say that I am very fortunate to have a good learning environment as International University, a dedicated advisor, and a great family, all things I cannot gain today without them.
+
+ 
+  \chapter*{Abstract}
+  
+ \addcontentsline {toc}{chapter}{ Abstract} 
+\fontsize{11pt}{20pt}\selectfont  In Vietnam, derivatives market has just started officially very recently, in August, 2017, with futures contracts on VN30 index. It is a very new investment area for Vietnamese investors. This market is however expected to strongly develop soon and then enhance greatly Vietnamese economy. In fact, trading volume on futures contracts on VN30 index is increasing significantly over last few months, and is expected to increase with an even faster rate. One important type of financial derivatives products is options. In Vietnam, covered call (a type of call options) will be traded soon. Options will bring greater leverage to speculators and bring more risk management tools for hedgers. Options thus have great potential chance in Vietnamese financial markets. Understanding clearly the pricing formulas for these products is very urgent, then the object of the thesis formulate the pricing models of European barrier options with rebates using the probabilistic approach. It includes deriving the Black - Scholes - Merton model by the Martingale approach which is model of European options. Then European down and out call options with rebates is formulated by using theory of Wiener process like Reflection Principle, First Passage Time, Markov Property and Stochastic Differential Equations as It\=o Calculus and One-Dimensional Diffusion Process. Further, testing real data for normal distribution using R – Studio software. Lastly, using the final formula to calculate the option price of the underlying asset price of stocks in Vietnam. The stock is applied that must be satisfied given conditions by previous testing. 
+
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	\clearpage
+	\chapter*{List of Abbreviations}
+	
+	RV \hspace{1cm} Random Variable\\[0.2cm]
+	PDF \hspace{0.7cm} Probability Density Function\\[0.2cm]
+	CDF \hspace{0.7cm} Cumulative Density Function\\[0.2cm]
+	SDEs \hspace{0.7cm} Stochastic Differential Equations\\[0.2cm]
+	PDE \hspace{0.7cm} Partial Differential Equation\\[0.2cm]
+	GBM \hspace{0.6cm} Geometric Brownian Motion\\[0.2cm]
+	LN \hspace{1cm} Log-Normal
+	 
+	
+	
+	\newpage
+	\pagenumbering{arabic}
+	\setcounter{page}{1}	
+	\include{part1}
+	\include{part2}
+	\include{part2.1}
+	\include{part7}
+	\include{part9}
+	
+	\begin{thebibliography}{9}
+		\bibitem{Kwok} 
+		Yue-Kuen Kwok. Path Dependent Options  
+		\textit{``Mathematical Models
+			of Financial Derivatives"}, 2nd ed.
+		Springer Berlin Heidelberg, pages 181-188, 2008.
+		
+		\bibitem{Eric} 
+	Eric Chin, Dian Nel and Sverrir Ólafsson.  
+		\textit{``Problems and Solutions
+			in Mathematical Finance,"} \textit{Stochastic Calculus},
+		 vol. 1, 2014. 
+		
+		\bibitem{Eric} 
+		Eric Chin, Dian Nel and Sverrir Ólafsson.  
+		\textit{``Problems and Solutions
+			in Mathematical Finance,"} \textit{Equity Derivatives},
+		vol. 2, 2017.
+		
+		\bibitem{John} 
+		John C. Hull.  
+		\textit{``Options, futures, and other derivatives,"} 
+		9th ed. United States of
+		America: Pearson Education, Inc., 2017. 
+
+		\bibitem{Ross} 
+		Ross, Sheldon M. Continuous Random Variables.  
+		\textit{``A first course in probability,"} 
+		8th ed. United States of
+		America: Pearson Prentice Hall, pages 198-208, 2010. 
+
+		\bibitem{Robert} 
+		Robert W. Kolb and James A. Overdahl. 
+		\textit{``Financial Derivatives,"} 3rd ed. New Jersey: John Wiley \& Sons, Inc, 2003. 
+		
+		\bibitem{Geon} 
+		Geon Ho Choe 
+		\textit{``Stochastic Analysis for Finance with Simulations,"} Springer International Publishing Switzerland, 2016. 
+		
+		\bibitem{Kiesel} 
+		N.H. Bingham and R. Kiesel.
+		\textit{``Risk-Neutral Valuation: Pricing and Hedging of Financial Derivatives,"} 2nd ed. London: Springer-Verlag, 2004. 
+		
+		\bibitem{Paul} 
+		 Paul Glasserman
+		\textit{``Monte Carlo Methods in Financial Engineering,"} United States of
+		America: Springer Science + Business Media, Inc, 2004.
+		
+		\bibitem{Paul} 
+		Peter. Zhang
+		\textit{``Exotic Options: A Guide To Second Generation Options,"} 2nd. World Scientific Publishing Co. Pte. Ltd, 1997.
+		
+	
+	\end{thebibliography}
+	\begin{appendices}
+		\include{part8}
+	\end{appendices}	
+\end{document}

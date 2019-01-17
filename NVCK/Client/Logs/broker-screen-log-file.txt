@@ -1,0 +1,51 @@
+﻿2018-12-19 08:52:30,075 WARN  [804] Start the Listener FSS.RTDF.JMSMessageListener [(null)] - 
+2018-12-19 08:52:30,136 INFO  [7936] About to connect to activemq:tcp://localhost:61216 FSS.RTDF.JMSMessageListener [(null)] - 
+2018-12-19 08:52:32,227 ERROR [7936] Listening::Connection:JMSMessageListener.:_brokerurl.:activemq:tcp://localhost:61216_id.:DESKTOP-3L4FS0A_Flex_636808063500582098_dataname.:NTSInternal.ADMIN_isqueue.:True_username.:admin_password.:admin@123 FSS.RTDF.JMSMessageListener [(null)] - 
+Apache.NMS.NMSConnectionException: Error connecting to localhost:61216. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it
+   at Apache.NMS.ActiveMQ.Transport.Tcp.TcpTransportFactory.DoConnect(String host, Int32 port, String localAddress, Int32 localPort)
+   --- End of inner exception stack trace ---
+   at Apache.NMS.ActiveMQ.ConnectionFactory.CreateConnection(String userName, String password)
+   at FSS.RTDF.JMSMessageListener.ListenThreadStart()
+2018-12-19 08:52:32,295 INFO  [7936] About to connect to activemq:tcp://localhost:61216 FSS.RTDF.JMSMessageListener [(null)] - 
+2018-12-19 08:52:34,307 ERROR [7936] Listening::Connection:JMSMessageListener.:_brokerurl.:activemq:tcp://localhost:61216_id.:DESKTOP-3L4FS0A_Flex_636808063500582098_dataname.:NTSInternal.ADMIN_isqueue.:True_username.:admin_password.:admin@123 FSS.RTDF.JMSMessageListener [(null)] - 
+Apache.NMS.NMSConnectionException: Error connecting to localhost:61216. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it
+   at Apache.NMS.ActiveMQ.Transport.Tcp.TcpTransportFactory.DoConnect(String host, Int32 port, String localAddress, Int32 localPort)
+   --- End of inner exception stack trace ---
+   at Apache.NMS.ActiveMQ.ConnectionFactory.CreateConnection(String userName, String password)
+   at FSS.RTDF.JMSMessageListener.ListenThreadStart()
+2018-12-19 08:52:34,308 INFO  [7936] About to connect to activemq:tcp://localhost:61216 FSS.RTDF.JMSMessageListener [(null)] - 
+2018-12-19 08:52:36,361 ERROR [7936] Listening::Connection:JMSMessageListener.:_brokerurl.:activemq:tcp://localhost:61216_id.:DESKTOP-3L4FS0A_Flex_636808063500582098_dataname.:NTSInternal.ADMIN_isqueue.:True_username.:admin_password.:admin@123 FSS.RTDF.JMSMessageListener [(null)] - 
+Apache.NMS.NMSConnectionException: Error connecting to localhost:61216. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it
+   at Apache.NMS.ActiveMQ.Transport.Tcp.TcpTransportFactory.DoConnect(String host, Int32 port, String localAddress, Int32 localPort)
+   --- End of inner exception stack trace ---
+   at Apache.NMS.ActiveMQ.ConnectionFactory.CreateConnection(String userName, String password)
+   at FSS.RTDF.JMSMessageListener.ListenThreadStart()
+2018-12-19 08:52:36,361 INFO  [7936] About to connect to activemq:tcp://localhost:61216 FSS.RTDF.JMSMessageListener [(null)] - 
+2018-12-19 08:52:38,392 ERROR [7936] Listening::Connection:JMSMessageListener.:_brokerurl.:activemq:tcp://localhost:61216_id.:DESKTOP-3L4FS0A_Flex_636808063500582098_dataname.:NTSInternal.ADMIN_isqueue.:True_username.:admin_password.:admin@123 FSS.RTDF.JMSMessageListener [(null)] - 
+Apache.NMS.NMSConnectionException: Error connecting to localhost:61216. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it
+   at Apache.NMS.ActiveMQ.Transport.Tcp.TcpTransportFactory.DoConnect(String host, Int32 port, String localAddress, Int32 localPort)
+   --- End of inner exception stack trace ---
+   at Apache.NMS.ActiveMQ.ConnectionFactory.CreateConnection(String userName, String password)
+   at FSS.RTDF.JMSMessageListener.ListenThreadStart()
+2018-12-19 08:52:38,392 INFO  [7936] About to connect to activemq:tcp://localhost:61216 FSS.RTDF.JMSMessageListener [(null)] - 
+2018-12-19 08:52:40,444 ERROR [7936] Listening::Connection:JMSMessageListener.:_brokerurl.:activemq:tcp://localhost:61216_id.:DESKTOP-3L4FS0A_Flex_636808063500582098_dataname.:NTSInternal.ADMIN_isqueue.:True_username.:admin_password.:admin@123 FSS.RTDF.JMSMessageListener [(null)] - 
+Apache.NMS.NMSConnectionException: Error connecting to localhost:61216. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it
+   at Apache.NMS.ActiveMQ.Transport.Tcp.TcpTransportFactory.DoConnect(String host, Int32 port, String localAddress, Int32 localPort)
+   --- End of inner exception stack trace ---
+   at Apache.NMS.ActiveMQ.ConnectionFactory.CreateConnection(String userName, String password)
+   at FSS.RTDF.JMSMessageListener.ListenThreadStart()
+2018-12-19 08:52:40,444 INFO  [7936] About to connect to activemq:tcp://localhost:61216 FSS.RTDF.JMSMessageListener [(null)] - 
+2018-12-19 08:52:42,477 ERROR [7936] Listening::Connection:JMSMessageListener.:_brokerurl.:activemq:tcp://localhost:61216_id.:DESKTOP-3L4FS0A_Flex_636808063500582098_dataname.:NTSInternal.ADMIN_isqueue.:True_username.:admin_password.:admin@123 FSS.RTDF.JMSMessageListener [(null)] - 
+Apache.NMS.NMSConnectionException: Error connecting to localhost:61216. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it
+   at Apache.NMS.ActiveMQ.Transport.Tcp.TcpTransportFactory.DoConnect(String host, Int32 port, String localAddress, Int32 localPort)
+   --- End of inner exception stack trace ---
+   at Apache.NMS.ActiveMQ.ConnectionFactory.CreateConnection(String userName, String password)
+   at FSS.RTDF.JMSMessageListener.ListenThreadStart()
+2018-12-19 08:52:42,477 INFO  [7936] About to connect to activemq:tcp://localhost:61216 FSS.RTDF.JMSMessageListener [(null)] - 
+2018-12-19 08:52:44,531 ERROR [7936] Listening::Connection:JMSMessageListener.:_brokerurl.:activemq:tcp://localhost:61216_id.:DESKTOP-3L4FS0A_Flex_636808063500582098_dataname.:NTSInternal.ADMIN_isqueue.:True_username.:admin_password.:admin@123 FSS.RTDF.JMSMessageListener [(null)] - 
+Apache.NMS.NMSConnectionException: Error connecting to localhost:61216. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it
+   at Apache.NMS.ActiveMQ.Transport.Tcp.TcpTransportFactory.DoConnect(String host, Int32 port, String localAddress, Int32 localPort)
+   --- End of inner exception stack trace ---
+   at Apache.NMS.ActiveMQ.ConnectionFactory.CreateConnection(String userName, String password)
+   at FSS.RTDF.JMSMessageListener.ListenThreadStart()
+2018-12-19 08:52:44,531 INFO  [7936] About to connect to activemq:tcp://localhost:61216 FSS.RTDF.JMSMessageListener [(null)] - 
